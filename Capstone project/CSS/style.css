@@ -59,7 +59,7 @@ flex-direction: row;
 
 
 .banner-container{
-      background-image: url(/Images/hero-vote.png);  
+      background-image: url(../Images/hero-vote.png);  
       background-size: 60% 100%;
         background-position: 100%;
         background-repeat: no-repeat;        
