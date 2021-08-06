@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    background-color: azure;
+    font-size: 1rem;
+}
+.icon{
+ width: 46px;
+  height: 44px;
+position: relative;
+left: 20px;
+top: 03px
+
+}
+/*aligining the icon and header properly */
+ h1{
+     position: relative;
+     left: 25px;
+     bottom: 50px;
+     text-align: center;
+     color: purple
+ }
+.item:hover, .banner-list:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px purple;
+}
+
+ header{
+border: 1px solid black;
+background-color: white;
+position: sticky;
+top: 0;
+
+
+ }
+.container{
+display: flex;
+flex-direction: row;
+
+
+
+}
+.item{
+    flex: 1;
+
+    position: relative;
+    left: 30px;
+    bottom: 30px;
+}
+
+/*banner list class is for the details list part we are setting a image a side it */
+
+
+.banner-container{
+      background-image: url(/Images/hero-vote.png);  
+      background-size: 60% 100%;
+        background-position: 100%;
+        background-repeat: no-repeat;        
+    background-color: #406c87;
+    font-size: 10px;
+  
+
+}
+
+
+.banner-container{
+padding: 40px;
+}
+
+.reading-content{
+margin-top: 10px ;
+text-align: center;
+
+}
+.footer-container{
+    margin-top: 20px;
+display: flex;
+
+
+}
+.footer item{
+
+    flex: 1;
+}
+   
+input{
+    padding: 10px;
+    border-radius: 5px;
+     background-color: orange;
+    padding: 10px 25px 10px 25px;
+    box-shadow: 2px 2px 2px 2px purple;
+}
+
+
+.button{
+    background-color: orange;
+    padding: 10px 25px 10px 25px;
+    box-shadow: 2px 2px 2px 2px purple;
+}
+
+
+
+   .login{
+
+
+
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  padding-bottom: 100px;
+  margin: 40px 240px 240px 240px;
+    box-shadow: 10px 10px 5px grey;
+    background-color: orange;
+    filter: opacity(85%); 
+   }
+
+/*setting the margin down to 50px below for better spacing*/
+
+
+.footer-banner{
+    
+    font-family: 'Oswald', sans-serif;
+margin-top: 80px;
+background-color: white;
+ padding: 50px 50px 0 50px;
+     background-color: #9F9994;
+}
+
+
+   @media all and (max-width:690px){
+
+.login{
+    position: relative;
+    bottom: -40px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+margin: auto 180px auto 180px;
+
+  
+
+   }
+   body{
+       font-size: -10px;
+   }
+
+   .container{
+       display: block;
+     text-align: center;
+   }
+
+input{
+    
+    border-radius: 5px;
+     background-color: orange;
+    padding: 10px 5px 10px 5px;
+    box-shadow: 2px 2px 2px 2px purple;
+}
+
+
+
+
+}
+
+@media all and (max-width: 530px){
+
+
+    .login{
+
+margin:auto 80px auto 80px;
+
+
+
+    }
+
+    
+}
+
+@media all and (max-width: 340px){
+
+
+  .login{
+
+margin:auto 20px auto 20px;
+
+
+
+    }
+}
+
+
