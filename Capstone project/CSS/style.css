@@ -1,0 +1,297 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Serif+JP:wght@300&family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hind+Siliguri:wght@300&display=swap');
+body{
+    margin: -27px 0 0 0;
+    padding: auto;
+       box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+ 
+    background-color: whitesmoke;
+    font-size: 2.3em;
+}
+.logo{
+max-width: 50px;
+position: relative;
+right: 81%;
+top: 5px;
+
+
+
+}
+header{
+    font-family: 'Lora', serif;
+font-family: 'Open Sans Condensed', sans-serif;
+    position: sticky;
+    top: 0;
+    background-color: white;
+  
+
+}
+
+/*aligining the icon and header properly */
+ .first{
+ padding: 3px;
+     text-align: center;
+     color: purple;
+       font-size: 0.7em;
+       font-weight: 610;
+       margin-left: 75px ;
+ }
+ h3
+ {
+ text-align: center;
+     color: purple;
+       font-size: 1em;
+
+ }
+.item:hover, .banner-list:hover, .footer-item:hover, .fooxter-lin:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px purple;
+}
+
+
+.container{
+display: flex;
+
+padding-bottom: 10px;
+
+
+
+
+
+}
+.item{
+    flex: 1;
+    font-weight: 680;
+    font-size: 0.7rem;
+  margin-left: 60px;
+
+  
+}
+
+/*banner list class is for the details list part we are setting a image a side it */
+
+
+
+.banner-container{      
+     
+background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);
+    font-size: 0.7rem;
+    color: white;
+    padding: 30PX;
+    font-family: 'Open Sans Condensed', sans-serif;
+  
+
+}
+
+ img{
+     width: 67%;
+     
+    float:right;
+
+
+
+
+ }
+
+.reading-content{
+margin-top: 10px ;
+text-align: center;
+font-size: 0.7rem;
+font-family: 'Lora', serif;
+font-family: 'Noto Serif JP', serif;
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.main-article{
+margin: 50px 10px 5px 25px;
+word-spacing: 3px;
+}
+
+.footer-details{
+font-size:0.8rem;
+text-align: center;
+
+}
+.footer-container{
+   
+display: flex;
+
+
+}
+.footer-item{
+
+    flex: 1;
+  
+}
+
+.footer-link{
+    display: flex;
+
+    justify-content: space-between;
+   margin: 20px 0 0 150px;
+}
+
+.fooxter-link{
+
+    flex: 1 ;
+    
+    
+}
+
+   
+input{
+    padding: -80px 10px -80px 10px; 
+    border-radius: 5px;
+     background-color: orange;
+ 
+    box-shadow: 0.2px 2px 2px 2px #E6AF2E ;
+}
+
+
+.button{
+    background-color: orange;
+
+    box-shadow: 2px 2px 2px 2px p#E6AF2E;
+}
+
+
+
+   .login{
+
+
+
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+font-size: 0.7rem;
+  padding-bottom: 100px;
+  margin: 40px 240px 240px 240px;
+    box-shadow: 10px 10px 5px grey;
+    background-color: orange;
+    
+   }
+
+/*setting the margin down to 50px below for better spacing*/
+
+
+.footer-banner{
+font-family: 'Open Sans Condensed', sans-serif;
+color: white;
+background-color: white;
+  background: linear-gradient(
+135deg,#5a2672 0%,#1b2554 75%);
+position: sticky;
+bottom: 0;
+font-size: 1.5rem;
+margin-bottom: 0;
+
+}
+
+
+   @media all and (max-width:690px){
+
+.login{
+
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+margin: auto 180px auto 180px;
+
+  
+
+   }
+
+   .banner-container{
+       padding: -280px;
+      background-image: url(/Images/Citizens\ Electoral.jfif);  
+      background-size: 50% 100%;
+        background-position: 100%;
+        background-repeat: no-repeat;        
+    background-color: #406c87;
+    font-size: 0.7rem;
+  
+
+}
+   body{
+       font-size: -10px;
+   }
+
+   .container{
+       display: block;
+     text-align: center;
+   }
+
+input{
+    
+    border-radius: 5px;
+     background-color: orange;
+    padding: 10px 5px 10px 5px;
+    box-shadow: 2px 2px 2px 2px purple;
+}
+
+
+
+
+}
+
+@media all and (max-width: 530px){
+
+
+    .login{
+
+margin:auto 80px auto 80px;
+
+
+
+    }
+   
+     .banner-container{
+         height: 30px;
+      background-image: url(/Images/hero-vote.png);  
+      background-size: 46% 100%;
+        background-position: fixed;
+        background-repeat: no-repeat;        
+    background-color: #406c87;
+    font-size: 0.7rem;
+ 
+  
+
+}
+.banner-items{
+
+   
+}
+    h1{
+
+        font-size: 23px;
+    }
+
+    
+         
+}
+
+@media all and (max-width: 380px){
+h1{
+    font-size: 15px;
+}
+
+
+
+
+  .login{
+
+margin:auto 20px auto 20px;
+
+
+
+    }
+}
+
+
