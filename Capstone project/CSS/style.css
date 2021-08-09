@@ -17,7 +17,7 @@
     font-family: 'Oswald', sans-serif;
  text-align: center;
     background-color: whitesmoke;
-    font-size: 3.9em;
+    font-size: 1.9em;
     word-spacing: 1px;
 }
 
@@ -26,10 +26,10 @@ a{
     color: black;
 }
 .logo{
-max-width: 60px;
+max-width: 40px;
 position:absolute;
-right: 94%;
-top: 9px;
+right: 92%;
+top: 1px;
 
 
 
@@ -92,8 +92,8 @@ padding-bottom: 10px;
 .item{
     flex: 1;
     font-weight: 680;
-    font-size: 1.3rem;
-  margin-left: 60px;
+    font-size: 0.9rem;
+  
 
   
 }
@@ -109,7 +109,7 @@ background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);
 background-size: cover;
 
   
-font-size: 1.2rem;
+font-size: 0.8rem;
     color: white;
     padding: 30PX;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -134,7 +134,7 @@ font-size: 1.2rem;
  
 margin-top: 10px ;
 text-align: center;
-font-size: 1.4rem;
+font-size: 0.9rem;
 font-family: 'Lora', serif;
 font-family: 'Noto Serif JP', serif;
 font-family: 'Open Sans Condensed', sans-serif;
@@ -144,13 +144,13 @@ font-family: 'Open Sans Condensed', sans-serif;
 .main-article{
 margin: 50px 10px 5px 25px;
 word-spacing: 1px;
-font-size: 1.4rem;
+font-size: 0.8rem;
 }
 
 .footer-details{
  
 
-font-size:1.5rem;
+font-size:0.9rem;
 text-align: center;
 
 }
@@ -173,7 +173,7 @@ display: flex;
  
  margin-top: 30px;
    padding: 10px;
-   font-size: 3.9rem;
+   font-size: 1.9rem;
  
   
 }
