@@ -217,7 +217,7 @@ font-size: 1.0rem;
  display: inline-block;
     text-align: center; 
 padding: 30px 20px;
-
+margin-top: 90px;
     box-shadow: 10px 10px 5px grey;
  background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);
 background-size: cover;
