@@ -65,11 +65,14 @@ font-family: 'Open Sans Condensed', sans-serif;
    animation-iteration-count: infinite;
    animation-timing-function: ease-in;
  }
+ h2{
+     font-size: 1.3rem;
+ }
  h3
  {
  text-align: center;
      color: purple;
-       font-size: 1.9em;
+       font-size: 1.0rem;
 
  }
 .item:hover, .banner-one:hover, .footer-item:hover, .fooxter-lin:hover{
@@ -210,20 +213,17 @@ input{
   text-align: center;
   border: 1px solid black;
   border-radius: 10px;
-font-size: 1.7rem;
+font-size: 1.0rem;
  display: inline-block;
     text-align: center; 
+padding: 30px 20px;
 
-margin: 30px 300px;
     box-shadow: 10px 10px 5px grey;
  background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);
 background-size: cover;
     max-width: 300px;
    }
-   .login{
-
-
-   }
+   
    
   .button{
 padding: 5px 10px;
