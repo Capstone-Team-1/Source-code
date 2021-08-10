@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 10, 2021 at 02:51 AM
+-- Generation Time: Aug 10, 2021 at 11:43 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -50,8 +50,9 @@ INSERT INTO `candidate` (`candidateID`, `candidateParty`, `candidateName`, `cand
 --
 
 CREATE TABLE `citizen` (
-  `citizenFirstName` varchar(255) DEFAULT NULL,
-  `citizenLastName` varchar(255) DEFAULT NULL,
+  `citizenID` mediumint(9) NOT NULL,
+  `citizenFName` varchar(255) DEFAULT NULL,
+  `citizenLName` varchar(255) DEFAULT NULL,
   `citizenPhone` varchar(100) DEFAULT NULL,
   `citizenDOB` varchar(255) DEFAULT NULL,
   `citizenEmail` varchar(255) DEFAULT NULL,
@@ -59,7 +60,6 @@ CREATE TABLE `citizen` (
   `citizenCity` varchar(255) DEFAULT NULL,
   `citizenState` varchar(50) DEFAULT NULL,
   `citizenZip` varchar(10) DEFAULT NULL,
-  `citizenID` mediumint(9) NOT NULL,
   `citizenPassword` varchar(255) DEFAULT NULL,
   `citizenAllowed` tinyint(1) DEFAULT NULL,
   `employeeID` mediumint(9) NOT NULL DEFAULT 1
@@ -69,9 +69,9 @@ CREATE TABLE `citizen` (
 -- Dumping data for table `citizen`
 --
 
-INSERT INTO `citizen` (`citizenFirstName`, `citizenLastName`, `citizenPhone`, `citizenDOB`, `citizenEmail`, `citizenAddress`, `citizenCity`, `citizenState`, `citizenZip`, `citizenID`, `citizenPassword`, `citizenAllowed`, `employeeID`) VALUES
-('Callie', 'Goodman', '(02) 3506 9468', '08/26/1944', 'sed.consequat@nequeSedeget.edu', 'P.O. Box 834, 9983 Fusce Ave', 'Brisbane', 'QLD', '7887', 100, 'd3947', NULL, 1),
-('Armando', 'Blair', '(02) 9534 7704', '01/09/1956', 'sed.sem@hendreritid.edu', 'P.O. Box 368, 5057 Praesent St.', 'Cessnock', 'NSW', '5143', 101, 'd8124', NULL, 1);
+INSERT INTO `citizen` (`citizenID`, `citizenFName`, `citizenLName`, `citizenPhone`, `citizenDOB`, `citizenEmail`, `citizenAddress`, `citizenCity`, `citizenState`, `citizenZip`, `citizenPassword`, `citizenAllowed`, `employeeID`) VALUES
+(176253, 'Armando', 'Blair', '(02) 9534 7704', '01/09/1956', 'sed.sem@hendreritid.edu', 'P.O. Box 368, 5057 Praesent St.', 'Cessnock', 'NSW', '5143', 'd8124', NULL, 1),
+(198533, 'Callie', 'Goodman', '(02) 3506 9468', '08/26/1944', 'sed.consequat@nequeSedeget.edu', 'P.O. Box 834, 9983 Fusce Ave', 'Brisbane', 'QLD', '7887', 'd3947', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -136,7 +136,9 @@ ALTER TABLE `employee`
 -- Indexes for table `vote`
 --
 ALTER TABLE `vote`
-  ADD PRIMARY KEY (`voteID`);
+  ADD PRIMARY KEY (`voteID`),
+  ADD KEY `citizenID` (`citizenID`),
+  ADD KEY `candidateID` (`candidateID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -147,12 +149,6 @@ ALTER TABLE `vote`
 --
 ALTER TABLE `candidate`
   MODIFY `candidateID` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `citizen`
---
-ALTER TABLE `citizen`
-  MODIFY `citizenID` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -175,6 +171,13 @@ ALTER TABLE `vote`
 --
 ALTER TABLE `citizen`
   ADD CONSTRAINT `citizen_ibfk_1` FOREIGN KEY (`employeeID`) REFERENCES `employee` (`employeeID`);
+
+--
+-- Constraints for table `vote`
+--
+ALTER TABLE `vote`
+  ADD CONSTRAINT `vote_ibfk_1` FOREIGN KEY (`candidateID`) REFERENCES `candidate` (`candidateID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `vote_ibfk_2` FOREIGN KEY (`citizenID`) REFERENCES `citizen` (`citizenID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
