@@ -125,17 +125,6 @@ font-size: 0.7rem;
 }
 
 
- img{
-     width: 50%;
-     
-    float:right;
-
-    
-
-
-
-
- }
 
 .reading-content{
  
@@ -350,10 +339,7 @@ input{
    
       .banner-container{
   
-    background: linear-gradient(
-135deg,#5a2672 0%,#1b2554 75%);
-            
- 
+
     font-size: 0.7rem;
   
 
