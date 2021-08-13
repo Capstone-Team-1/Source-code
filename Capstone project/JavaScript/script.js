@@ -28,7 +28,7 @@ x.addEventListener("click", function onMenuClick(){
 
    else if (menuStatus == true){
 y.style.display = "block" ;
-y.style.color = "blue" ;
+y.style.transition = "" ;
 menuStatus = false;
 
    }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/Capstone project/CSS/style.css">
+   
 </head>
 <body>
    <body>
@@ -41,17 +42,16 @@
 <div class="section-form">  
 <div class="login">
     <h2 style="color: whitesmoke;">Election Commission Of Australia </h2>
-    <p id= "template"></p>
+    <p id= "template" style= "color:aliceblue"></p>
     
-<form action="" method="GET" onsubmit="return validate();">
+<form action="" method="GET" onsubmit="return validateRegister();" style="color: white;" >
 
 <br>
-<br>    <label for="cid">
- Citzenship ID
-</label> 
+<br>   
+ <label for="cid"> Citzenship ID</label> 
 <br>
 <br>
-<input type="placeholder" name="vid" id="vid" placeholder="Citizenship ID">
+<input type="placeholder" name="cid" id="cid" placeholder="Citizenship ID">
 <br>
 <br>
 
@@ -60,7 +60,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="vid" id="vid" placeholder="First Name">
+<input type="placeholder" name="fname" id="fname" placeholder="First Name">
 <br>
 <br>
 <label for="lname">
@@ -69,6 +69,46 @@
 <br>
 <br>
 <input type="placeholder" name="lname" id="lname" placeholder="Last Name">
+<br>
+<br>
+<label for="phonenum">
+ Phone Number
+</label> 
+<br>
+<br>
+<input type="placeholder" name="phonenum" id="phonenum" placeholder="Phone Number" value="+61">
+<br>
+<br>
+<label for="Dateof">
+   D.O.B
+</label> 
+<br>
+<br>
+<input type="placeholder" name="Dateof" id="Dateof" placeholder="dd/mm/yyyy">
+<br>
+<br>
+<label for="cEmail">
+ Email
+</label> 
+<br>
+<br>
+<input type="placeholder" name="cEmail" id="cEmail" placeholder="Email" value="@">
+<br>
+<br>
+<label for="caddress">
+   Address 
+</label> 
+<br>
+<br>
+<input type="placeholder" name="caddress" id="caddress" placeholder="address">
+<br>
+<br>
+<label for="city">
+   City
+</label> 
+<br>
+<br>
+<input type="placeholder" name="city" id="city" placeholder="City">
 <br>
 <br>
 <label for="pw">Password</label>
@@ -136,7 +176,7 @@
 
 
 
-
+<script src="/Capstone project/JavaScript/register.js"></script>
 
 </body>
 </html> 
