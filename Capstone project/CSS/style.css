@@ -34,6 +34,10 @@ top: 9px;
 
 
 }
+.sticky-mobile-nav{
+  
+display: none;
+}
 header{
     font-family: 'Lora', serif;
 font-family: 'Open Sans Condensed', sans-serif;
@@ -41,6 +45,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     top: 0;
     background-color: white;
     padding: 5px;
+    margin-bottom: ;
  
   
 
@@ -268,6 +273,13 @@ margin: 120px 240px;
 
 }
    @media all and (max-width:690px){ 
+       .sticky-mobile-nav{
+           display: inline;
+           position: absolute;
+    top: 20px;
+    left: 90%;
+    
+       }
 .logo{
 max-width: 40px;
 position:absolute;
@@ -304,8 +316,9 @@ padding: 50px 20px;
   
 
    .container{
-       display: block;
+       display: none;
      text-align: center;
+
    }
 
 input{

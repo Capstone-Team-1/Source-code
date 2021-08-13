@@ -15,3 +15,21 @@ else{
 }
 
 ///hamburger
+
+
+let x= document.querySelector(".sticky-mobile-nav");
+let y = document.querySelector(".container");
+let menuStatus = false;
+x.addEventListener("click", function onMenuClick(){
+   if (menuStatus== false){
+       y.style.display = "none";
+       menuStatus =true;
+   }
+
+   else if (menuStatus == true){
+y.style.display = "block" ;
+y.style.color = "blue" ;
+menuStatus = false;
+
+   }
+})
