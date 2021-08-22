@@ -28,7 +28,7 @@ a{
 .logo{
 max-width: 50px;
 position:absolute;
-right: 90%;
+right: 94%;
 top: 9px;
 
 
@@ -44,7 +44,8 @@ font-family: 'Open Sans Condensed', sans-serif;
     position: sticky;
     top: 0;
     background-color: white;
-    padding: 5px;
+    /* padding-bottom: 10px; */
+    /* padding: 5px; */
    
  
   
@@ -85,11 +86,12 @@ font-family: 'Open Sans Condensed', sans-serif;
     text-shadow: 2px 2px 5px purple;
 }
 
-
+/* padding were not getting synced on all screen sizes */
 .container{
 display: flex;
-
-padding-bottom: 10px;
+    height:auto;
+    margin-bottom: 5px;
+/* padding-bottom: 10px; */
 
 
 
@@ -99,7 +101,9 @@ padding-bottom: 10px;
 .item{
     flex: 1;
     font-weight: 680;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+
+
   
 
   
@@ -116,27 +120,45 @@ background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);
 background-size: cover;
 
   
-font-size: 0.7rem;
+font-size: 1rem;
     color: white;
-    padding: 30PX;
+    padding: 30px 0;
     font-family: 'Open Sans Condensed', sans-serif;
   
 
 }
 
-
+.banner-header{
+    margin: 0 0 40px 10px;
+}
 
 .reading-content{
  
 margin-top: 10px ;
 text-align: center;
-font-size: 0.9rem;
+font-size: 1.3rem;
 font-family: 'Lora', serif;
 font-family: 'Noto Serif JP', serif;
 font-family: 'Open Sans Condensed', sans-serif;
 
 }
+.image-container{
+    display: flex;
 
+}
+.image{
+    flex:1;
+   
+}
+.image-two{
+    width: 20px;
+  
+    height: 30px;
+}
+.image-three{
+    width: 40px;
+height: -11110px;
+}
 .main-article{
 margin: 50px 10px 5px 25px;
 word-spacing: 1px;
@@ -146,8 +168,9 @@ font-size: 0.7rem;
 .footer-details{
  
 
-font-size:0.9rem;
+font-size:1.1rem;
 text-align: center;
+
 
 }
 .footer-container{
@@ -169,7 +192,7 @@ display: flex;
  
  margin-top: 30px;
    padding: 10px;
-   font-size: 1.9rem;
+   /* font-size: 1.9rem; */
  
   
 }
@@ -261,7 +284,8 @@ margin: 120px 240px;
 }
 
 }
-   @media all and (max-width:690px){ 
+   @media all and (max-width:690px){
+      
        .sticky-mobile-nav{
            display: inline;
            position: absolute;
@@ -305,11 +329,18 @@ padding: 50px 20px;
  
 
    .container{
-       display: none;
+      
+       height: 0px;
+       overflow: hidden;
+       transition: var(--transition);
      text-align: center;
+     display: block;
 
    }
-
+.show-container{
+    height:8.3rem;
+  
+}
 input{
     
     border-radius: 5px;
@@ -329,10 +360,18 @@ input{
   .first {
 
     font-size: 1.5rem;
+
+
   } 
+
+.show-container {
+    height: 6rem;
+}
+
+
 .item{
     margin: 0 0 0 22px;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
 
  
