@@ -148,6 +148,8 @@ Compliance statement</p>
 
        
  </footer>
+
+ <!-The script tag is at the very bottom because its a good practic to keep it al the bottom. it makes it more easier to prase the DOM elements--->
     <script src="./JavaScript/script.js"></script>
 </body>
 </html>
