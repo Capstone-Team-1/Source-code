@@ -234,11 +234,10 @@ display: flex;
 
    
 input{
-   
-    border-radius: 5px;
+ 
    padding: 10px;
  
-    box-shadow: 0.2px 2px 2px 2px #E6AF2E ;
+    box-shadow: 0.2px 0.4px 0.2px 0.2px purple ;
 }
 
 
@@ -246,6 +245,8 @@ input{
 
 
     box-shadow: 2px 2px 2px 2px p#E6AF2E;
+    background-color: linear-gradient(135deg, #5a2672 0%, #1b2554 75%);
+    
 }
 
 
@@ -254,23 +255,25 @@ input{
 
 
   text-align: center;
-  border: 1px solid black;
-  border-radius: 10px;
-font-size: 0.9rem;
+
+ 
+font-size: 1.1rem;
  display: inline-block;
     text-align: center; 
 padding: 10px 40px;
 margin: 30px 300px;
-    box-shadow: 10px 10px 5px grey;
- background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);
+   
+  /* background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);  */
 background-size: cover;
     max-width: 400px;
+    color: black;
    }
   
   .button{
-padding: 5px 10px;
-background-color: lightgreen;
-color: black;
+padding: 15px 30px;
+background: linear-gradient(135deg, #5a2672 0%, #1b2554 75%);
+
+color: white;
 cursor: pointer;
 box-shadow: 0.1px 0.1px 0.1px 0.1px wheat;
   }
@@ -285,8 +288,7 @@ box-shadow: 0.1px 0.1px 0.1px 0.1px wheat;
  #template{
      animation-name: message;
          animation-duration: 6s;
-        
-  animation-direction: reverse; 
+        animation-direction: reverse; 
    animation-iteration-count: infinite;
    animation-timing-function: ease-in;
  }
