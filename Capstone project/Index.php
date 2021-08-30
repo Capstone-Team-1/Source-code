@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Election Commission of Australlia</title>
-    
-<link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 
 
 
@@ -15,18 +14,20 @@
 </head>
 <body>
 
- 
+ <!--The script tag contains location to fetch icons-->
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-
+<!--Header contains nav and heading--->
    <header id="head">
   
 
 
       <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif" alt="" class="logo"></a>
         <h1 class="first">Election Commission of  Australia</h1>
+        <!--The first div is for mobile menu which will trigger height equivalent to the size of the menu items once button is clicked-->
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
      <div id="mobile-nav">
+       <!--Container class contains all the nav menu and it is set to flex--->
         <div class= "container">
              <div class="item one"> 
              <a href="./HTML/login.html" target="blank">For Voters </a>    
@@ -40,10 +41,12 @@
         </div> 
     </header>
 
+    <!--Section class contains all our main content present in the body as per name specified by the class--->
+
     <section class="banner">
  
             <div class="banner-container">
-                      <div class="banner-image"> </div>
+             <div class="banner-image"> </div>
               <div class="banner-items" > </div>
                 <h2 class="banner-header">ECOA ONLINE VOTING SYSTEM
                                
@@ -104,6 +107,8 @@ Compliance statement</p>
 
 
     </div>
+
+    <!--Footer conatins the bottom page description-->
  <footer>
 
 <div class="footer-banner" >
@@ -126,7 +131,7 @@ Compliance statement</p>
 
 
 </div>
-
+<!--This div in particular contains links to various platforms and is set to flex-->
        <div class="footer-link">
 
                     <div class="footxer-link-one">   <ion-icon name="logo-facebook"></ion-icon></div>
