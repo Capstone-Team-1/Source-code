@@ -31,7 +31,7 @@ session_start();
         <div class= "container">
           <div class="item one">
                  
-            <a href="./Capstone project/Index.php">Homepage</a> </div>
+            <a href="../Index.php">Homepage</a> </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>

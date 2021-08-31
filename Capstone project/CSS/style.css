@@ -30,7 +30,7 @@ a{
 
 /*The main logo on the header*/
 .logo{
-width: 50px;
+width: 60px;
 position:absolute;
 right: 94%;
 top: 9px;
@@ -102,9 +102,9 @@ transition : all 0.2s ease-in;
 
 }
 .logo:hover{
-height: 60px;
-width: 60px;
-/* transition: all 0.4s ease;     */
+
+width: 65px;
+ transition: all 0.4s ease;    
 }
 /* padding were not getting synced on all screen sizes */
 /*The container that we specified our nav menu*/
@@ -291,7 +291,7 @@ input[type=password]:focus {
 
 
 
- 
+ background-color: whitesmoke;
 font-size: 1.2rem;
 
  display: inline-block; 

@@ -15,11 +15,12 @@
          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     
 <header>
+   
        <img src="/Capstone project/Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
         <h1 class="first">Election Commission of  Australia</h1>
         <div class= "container">
              <div class="item one">
-                 <a href="/Capstone project/Index.php">Homepage</a> </div>
+                 <a href="../Index.php">Homepage</a> </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
@@ -144,6 +145,18 @@
 
 
 <input type="submit" class="button" name="signup" value="SIGN UP">
+<br>
+<br>
+
+<label for="check">
+    Already registered?
+    <br>
+    <br>
+    Click the link below to Login yourself!!!
+</label>
+<br>
+<br>
+<a href="../HTML/login.php" style="color:red;"> Login Now</a>
 
 
 
