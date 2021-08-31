@@ -214,6 +214,10 @@ font-family: 'Open Sans Condensed', sans-serif;
 height: -11110px;
 } */
 
+.success{
+    margin-top: 40px;
+  color: rgb(52, 184, 52);
+}
 
 .main-article{
 margin: 50px 10px 5px 25px;

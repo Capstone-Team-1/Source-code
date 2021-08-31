@@ -56,10 +56,10 @@ session_start();
                     </div>
         </div>
 
-        <section style="margin-top: 30px;">
-            <h3 style="font-size: 40px; color:black">
-                Thank You dear user registartion complete!!!!
-            </h3>
+        <section class="success">
+            <h5>
+                Thank You, your registartion process is complete!!!!
+            </h5>
             <img src="check.gif" alt="" style="margin-top: 30px;">
             <br>
 
