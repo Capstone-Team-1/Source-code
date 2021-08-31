@@ -20,7 +20,7 @@
   
 
 
-      <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif" alt="" class="logo"></a>
+    <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif" alt="" class="logo"></a>
         <h1 class="first">Election Commission of  Australia</h1>
         <!--The first div is for mobile menu which will trigger height equivalent to the size of the menu items once button is clicked-->
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
@@ -28,7 +28,7 @@
        <!--Container class contains all the nav menu and it is set to flex--->
  <div class= "container">        
 <div class="item one">
-  <div class= dropdown> For Voters
+  <div class= "dropdown"> For Voters
        <div class="dropdown-content">
            <a href="./HTML/login.php">Voter Login</a>
            <a href="./HTML/register.php"> Registration</a>
