@@ -6,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Election Commission of Australlia</title>
     <link rel="stylesheet" href="./CSS/style.css">
-
-
-
-
-
 </head>
+
+
 <body>
+
 
  <!--The script tag contains location to fetch icons-->
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-<!--Header contains nav and heading--->
-   <header id="head">
+<!--Header contains nav and heading following the semantic tags from HTML5--->
+   <header>
   
 
 
@@ -26,19 +24,15 @@
         <h1 class="first">Election Commission of  Australia</h1>
         <!--The first div is for mobile menu which will trigger height equivalent to the size of the menu items once button is clicked-->
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
-     <div id="mobile-nav">
+     
        <!--Container class contains all the nav menu and it is set to flex--->
-        <div class= "container">
-         
-
-
-             <div class="item one">
+ <div class= "container">        
+<div class="item one">
   <div class= dropdown> For Voters
        <div class="dropdown-content">
            <a href="./HTML/login.php">Voter Login</a>
            <a href="./HTML/register.php"> Registration</a>
-             
-             </div>
+              </div>
 </div>
                 </div>
               <div class="item two">For candidates </div>
