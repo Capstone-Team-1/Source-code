@@ -26,12 +26,11 @@ session_start();
          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     
 <header>
- <a href="../Index.php">  <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
+ <a href="/Capstone project/Index.php">  <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
         <h1 class="first">Election Commission of  Australia</h1>
         <div class= "container">
           <div class="item one">
-                 
-             <a href="./Capstone project/Index.php">Homepage</a> </div>
+             <a href="/Capstone project/Index.php">Homepage</a> </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>

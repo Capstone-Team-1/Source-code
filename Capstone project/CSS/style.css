@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Serif+JP:wght@300&family=Open+Sans+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hind+Siliguri:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 *{
     margin: 0; /*Margin and padding to 0 inorder to get rid of the unwanted default margin and padding*/
@@ -123,14 +123,9 @@ display: flex;
 /*The nested menu items  inside the conatiner div*/
 .item{
     flex: 1;
+
     font-weight: 680;
     font-size: 1.2rem;
-  
-
-
-  
-
-  
 }
 .dropdown-content {
     display: none;

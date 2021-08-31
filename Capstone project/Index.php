@@ -26,6 +26,7 @@
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
      
        <!--Container class contains all the nav menu and it is set to flex--->
+       
  <div class= "container">        
 <div class="item one">
   <div class= "dropdown"> For Voters
@@ -33,7 +34,7 @@
            <a href="./HTML/login.php">Voter Login</a>
            <a href="./HTML/register.php"> Registration</a>
               </div>
-</div>
+            </div>
                 </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
@@ -46,8 +47,8 @@
 
     <!--Section class contains all our main content present in the body as per name specified by the class--->
 
-    <section class="banner">
- 
+
+     
             <div class="banner-container">
              <div class="banner-image"> </div>
                 <h2 class="banner-header">ECOA ONLINE VOTING SYSTEM
@@ -66,7 +67,7 @@
           
         </div>
 
-    </section>
+
 
     <div class="reading-content">
    
@@ -86,7 +87,7 @@
       <h3 style="color: #009cde;">WELCOME
 Welcome to our corporate plan
 Welcome to the Australian Electoral Commission (AEC) 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3> 
- <p style="font-size: 1.3rem; text-align: justify;">
+ <p style="font-size: 1.4rem; text-align: justify;">
 Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
 
 To remain agile—now and into the future—we must continue refining our election delivery model through our lessons management approach. <br> <br>  We will continue to evolve our planning processes, address the delivery of electoral events in a pandemic, and improve our delivery model for future electoral cycles.
@@ -118,7 +119,7 @@ Compliance statement</p>
 
 <div class= "footer-details">
      <h3 style="color: azure; font-size: 1.8rem; font-weight: 550px;">Election Comission of Australia</h3>
-     <p style="font-family: 'Dancing Script', cursive; font-size: 1.4em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+     <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 

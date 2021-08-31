@@ -19,7 +19,7 @@ else{
 
 let x= document.querySelector(".sticky-mobile-nav");
 let y = document.querySelector(".container");
-let menuStatus = false;
+// let menuStatus = false;
 x.addEventListener("click", function onMenuClick(){
 
     y.classList.toggle('show-container');
