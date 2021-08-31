@@ -50,7 +50,6 @@
  
             <div class="banner-container">
              <div class="banner-image"> </div>
-              <div class="banner-items" > </div>
                 <h2 class="banner-header">ECOA ONLINE VOTING SYSTEM
                                
                <!-- <div class="banner-list">
