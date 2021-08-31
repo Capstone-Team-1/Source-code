@@ -45,72 +45,105 @@
     <h2>Election Commission Of Australia </h2>
     <p id= "template"></p>
     
-<form action="" method="GET" onsubmit="return validateRegister();" >
-
+<p id="msg"> </p>
 <br>
 <br>   
  <label for="cid"> Citzenship ID</label> 
-
-<input type="placeholder" name="cid" id="cid" placeholder="Citizenship ID">
+<br>
+<br>
+<input type="placeholder" name="citizenID" id="cid" placeholder="Citizenship ID" value="">
 <br>
 <br>
 
-<label for="fname" >
+    <label for="fname" >
    First Name
 </label> 
-
-<input type="placeholder" name="fname" id="fname" placeholder="First Name">
+<br>
+<br>
+<input type="placeholder" name="citizenFName" id="fname" placeholder="First Name"  value="">
 <br>
 <br>
 <label for="lname">
    Last Name
 </label> 
-
-<input type="placeholder" name="lname" id="lname" placeholder="Last Name">
+<br>
+<br>
+<input type="placeholder" name="citizenLName" id="lname" placeholder="Last Name" value="">
 <br>
 <br>
 <label for="phonenum">
  Phone Number
 </label> 
-
-<input type="placeholder" name="phonenum" id="phonenum" placeholder="Phone Number" value="+61">
+<br>
+<br>
+<input type="placeholder" name="citizenPhonenum" id="phonenum" placeholder="Phone Number" value="">
 <br>
 <br>
 <label for="Dateof">
    D.O.B
 </label> 
-
-<input type="placeholder" name="Dateof" id="Dateof" placeholder="dd/mm/yyyy">
+<br>
+<br>
+<input type="placeholder" name="citizenDOB" id="Dateof" placeholder="dd/mm/yyyy" value="">
 <br>
 <br>
 <label for="cEmail">
  Email
 </label> 
-
-<input type="placeholder" name="cEmail" id="cEmail" placeholder="Email" value="@">
+<br>
+<br>
+<input type="placeholder" name="citizenEmail" id="cEmail" placeholder="Email"  value="">
 <br>
 <br>
 <label for="caddress">
    Address 
 </label> 
-
-<input type="placeholder" name="caddress" id="caddress" placeholder="address">
+<br>
+<br>
+<input type="placeholder" name="citizenAddress" id="caddress" placeholder="address"  value="" >
 <br>
 <br>
 <label for="city">
    City
 </label> 
-
-<input type="placeholder" name="city" id="city" placeholder="City">
+<br>
+<br>
+<input type="placeholder" name="citizenCity" id="city" placeholder="City" value="">
+<br>
+<br>
+<label for="state">
+   State
+</label> 
+<br>
+<br>
+<input type="placeholder" name="citizenState" id="state" placeholder="State" value="">
+<br>
+<br>
+<label for="Zip">
+  ZIP
+</label> 
+<br>
+<br>
+<input type="placeholder" name="citizenZip" id="Zip" placeholder="Zip"value="">
 <br>
 <br>
 <label for="pw">Password</label>
-
-<input type="password" name="pw" id="pw" placeholder="Password">
+<br>
+<br>
+<input type="password" name="pw" id="Citizenpw" placeholder="Password" value="">
 <br>
 
 <br>
-<input type="submit" class="button">
+<label for="cpw">Confirm Password</label>
+<br>
+<br>
+<input type="password" name="confirmpw" id="cpw" placeholder="Password"value="">
+<br>
+
+<br>
+
+
+<input type="submit" class="button" name="signup" value="SIGN UP">
 
 
 
@@ -119,6 +152,8 @@
 
 
 </form>
+
+
 
 </div>
 
