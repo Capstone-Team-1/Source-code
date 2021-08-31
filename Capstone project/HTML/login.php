@@ -1,27 +1,28 @@
 <?php
 include 'connection.php';
 session_start();
-
+error_reporting(0);
+//session start done so that browser can know about who the user is once log in
 if (isset($_SESSION["votersId"])) {
   header("Location: candidate.php");
 }
+//the isset method keeps the session id and the directs the users towards candidate page if the user is authorised
 
 
 
-
-
+//Here we check whether the available informatioon is in database or not 
 if (isset($_POST["login"])){
   
-  $citizenID = mysqli_real_escape_string($conn, $_POST["votersId"]);
+  $citizenID = mysqli_real_escape_string($conn, $_POST["votersId"]); //if you check the forms the value on the post methods match hence they communicate with each other regarding the infromation entered
 $citizenVPW = mysqli_real_escape_string($conn, md5($_POST["passWord"]));
 //$citizenVCPW = mysqli_real_escape_string($conn, md5($_POST["cpassWord"]));
      //   $citizenCPW = mysqli_real_escape_string($conn, md5($_POST["confirmpw"]));
- $checkcitizenID = mysqli_query($conn, "SELECT * FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW' AND citizenFName AND CitizenLName");
+ $checkcitizenID = mysqli_query($conn, "SELECT * FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'"); //This is the query to check the information passed on
  //$fetchCitizenUsername = mysqli_query($conn, "SELECT citizenFName, citizenLName FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'");
-if(mysqli_num_rows($checkcitizenID)>0){
+if(mysqli_num_rows($checkcitizenID)>0){   //if citizen id is present than it will direct the user with record of session
   $row = mysqli_fetch_assoc($checkcitizenID);
   $_SESSION['votersId']= $row['citizenID'];
-  $_SESSION['citizenName'] = $row['citizenFName'];
+
   header("Location : candidate.php");
 
 }
@@ -98,14 +99,14 @@ else{
 <label for="pw">Password</label>
 <br>
 <br>
-<input type="password" name="passWord" id="pw">
+<input type="password" name="passWord" id="pw"> <!--The name parameter is the one responsible in connection with php--->
 <br>
 <br>
 <br>
 <!-- <label for="pw">Confirm Password</label>
 <br>
 <br>
-<input type="password" name="cpassWord" id="pw" value=" <?php echo $_POST['cpassWord']; ?>">
+<input type="password" name="cpassWord" id="pw" value="<?php echo $_POST['cpassWord']; ?>">
 <br>
 <br> -->
 <input type="submit" name ="login" class="button">
