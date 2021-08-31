@@ -97,7 +97,7 @@ header{
 .item:hover, .banner-one:hover, .footer-item:hover, .fooxter-lin:hover{
     text-decoration: underline;
     cursor: pointer;
-    text-shadow: 2px 2px 7px purple;
+    text-shadow: 2px 2px 12px purple;
 transition : all 0.2s ease-in;
 
 }
@@ -125,13 +125,47 @@ display: flex;
     flex: 1;
     font-weight: 680;
     font-size: 1.2rem;
+  
 
 
   
 
   
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 60px;
+    background-color: whitesmoke;
 
+    /* background-image: linear-gradient(135deg, #3B2667 10%, #BC78EC 100%); */
+    min-width: 210px;
+    min-height: 100px;
+
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.dropdown-content a {
+
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-shadow: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+
+}
+
+.dropdown-content a:hover {
+
+    background-image: linear-gradient(135deg, #EE9AE5 10%, #5961F9 100%);
+    transition: background 0.3s ease-in;
+}
 /*banner list class is for the details list part we are setting a image a side it */
 
 
@@ -243,7 +277,7 @@ input{
 }
 input[type=text]:focus,
 input[type=password]:focus {
-    background-color: #ddd;
+  
     outline: none;
 }
 

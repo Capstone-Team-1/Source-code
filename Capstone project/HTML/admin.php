@@ -31,11 +31,11 @@ session_start();
         <div class= "container">
           <div class="item one">
                  
-            <a href="./Capstone project/Index.php">Homepage</a> </div>
+             <a href="./Capstone project/Index.php">Homepage</a> </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
-                 <div class="item five ">  <a href="./admin.php"> ECOA</a> </div>
+                 <div class="item five ">    <a href="./admin.php"> ECOA</a> </div>
                <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
         </div>
     </header>
@@ -46,13 +46,13 @@ session_start();
             <div class="banner-container">
               <div class="banner-items" >
                 <h2 class="banner-header">
-                    <br> Welcome to ECOA online voting platform
+                    <br> Admin Login
                     <br>Please fill up the form to continue!
                 </h2>
                
                     </div>
         </div>
-</section>
+
 <div class="section-form">  
 <div class="login">
     <h2>Election Commission Of Australia </h2>
@@ -60,7 +60,7 @@ session_start();
     
 <form action="" method="GET" onsubmit="return validate();" >
 <label for="vid">
-    Voters ID
+    Admin ID
 </label> 
 <br>
 <br>
@@ -80,14 +80,14 @@ session_start();
 <br>
 
 <label for="check">
-    Not registered?
+    Are you a registered voter?
     <br>
     <br>
-    Click the link below to register yourself!!!
+    Click the link below to login!!
 </label>
 <br>
 <br>
-<a href="../HTML/register.php" style="color:red;"> Register Now</a>
+<a href="../HTML/login.php" style="color:red;"> Voters Login</a>
 
 </form>
 

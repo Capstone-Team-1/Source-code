@@ -29,13 +29,22 @@
      <div id="mobile-nav">
        <!--Container class contains all the nav menu and it is set to flex--->
         <div class= "container">
-             <div class="item one"> 
-             <a href="./HTML/login.php" target="blank">For Voters </a>    
+         
+
+
+             <div class="item one">
+  <div class= dropdown> For Voters
+       <div class="dropdown-content">
+           <a href="./HTML/login.php">Voter Login</a>
+           <a href="./HTML/register.php"> Registration</a>
+             
+             </div>
+</div>
                 </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
-                 <div class="item five "> The ECOA </div>
+                 <div class="item five ">  <a href="./HTML/admin.php"> ECOA</a> </div>
                
         </div>
         </div> 

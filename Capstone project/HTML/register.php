@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/Capstone project/CSS/style.css">
+      <link rel="stylesheet" href="../CSS/style.css">
    
 </head>
 <body>
@@ -19,7 +19,7 @@
         <h1 class="first">Election Commission of  Australia</h1>
         <div class= "container">
              <div class="item one">
-                 <a href="/Capstone project/HTML/login.php">For Voters</a> </div>
+                 <a href="/Capstone project/Index.php">Homepage</a> </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
