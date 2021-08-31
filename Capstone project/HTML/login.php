@@ -1,7 +1,7 @@
 <?php
 include 'connection.php';
 session_start();
-error_reporting(0);
+
 if (isset($_SESSION["votersId"])) {
   header("Location: candidate.php");
 }
@@ -16,11 +16,12 @@ if (isset($_POST["login"])){
 $citizenVPW = mysqli_real_escape_string($conn, md5($_POST["passWord"]));
 //$citizenVCPW = mysqli_real_escape_string($conn, md5($_POST["cpassWord"]));
      //   $citizenCPW = mysqli_real_escape_string($conn, md5($_POST["confirmpw"]));
- $checkcitizenID = mysqli_query($conn, "SELECT * FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'");
+ $checkcitizenID = mysqli_query($conn, "SELECT * FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW' AND citizenFName AND CitizenLName");
  //$fetchCitizenUsername = mysqli_query($conn, "SELECT citizenFName, citizenLName FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'");
 if(mysqli_num_rows($checkcitizenID)>0){
   $row = mysqli_fetch_assoc($checkcitizenID);
   $_SESSION['votersId']= $row['citizenID'];
+  $_SESSION['citizenName'] = $row['citizenFName'];
   header("Location : candidate.php");
 
 }
@@ -91,13 +92,13 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="votersId" id="vid" value="<?php echo $_POST['votersId']; ?>">
+<input type="placeholder" name="votersId" id="vid" >
 <br>
 <br>
 <label for="pw">Password</label>
 <br>
 <br>
-<input type="password" name="passWord" id="pw" value="<?php echo $_POST['passWord']; ?>">
+<input type="password" name="passWord" id="pw">
 <br>
 <br>
 <br>
@@ -130,11 +131,11 @@ else{
 </div>
 <footer>
 
-<div class="footer-banner" >
+<div class="footer-banner" style="text-align: justify;" >
     <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
 
 <div class= "footer-details">
-     <p style="font-family: 'Dancing Script', cursive;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>   
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 

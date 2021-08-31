@@ -38,7 +38,9 @@ session_start();
                <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
         </div>
          <div class = "user-name" style="position:absolute; bottom: 50%; left: 95% ; font-size: 24px;">         <?php 
-     echo $_SESSION["votersId"]; ?>
+     echo $_SESSION["votersId"];
+    
+   ?>
     </header>
 
 
@@ -48,7 +50,7 @@ session_start();
               <div class="banner-items" >
                 <h2 class="banner-header">
                     <br> Welcome Dear user   <?php 
-     echo $_SESSION["votersId"]; ?>
+     echo $_SESSION["votersId"];   ?>
                     <br>Please choose in your selection to continue!!!
                 </h2>
                
@@ -61,7 +63,7 @@ session_start();
     <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
 
 <div class= "footer-details">
-     <p style="font-family: 'Dancing Script', cursive;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 

@@ -102,7 +102,7 @@ session_start();
     <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
 
 <div class= "footer-details">
-     <p style="font-family: 'Dancing Script', cursive;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em; justify-content:center">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 

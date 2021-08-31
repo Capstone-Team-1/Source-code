@@ -60,7 +60,7 @@ session_start();
             <h3 style="font-size: 40px; color:black">
                 Thank You dear user registartion complete!!!!
             </h3>
-            <img src="check.png" alt="" style="margin-top: 30px;">
+            <img src="check.gif" alt="" style="margin-top: 30px;">
             <br>
 
             <a href="./login.php" alt="" title=""> Click here to get redirected to login page!! </a>
@@ -73,7 +73,7 @@ session_start();
     <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
 
 <div class= "footer-details">
-     <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 

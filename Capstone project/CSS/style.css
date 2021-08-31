@@ -25,7 +25,7 @@
 
 a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 /*The main logo on the header*/
@@ -256,6 +256,7 @@ display: flex;
 .fooxter-link{
 
     flex: 1 ;
+    color: white;
   
     
     
