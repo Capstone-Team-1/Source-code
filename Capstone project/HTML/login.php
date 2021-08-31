@@ -1,9 +1,36 @@
-<?php 
+<?php
 include 'connection.php';
 session_start();
+error_reporting(0);
+if (isset($_SESSION["votersId"])) {
+  header("Location: candidate.php");
+}
 
+
+
+
+
+if (isset($_POST["login"])){
+  
+  $citizenID = mysqli_real_escape_string($conn, $_POST["votersId"]);
+$citizenVPW = mysqli_real_escape_string($conn, md5($_POST["passWord"]));
+//$citizenVCPW = mysqli_real_escape_string($conn, md5($_POST["cpassWord"]));
+     //   $citizenCPW = mysqli_real_escape_string($conn, md5($_POST["confirmpw"]));
+ $checkcitizenID = mysqli_query($conn, "SELECT * FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'");
+ //$fetchCitizenUsername = mysqli_query($conn, "SELECT citizenFName, citizenLName FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'");
+if(mysqli_num_rows($checkcitizenID)>0){
+  $row = mysqli_fetch_assoc($checkcitizenID);
+  $_SESSION['votersId']= $row['citizenID'];
+  header("Location : candidate.php");
+
+}
+
+else{
+
+  echo "<script> alert('The details does not match') </script>";
+}
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,42 +82,46 @@ session_start();
 </section>
 <div class="section-form">  
 <div class="login">
-    <h2>Election Commission Of Australia </h2>
+     <h2>Election Commission Of Australia </h2>
     <p id= "template"></p>
     
-<form action="" method="GET" onsubmit="return validate();" >
+<form action="" method="POST" class = "siginForm" onsubmit="return validate();">
 <label for="vid">
     Voters ID
 </label> 
 <br>
 <br>
-<input type="placeholder" name="vid" id="vid">
+<input type="placeholder" name="votersId" id="vid" value="<?php echo $_POST['votersId']; ?>">
 <br>
 <br>
 <label for="pw">Password</label>
 <br>
 <br>
-<input type="password" name="pw" id="pw">
+<input type="password" name="passWord" id="pw" value="<?php echo $_POST['passWord']; ?>">
 <br>
+<br>
+<br>
+<!-- <label for="pw">Confirm Password</label>
+<br>
+<br>
+<input type="password" name="cpassWord" id="pw" value=" <?php echo $_POST['cpassWord']; ?>">
+<br>
+<br> -->
+<input type="submit" name ="login" class="button">
 
 <br>
-<input type="submit" class="button">
-
 <br>
-<br>
-
 <label for="check">
     Not registered?
     <br>
     <br>
-    Click the link below to register yourself!!!
+    Click the link below to register yourself
 </label>
 <br>
 <br>
-<a href="../HTML/register.php" style="color:red;"> Register Now</a>
+<a href="register.php" style="color:red;"> Register Now</a>
 
 </form>
-
 
 
 <div></div>
@@ -107,7 +138,7 @@ session_start();
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 
-             <div class="footer-item one"> For Voters</div>
+             <div class="footer-item one"> Homepage</div>
               <div class="footer-item two">For candidates </div>
                <div class="footer-item three"> About election </div>
                 <div class="footer-item four"> Information Centre</div>
@@ -121,9 +152,9 @@ session_start();
 
        <div class="footer-link">
 
-                    <div class="footxer-link-one">   <ion-icon name="logo-facebook"></ion-icon></div>
-                    <div class="footxer-link-two"> <ion-icon name="logo-twitter"></ion-icon></div>
-                      <div class="fooxter-link-three"> <ion-icon name="logo-instagram"></ion-icon></div>
+                    <div class="footxer-link-one">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-facebook"></ion-icon></a>  </div>
+                    <div class="footxer-link-two">   <a href="https://twitter.com/auselectoralcom"> <ion-icon name="logo-twitter"></ion-icon></a>   </div>
+                      <div class="fooxter-link-three">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-instagram"></ion-icon></a>  </div>
                        
                 </div> 
          

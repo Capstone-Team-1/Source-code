@@ -7,10 +7,10 @@ $dbName = "voting";
 
 $conn = mysqli_connect($dbServerName, $dbUsername, $dbPassword, $dbName)
  or die("database connection failed");
-  if ($conn){
-      echo "Connection Successful";
+  // if ($conn){
+  //     echo "Connection Successful";
 
-  }
+  // }
 //  else {
 //      die ("Connection Failed. Reason: ".mysqli_connect_error());
 //  } 

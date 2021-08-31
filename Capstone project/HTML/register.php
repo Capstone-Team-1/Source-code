@@ -1,3 +1,62 @@
+<?php 
+
+include 'connection.php';
+error_reporting(0);
+if (isset($_POST["signup"])){
+  echo "connection is done";
+  $citizenID = mysqli_real_escape_string($conn, $_POST["citizenID"]); 
+  $citizenFName = mysqli_real_escape_string($conn, $_POST["citizenFName"]);
+ $citizenLName = mysqli_real_escape_string($conn, $_POST["citizenLName"]);
+$citizenPhone = mysqli_real_escape_string($conn, $_POST["citizenPhonenum"]);
+ $citizenDOB = mysqli_real_escape_string($conn, $_POST["citizenDOB"]);
+   $citizenEmail = mysqli_real_escape_string($conn, $_POST["citizenEmail"]);
+    $citizenAddress = mysqli_real_escape_string($conn, $_POST["citizenAddress"]);
+     $citizenCity = mysqli_real_escape_string($conn, $_POST["citizenCity"]);
+      $citizenState = mysqli_real_escape_string($conn, $_POST["citizenState"]);
+       $citizenZip = mysqli_real_escape_string($conn, $_POST["citizenZip"]);
+        $citizenPW = mysqli_real_escape_string($conn, md5($_POST["pw"]));
+        $citizenCPW = mysqli_real_escape_string($conn, md5($_POST["confirmpw"]));
+
+       $checkregestringID = mysqli_num_rows(mysqli_query($conn, "SELECT citizenID FROM citizen WHERE citizenID='$citizenID'"));
+if ($citizenPW !== $citizenCPW ){
+echo "<script> alert ('Sorry your password does not match.'); </script>"; ##checking if the input data match
+
+}
+ else if($checkregestringID>1){
+   echo "<script> alert('Hey you have already registered please log in');
+    </script>";
+   
+ }
+else{
+$sql=" INSERT INTO citizen(citizenID, citizenFName, citizenLName, citizenPhone, citizenDOB, citizenEmail, citizenAddress, citizenCity, citizenState, citizenZip, citizenPassword, citizenAllowed, employeeID) VALUES ('$citizenID','$citizenFName','$citizenLName','$citizenPhone','$citizenDOB','$citizenEmail','$citizenAddress','$citizenCity','$citizenState','$citizenZip','$citizenPW','','1') ";
+$result = mysqli_query($conn, $sql);
+ header("Location: success.php");
+if($result){
+
+  $_POST["citizenID"]= "";
+   $_POST["citizenFName"] = "";
+   $_POST["citizenLName"] = "";
+   $_POST["citizenPhonenum"] = "";
+ $_POST["citizenDOB"]= "";
+ $_POST["citizenEmail"] = "";
+ $_POST["citizenAddress"]= "";
+$_POST["citizenCity"] ="";
+$_POST["citizenState"]= "";
+$_POST["citizenZip"]= "";
+$_POST["pw"] ="";
+$_POST["confirmpw"] ="";
+
+echo "<script> alert ('User registration success.'); </script>";
+
+}
+else{
+  echo "<script> alert ('user registration failed.'); </script>";
+}
+}
+}
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,16 +102,18 @@
 
 <div class="section-form">  
 
-    <h2>Election Commission Of Australia </h2>
+    <h2 >Election Commission Of Australia </h2>
     <p id= "template"></p>
     
+<form action="#" method="post" onsubmit="return validateRegister();"  >
+
 <p id="msg"> </p>
 <br>
 <br>   
  <label for="cid"> Citzenship ID</label> 
 <br>
 <br>
-<input type="placeholder" name="citizenID" id="cid" placeholder="Citizenship ID" value="">
+<input type="placeholder" name="citizenID" id="cid" placeholder="Citizenship ID" value="<?php echo $_POST["citizenID"]; ?>">
 <br>
 <br>
 
@@ -61,7 +122,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenFName" id="fname" placeholder="First Name"  value="">
+<input type="placeholder" name="citizenFName" id="fname" placeholder="First Name"  value="<?php echo $_POST["citizenFName"]; ?>">
 <br>
 <br>
 <label for="lname">
@@ -69,7 +130,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenLName" id="lname" placeholder="Last Name" value="">
+<input type="placeholder" name="citizenLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["citizenLName"]; ?>">
 <br>
 <br>
 <label for="phonenum">
@@ -77,7 +138,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenPhonenum" id="phonenum" placeholder="Phone Number" value="">
+<input type="placeholder" name="citizenPhonenum" id="phonenum" placeholder="Phone Number" value="<?php echo $_POST["citizenPhonenum"]; ?>">
 <br>
 <br>
 <label for="Dateof">
@@ -85,7 +146,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenDOB" id="Dateof" placeholder="dd/mm/yyyy" value="">
+<input type="placeholder" name="citizenDOB" id="Dateof" placeholder="dd/mm/yyyy" value="<?php echo $_POST["citizenDOB"]; ?>">
 <br>
 <br>
 <label for="cEmail">
@@ -93,7 +154,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenEmail" id="cEmail" placeholder="Email"  value="">
+<input type="placeholder" name="citizenEmail" id="cEmail" placeholder="Email"  value="<?php echo $_POST["citizenEmail"]; ?>">
 <br>
 <br>
 <label for="caddress">
@@ -101,7 +162,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenAddress" id="caddress" placeholder="address"  value="" >
+<input type="placeholder" name="citizenAddress" id="caddress" placeholder="address"  value="<?php echo $_POST["citizenAddress"]; ?>" >
 <br>
 <br>
 <label for="city">
@@ -109,7 +170,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenCity" id="city" placeholder="City" value="">
+<input type="placeholder" name="citizenCity" id="city" placeholder="City" value="<?php echo $_POST["citizenCity"]; ?>">
 <br>
 <br>
 <label for="state">
@@ -117,7 +178,7 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenState" id="state" placeholder="State" value="">
+<input type="placeholder" name="citizenState" id="state" placeholder="State" value="<?php echo $_POST["citizenState"]; ?>">
 <br>
 <br>
 <label for="Zip">
@@ -125,28 +186,29 @@
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenZip" id="Zip" placeholder="Zip"value="">
+<input type="placeholder" name="citizenZip" id="Zip" placeholder="Zip"value="<?php echo $_POST["citizenZip"]; ?>">
 <br>
 <br>
 <label for="pw">Password</label>
 <br>
 <br>
-<input type="password" name="pw" id="Citizenpw" placeholder="Password" value="">
+<input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
 <br>
 
 <br>
 <label for="cpw">Confirm Password</label>
 <br>
 <br>
-<input type="password" name="confirmpw" id="cpw" placeholder="Password"value="">
+<input type="password" name="confirmpw" id="cpw" placeholder="Password"value="<?php echo $_POST["confirmpw"]; ?>">
 <br>
 
 <br>
 
 
 <input type="submit" class="button" name="signup" value="SIGN UP">
-<br>
-<br>
+
+
+ 
 
 <label for="check">
     Already registered?
