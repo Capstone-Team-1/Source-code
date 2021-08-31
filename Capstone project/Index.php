@@ -30,7 +30,7 @@
        <!--Container class contains all the nav menu and it is set to flex--->
         <div class= "container">
              <div class="item one"> 
-             <a href="./HTML/login.html" target="blank">For Voters </a>    
+             <a href="./HTML/login.php" target="blank">For Voters </a>    
                 </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
