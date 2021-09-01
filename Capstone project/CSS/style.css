@@ -94,11 +94,11 @@ header{
  }
 
  /*The effect that we get upon hovering oover the contents*/
-.item:hover, .banner-one:hover, .footer-item:hover, .fooxter-lin:hover{
+.item:hover, .banner-one:hover, .footer-item:hover, .fooxter-link:hover{
     text-decoration: underline;
     cursor: pointer;
     text-shadow: 2px 2px 12px purple;
-transition : all 0.2s ease-in;
+transition : all 5s ease-in;
 
 }
 .logo:hover{

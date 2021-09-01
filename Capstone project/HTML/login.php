@@ -4,7 +4,7 @@ session_start();
 error_reporting(0);
 //session start done so that browser can know about who the user is once log in
 if (isset($_SESSION["votersId"])) {
-  header("Location: candidate.php");
+  header("Location: ./candidate.php");
 }
 //the isset method keeps the session id and the directs the users towards candidate page if the user is authorised
 
@@ -23,7 +23,7 @@ if(mysqli_num_rows($checkcitizenID)>0){   //if citizen id is present than it wil
   $row = mysqli_fetch_assoc($checkcitizenID);
   $_SESSION['votersId']= $row['citizenID'];
 
-  header("Location : candidate.php");
+  header("Location : ./candidate.php");
 
 }
 
