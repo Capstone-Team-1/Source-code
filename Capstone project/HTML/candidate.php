@@ -37,8 +37,10 @@ session_start();
                  <div class="item five ">    <a href="./logout.php"> Log Out</a> </div>
                <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
         </div>
-         <div class = "user-name" style="position:absolute; bottom: 50%; left: 95% ; font-size: 24px;">         <?php 
-     echo $_SESSION["votersId"];
+        <!---This div class will display the user name as per the session --->
+         <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php 
+     echo    $_SESSION['citizenFName'] . " ". $_SESSION['citizenLName'] ;
+
     
    ?>
     </header>
@@ -48,10 +50,12 @@ session_start();
      
             <div class="banner-container">
               <div class="banner-items" >
+                <!---This h2 will display the user name as per the session --->
                 <h2 class="banner-header">
-                    <br> Welcome Dear user   <?php 
-     echo $_SESSION["votersId"];   ?>
-                    <br>Please choose in your selection to continue!!!
+
+                    <br> Welcome <?php 
+     echo $_SESSION['citizenFName'] . " ". $_SESSION['citizenLName'] . "!!" ?>
+                    <br>Please choose in your Candidate to continue!!!
                 </h2>
                
                     </div>

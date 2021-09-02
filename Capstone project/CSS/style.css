@@ -97,7 +97,8 @@ header{
 .item:hover, .banner-one:hover, .footer-item:hover, .fooxter-link:hover{
     text-decoration: underline;
     cursor: pointer;
-    text-shadow: 2px 2px 12px purple;
+    text-shadow: 2px 2px 2px purple;
+
 transition : all 5s ease-in;
 
 }
