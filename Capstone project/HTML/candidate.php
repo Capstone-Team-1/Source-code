@@ -61,6 +61,35 @@ session_start();
                     </div>
         </div>
 
+        <h1>Candidates</h1>
+        <centre> 
+        <div class="containerT">
+            <div id="C1-box">
+              <h1> Kripu </h1>
+                <p>this will display a picture of the candidate as well as some details relevant to the voter
+</p>
+<Button> Select </Button>
+            </div>
+              
+            <div id="C2-box">
+              <h1>Teresa</h1>
+                <p>
+                   Candidate 2 image here
+                </p>
+                <Button> Select </Button>
+            </div>
+              
+            <div id="C3-box">
+                <!---img src= --->
+              <h1> Juan </h1>
+              <p> candidate 3 image here</p>
+              <Button> Select </Button>
+            </div>
+        </div>
+        </centre>
+
+
+
 
 
 <div class="footer-banner" >
