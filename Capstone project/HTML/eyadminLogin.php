@@ -61,44 +61,14 @@ session_start();
 
                     <br>
                     <br>
-                    <h2>Admin Election Commission Of Australia </h2>
+                    <h2>Admin Login <br>Election Commission Of Australia </h2>
                     <p id="template"></p>
-                    <form action="" method="GET" onsubmit="return validate();">
-                        <label for="vid">
-                        </label>
-                        <br>
-                        <br>
-                        <input type="placeholder" placeholder='ID' name="vid" id="vid">
-                        <!--<br>
-<br>
-<label for="pw">Password</label>
-<br>
-<br>-->
-                        <input type="password" placeholder='Password' name="pw" id="pw">
-                        <br>
-
-                        <br>
-                        <input type="submit" class="button" Value="Login">
-
-                        <br>
-                        <br>
-                        <!--
-<label for="check">
-    Not registered?
-    <br>
-    <br>
-    Click the link below to register yourself
-</label>
-<br>
-<br>
-<a href="../HTML/register.php" style="color:red;"> Register Now</a>
--->
-
+                    <form action="tryloginEMPLOYEE.php" method="POST" onsubmit="return validate();">
+                        <label for="employeeUsername"></label>
+                        <input type="text" placeholder="ID" name="employeeUsername" required">
+                        <input type="password" placeholder="Password" name="employeePassword" required>
+                        <input type="submit" class="button" Value="Login"></input>
                     </form>
-
-
-
-                    <div></div>
 
                 </div>
             </div>
