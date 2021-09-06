@@ -21,6 +21,7 @@
     background-color: white;
     font-size: 1.9rem;
     word-spacing: 1px;
+    line-height: 35px;
 }
 #google_translate_element {
     position: absolute;
@@ -285,8 +286,8 @@ input{
   box-shadow: 0.2px 0.4px 0.2px 0.2px purple ;
 
 }
-input[type=text]:focus,
-input[type=password]:focus {
+input:focus
+ {
   
     outline: none;
     border-color: #5961F9;
@@ -491,7 +492,10 @@ margin:60px 30px auto 30px;
     }
 
 } 
-         
+/* The links not being aligned on the side is fixed with this one */
+       .footer-link{
+           text-align: center;
+       }  
 
 
 @media all and (max-width: 380px){

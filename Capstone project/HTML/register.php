@@ -114,7 +114,7 @@ else{
     
 <form action="#" method="post" onsubmit="return validateRegister();"  >
 
-<p id="msg"> </p>
+<p id="msg" style="color:red;"> </p>
 <br>
 <br>   
  <label for="cid"> Citzenship ID</label> 
