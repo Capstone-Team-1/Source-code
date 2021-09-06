@@ -22,8 +22,8 @@
 <body>
     
  
-         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-          <!--The div underneath contains the google translator link and initial langugage is set to english with en ----->
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+ <!--The div underneath contains the google translator link and initial langugage is set to english with en ----->
 <div id="google_translate_element"></div>
  <script type="text/javascript"> 
    function googleTranslateElementInit() {
@@ -31,6 +31,8 @@
   }
 </script>
     
+
+
 <header>
  <a href="../Index.php">  <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
         <h1 class="first">Election Commission of  Australia</h1>

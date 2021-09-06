@@ -283,7 +283,7 @@ else{
 
 
 
-<script src="./Capstone project/JavaScript/register.js"></script>
+<script src="../JavaScript/register.js"></script>
   <!--This is the script towards the google translator api script file-->
     <script type="text/javascript" 
  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
