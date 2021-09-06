@@ -30,6 +30,7 @@ session_start();
         <header>
             <img src="/Capstone project/Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
             <h1 class="first">Election Commission of Australia</h1>
+            <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
             <div class="container">
                 <div class="item one">
                     <a href="/Capstone project/HTML/login.php">For Voters</a>
