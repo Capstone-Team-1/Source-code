@@ -25,7 +25,13 @@ session_start();
 </head>
 <body>
     
-     <header>
+    <!--The div underneath contains the google translator link and initial langugage is set to english with en ----->
+<div id="google_translate_element"></div>
+ <script type="text/javascript"> 
+   function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>
          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     
 <header>
@@ -110,6 +116,10 @@ session_start();
 
 
 <script src="../JavaScript/script.js"></script>
+  <!--This is the script towards the google translator api script file-->
+    <!-- <script type="text/javascript" 
+ src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script> -->
 
 </body>
 </html>
