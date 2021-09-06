@@ -17,7 +17,7 @@ $mypassword=$_POST['citizenPassword'];
 $myuser = stripslashes($myuser);
 $mypassword = stripslashes($mypassword);
 $myuser = mysqli_real_escape_string($conn, $myuser);
-$mypassword = mysqli_real_escape_string($conn, $mypassword);
+$mypassword = mysqli_real_escape_string($conn, md5($mypassword));
 $sql="SELECT * FROM citizen WHERE citizenID ='$myuser' and citizenPassword ='$mypassword'";
 $result=mysqli_query($conn, $sql);
 // Mysql_num_row is counting table row
@@ -30,7 +30,7 @@ if($count==1){
 /* session_start();
 session_register("myuser");
 session_register("mypassword");  */
-header("location: success.php");
+header("location: candidate.php");
 }
 else {
 echo "Wrong Username or Password";
