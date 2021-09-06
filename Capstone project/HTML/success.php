@@ -56,7 +56,7 @@ session_start();
               <div class="banner-items" >
                 <h2 class="banner-header">
                     <br> Welcome to ECOA online voting platform
-                    <br>The list of users available
+                    <br>Thank you for regestering!
                 </h2>
                
                     </div>
