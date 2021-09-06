@@ -65,17 +65,17 @@ session_start();
     
 <form action="" method="GET" onsubmit="return validate();" >
 <label for="vid">
-    Admin ID
+    
 </label> 
 <br>
 <br>
-<input type="placeholder" name="vid" id="vid">
+<input type="placeholder" name="vid" id="vid" placeholder="Admin ID">
 <br>
 <br>
-<label for="pw">Password</label>
+<label for="pw"></label>
 <br>
 <br>
-<input type="password" name="pw" id="pw">
+<input type="password" name="pw" id="pw" placeholder="Password">
 <br>
 
 <br>

@@ -69,7 +69,7 @@ session_start();
             <img src="check.gif" alt="" style="margin-top: 30px;">
             <br>
 
-            <a href="./login.php" alt="" title=""> Click here to get redirected to login page!! </a>
+            <a href="./login.php" alt="" title="" style="color:black"> Click here to get redirected to login page!! </a>
         </section>
 
 <footer>

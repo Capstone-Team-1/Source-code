@@ -117,7 +117,7 @@ else{
 <p id="msg" style="color:red;"> </p>
 <br>
 <br>   
- <label for="cid"> Citzenship ID</label> 
+ <label for="cid">   </label> 
 <br>
 <br>
 <input type="placeholder" name="citizenID" id="cid" placeholder="Citizenship ID" value="<?php echo $_POST["citizenID"]; ?>">
@@ -125,7 +125,7 @@ else{
 <br>
 
     <label for="fname" >
-   First Name
+   <!-- First Name -->
 </label> 
 <br>
 <br>
@@ -133,7 +133,7 @@ else{
 <br>
 <br>
 <label for="lname">
-   Last Name
+   <!-- Last Name -->
 </label> 
 <br>
 <br>
@@ -141,7 +141,7 @@ else{
 <br>
 <br>
 <label for="phonenum">
- Phone Number
+ <!-- Phone Number -->
 </label> 
 <br>
 <br>
@@ -149,7 +149,7 @@ else{
 <br>
 <br>
 <label for="Dateof">
-   D.O.B
+   <!-- D.O.B -->
 </label> 
 <br>
 <br>
@@ -157,7 +157,7 @@ else{
 <br>
 <br>
 <label for="cEmail">
- Email
+ <!-- Email -->
 </label> 
 <br>
 <br>
@@ -165,7 +165,7 @@ else{
 <br>
 <br>
 <label for="caddress">
-   Address 
+   <!-- Address  -->
 </label> 
 <br>
 <br>
@@ -173,7 +173,7 @@ else{
 <br>
 <br>
 <label for="city">
-   City
+   <!-- City -->
 </label> 
 <br>
 <br>
@@ -181,7 +181,7 @@ else{
 <br>
 <br>
 <label for="state">
-   State
+   <!-- State -->
 </label> 
 <br>
 <br>
@@ -189,21 +189,25 @@ else{
 <br>
 <br>
 <label for="Zip">
-  ZIP
+  <!-- ZIP -->
 </label> 
 <br>
 <br>
 <input type="placeholder" name="citizenZip" id="Zip" placeholder="Zip"value="<?php echo $_POST["citizenZip"]; ?>">
 <br>
 <br>
-<label for="pw">Password</label>
+<label for="pw">
+  <!-- Password -->
+</label>
 <br>
 <br>
 <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
 <br>
 
 <br>
-<label for="cpw">Confirm Password</label>
+<label for="cpw">
+  <!-- Confirm Password -->
+</label>
 <br>
 <br>
 <input type="password" name="confirmpw" id="cpw" placeholder="Password"value="<?php echo $_POST["confirmpw"]; ?>">

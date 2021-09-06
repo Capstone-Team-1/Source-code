@@ -266,6 +266,7 @@ display: flex;
 a{
     color: white;
     text-decoration: none;
+    transition: 0.5s;
 
 }
 .fooxter-link a{
@@ -281,9 +282,12 @@ a{
 input{
   width: 80%;
   padding: 12px;
+  height: 55px;
   margin: 5px 0 22px 0;
   display: inline-block;
   box-shadow: 0.2px 0.4px 0.2px 0.2px purple ;
+  outline: none;
+  border-radius: 3px;
 
 }
 input:focus
@@ -293,28 +297,14 @@ input:focus
     border-color: #5961F9;
 }
 
-.button{
 
- 
-  border-radius: 20px;
-    box-shadow: 2px 2px 2px 2px p#E6AF2E;
-    background-color: linear-gradient(135deg, #5a2672 0%, #1b2554 75%);
-   
-    
-}
-
-.button:hover{
-background: rgb(63, 70, 251);
-background: radial-gradient(circle, rgba(63, 70, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
- transition: all 5s ease-out;
-}
 
 
    .section-form{
 
 
 
-
+line-height: 1.5rem;
  /* background-color: whitesmoke; */
 font-size: 1.2rem;
 /* text-align: left; */
@@ -323,22 +313,29 @@ padding: 10px 40px;
 margin: 90px 0;
    
   /* background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);  */
-background-size: cover;
-    max-width: 800px; /*The max width property hence the form will not over grow when the screen size is larger*/
+
+    width: 700px; /*The max width property hence the form will not over grow when the screen size is larger*/
     color: black;
+    border-radius: 30px 4px 50px 4px;
+    box-shadow:2px 2px 15px  #4c5ae0;
    }
-  
+
   .button{
 padding: 15px 30px;
-border-radius: 3px;
+border-radius: 10px 0 10px 0;
 outline: none;
 background: linear-gradient(135deg, #5a2672 0%, #1b2554 75%);
 
 color: white;
 cursor: pointer;
-box-shadow: 0.1px 0.1px 0.1px 0.1px wheat;
+
   }
   
+.button:hover {
+    background: rgb(63, 70, 251);
+    background: radial-gradient(circle, rgba(63, 70, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    transition:  0.5s;
+}
 
 /*setting the margin down to 50px below for better spacing*/
  @keyframes message {

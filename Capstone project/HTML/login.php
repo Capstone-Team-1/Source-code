@@ -100,17 +100,17 @@ else{
     
 <form action="" method="POST" class = "siginForm" onsubmit="return validate();">
 <label for="vid">
-    Voters ID
+    
 </label> 
 <br>
 <br>
-<input type="placeholder" name="votersId" id="vid" >
+<input type="placeholder" name="votersId" id="vid" placeholder="Voters ID" >
 <br>
 <br>
-<label for="pw">Password</label>
+<label for="pw"></label>
 <br>
 <br>
-<input type="password" name="passWord" id="pw"> <!--The name parameter is the one responsible in connection with php--->
+<input type="password" name="passWord" id="pw" placeholder="Password"> <!--The name parameter is the one responsible in connection with php--->
 <br>
 <br>
 <br>
