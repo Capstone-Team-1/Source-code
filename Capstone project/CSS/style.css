@@ -368,9 +368,9 @@ margin-top: 90px  ;
 @media all and (max-width: 813px){
 
 .section-form{
-margin: 120px 240px;
+width: 400px;
   
-}
+} 
 
 }
    @media all and (max-width:690px){
@@ -396,9 +396,7 @@ top: 9px;}
 .section-form{
 
 
- 
-margin: 60px 180px auto 180px;
-padding: 50px 20px;
+
 
   
 
@@ -474,7 +472,7 @@ padding: 50px 20px;
    
   .section-form{
 font-size: 1.1rem;
-margin:60px 30px auto 30px;
+width: 350px;
 
 
 
@@ -506,7 +504,7 @@ margin:60px 30px auto 30px;
 
   .section-form{
 font-size: 1.1rem;
-margin:60px 30px auto 30px;
+width: 250px;
 
 
 
