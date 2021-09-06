@@ -215,9 +215,10 @@ else{
 <input type="submit" class="button" name="signup" value="SIGN UP">
 
 
- 
+ <br>
 
 <label for="check">
+  
     Already registered?
     <br>
     <br>

@@ -28,7 +28,7 @@
     right: 50px;
 }
 
-a{
+.item a{
     text-decoration: none;
     color: black;
 }
@@ -102,9 +102,9 @@ header{
 .item:hover, .banner-one:hover, .footer-item:hover, .fooxter-link:hover{
     text-decoration: underline;
     cursor: pointer;
-    text-shadow: 2px 2px 2px purple;
+    text-shadow: 2px 2px 15px purple;
 
-transition : all 5s ease-in;
+transition : all 0.3s ease-in;
 
 }
 .logo:hover{
@@ -245,25 +245,29 @@ display: flex;
 
 
 }
-.footer-item{
+.footer-item {
 
     flex: 1;
     justify-content: space-around ;
   
 }
 
-.footer-link{
+.footer-link {
 display: flex;
  justify-content: space-around;
- 
+ color: white;
  margin-top: 30px;
  padding: 10px;
    /* font-size: 1.9rem; */
  
   
 }
+a{
+    color: white;
+    text-decoration: none;
 
-.fooxter-link{
+}
+.fooxter-link a{
 
     flex: 1 ;
     color: white;
@@ -274,7 +278,7 @@ display: flex;
 
    
 input{
-  width: 100%;
+  width: 80%;
   padding: 12px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -285,16 +289,24 @@ input[type=text]:focus,
 input[type=password]:focus {
   
     outline: none;
+    border-color: #5961F9;
 }
 
 .button{
 
-
+ 
+  border-radius: 20px;
     box-shadow: 2px 2px 2px 2px p#E6AF2E;
     background-color: linear-gradient(135deg, #5a2672 0%, #1b2554 75%);
+   
     
 }
 
+.button:hover{
+background: rgb(63, 70, 251);
+background: radial-gradient(circle, rgba(63, 70, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+ transition: all 5s ease-out;
+}
 
 
    .section-form{
@@ -302,16 +314,16 @@ input[type=password]:focus {
 
 
 
- background-color: whitesmoke;
+ /* background-color: whitesmoke; */
 font-size: 1.2rem;
-
+/* text-align: left; */
  display: inline-block; 
 padding: 10px 40px;
-margin: 30px 300px;
+margin: 90px 0;
    
   /* background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);  */
 background-size: cover;
-    max-width: 400px;
+    max-width: 800px; /*The max width property hence the form will not over grow when the screen size is larger*/
     color: black;
    }
   

@@ -1,10 +1,3 @@
-<?php 
-include 'connection.php';
-session_start();
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,25 +15,27 @@ session_start();
 </head>
 <body>
     
-     
+ 
          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-     <!--The div underneath contains the google translator link and initial langugage is set to english with en ----->
+          <!--The div underneath contains the google translator link and initial langugage is set to english with en ----->
 <div id="google_translate_element"></div>
  <script type="text/javascript"> 
    function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
   }
 </script>
+    
 <header>
  <a href="../Index.php">  <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
         <h1 class="first">Election Commission of  Australia</h1>
         <div class= "container">
           <div class="item one">
-             <a href="../Index.php">Homepage</a> </div>
+                 
+            <a href="../Index.php">Homepage</a> </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
-                 <div class="item five ">    <a href="./admin.php"> ECOA</a> </div>
+                 <div class="item five ">  <a href="./admin.php"> ECOA</a> </div>
                <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
         </div>
     </header>
@@ -51,68 +46,30 @@ session_start();
             <div class="banner-container">
               <div class="banner-items" >
                 <h2 class="banner-header">
-                    <br> Admin Login
-                    <br>Please fill up the form to continue!
+                    <br> Welcome to ECOA online voting platform
+                    <br>Information Center
                 </h2>
                
                     </div>
         </div>
+</section>
 
-<div class="section-form">  
-<div class="login">
-    <h2>Election Commission Of Australia </h2>
-    <p id= "template"></p>
-    
-<form action="" method="GET" onsubmit="return validate();" >
-<label for="vid">
-    Admin ID
-</label> 
-<br>
-<br>
-<input type="placeholder" name="vid" id="vid">
-<br>
-<br>
-<label for="pw">Password</label>
-<br>
-<br>
-<input type="password" name="pw" id="pw">
-<br>
-
-<br>
-<input type="submit" class="button">
-
-<br>
-<br>
-
-<label for="check">
-    Are you a registered voter?
-    <br>
-    <br>
-    Click the link below to login!!
-</label>
-<br>
-<br>
-<a href="../HTML/login.php" style="color:red;"> Voters Login</a>
-
-</form>
+<section class="reading-content">
 
 
+</section>
 
-<div></div>
-
-</div>
-</div>
 <footer>
 
-<div class="footer-banner" >
+<div class="footer-banner" style="text-align: justify;" >
     <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
 
 <div class= "footer-details">
-    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em; justify-content:center">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>   
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 
-             <div class="footer-item one">   <a href="./result.php"> For Voters</a>  </div>
+             <div class="footer-item one"> Homepage</div>
               <div class="footer-item two">For candidates </div>
                <div class="footer-item three"> About election </div>
                 <div class="footer-item four"> Information Centre</div>
@@ -126,9 +83,9 @@ session_start();
 
        <div class="footer-link">
 
-                    <div class="footxer-link-one">   <ion-icon name="logo-facebook"></ion-icon></div>
-                    <div class="footxer-link-two"> <ion-icon name="logo-twitter"></ion-icon></div>
-                      <div class="fooxter-link-three"> <ion-icon name="logo-instagram"></ion-icon></div>
+                    <div class="footxer-link-one">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-facebook"></ion-icon></a>  </div>
+                    <div class="footxer-link-two">   <a href="https://twitter.com/auselectoralcom"> <ion-icon name="logo-twitter"></ion-icon></a>   </div>
+                      <div class="fooxter-link-three">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-instagram"></ion-icon></a>  </div>
                        
                 </div> 
          

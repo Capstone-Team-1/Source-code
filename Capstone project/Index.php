@@ -42,8 +42,10 @@
               </div>
             </div>
                 </div>
-              <div class="item two">For candidates </div>
-               <div class="item three"> About election </div>
+              <!-- <div class="item two"> Candidates </div> -->
+               <div class="item three">  <a href="./HTML/about.php"> About election</a> 
+              
+              </div>
                 <div class="item four"> Information Centre</div>
                  <div class="item five ">  <a href="./HTML/admin.php"> ECOA</a> </div>
                
@@ -131,7 +133,7 @@ Compliance statement</p>
      <div class= "footer-container" style="margin-top: 50px;"> 
              <div class="footer-item one"> For Voters</div>
               <div class="footer-item two">For candidates </div>
-               <div class="footer-item three"> About election </div>
+               <div class="footer-item three"> <a href="./HTML/eycandidateRegister.php"> About election</a>  </div>
                 <div class="footer-item four"> Information Centre</div>
                  <div class ="footer-item five "> The ECOA </div>
                   </div>
