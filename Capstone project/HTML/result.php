@@ -8,6 +8,13 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+     <!--The div underneath contains the google translator link and initial langugage is set to english with en ----->
+<div id="google_translate_element"></div>
+ <script type="text/javascript"> 
+   function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>
   <canvas id="myChart" width="400" height="400"></canvas>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -40,6 +47,10 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+</script>
+  <!--This is the script towards the google translator api script file-->
+    <script type="text/javascript" 
+ src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
 </body>
 </html>

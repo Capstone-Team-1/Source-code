@@ -18,9 +18,14 @@
      min-height: 100vh;
     font-family: 'Oswald', sans-serif;
      text-align: center;
-    background-color: whitesmoke;
+    background-color: white;
     font-size: 1.9rem;
     word-spacing: 1px;
+}
+#google_translate_element {
+    position: absolute;
+    top: 300px;
+    right: 50px;
 }
 
 a{
