@@ -1,4 +1,23 @@
-<?php
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login Page</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <style>
+     
+    </style>
+
+<!-- ------- this code was at the top of this page. I (JUAN) commented and pasted here to try another connection
+write the php opening tag to use
+
 include 'connection.php';
 session_start();
 error_reporting(0);
@@ -36,22 +55,7 @@ else{
   echo "<script> alert('The details does not match') </script>";
 }
 }
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login Page</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
-    <style>
-     
-    </style>
+?> -->
 </head>
 <body>
     
@@ -99,19 +103,22 @@ else{
      <h2>Election Commission Of Australia </h2>
     <p id= "template"></p>
     
-<form action="" method="POST" class = "siginForm" onsubmit="return validate();">
-<label for="vid">
-    
-</label> 
+    <form action="tryloginCITIZEN.php" method="POST" onsubmit="return validate();">
+                        <label for="citizenID"></label>
+                        <input type="text" placeholder="Citizen's ID" name="citizenID" required">
+                        <input type="password" placeholder="Password" name="citizenPassword" required>
+                        <input type="submit" class="button" Value="Login"></input>
+                    </form>
+
+
+
+
+    <form action="" method="POST" class = "siginForm" onsubmit="return validate();">
+<label for="vid"></label> 
+<input type="text" name="votersId" id="vid" placeholder="Voters ID" >
 <br>
 <br>
-<input type="placeholder" name="votersId" id="vid" placeholder="Voters ID" >
-<br>
-<br>
-<label for="pw"></label>
-<br>
-<br>
-<input type="password" name="passWord" id="pw" placeholder="Password"> <!--The name parameter is the one responsible in connection with php--->
+<label for="pw"></label><input type="password" name="passWord" id="pw" placeholder="Password"> <!--The name parameter is the one responsible in connection with php--->
 <br>
 <br>
 <br>
