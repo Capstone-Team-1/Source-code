@@ -68,7 +68,6 @@
                           Update my details</div>
                         <div class="banner-three">General information</div>
                 </div> -->
-<<<<<<< HEAD
                 </div>
                     </div>
                     
@@ -89,24 +88,19 @@
       <Strong>  Please  stay updated, we will be updating any privacy related information to you via the information that we have available
    </strong> </p>
    <img src="./Images/pexels-hugo-heimendinger-1766215.jpg" alt="" >
-=======
   </div>
   </div>
->>>>>>> 5f8da56b4cad361fe50ec73dcdfb9fa2e139c476
 
 
 
   </div>
 
-<<<<<<< HEAD
    <div class="main-article">
       <h3 style="color: #009cde;">WELCOME
 Welcome to our corporate plan
 Welcome to the Election Commission of Australia 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3> 
  <p style="font-size: 1.4rem; text-align: justify;">
 Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
-=======
->>>>>>> 5f8da56b4cad361fe50ec73dcdfb9fa2e139c476
 
 
   <div class="reading-content">
@@ -128,8 +122,30 @@ Challenges to the successful administration of electoral events continue to mult
         <p style="font-size: 1.4rem; text-align: justify;">
           Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
 
-<<<<<<< HEAD
-    <section  class="card-container">
+    
+
+
+
+          To remain agile—now and into the future—we must continue refining our election delivery model through our lessons management approach. <br> <br> We will continue to evolve our planning processes, address the delivery of electoral events in a pandemic, and improve our delivery model for future electoral cycles.
+
+          Elections are Australia’s largest and most complex single peacetime event. This fact is masked by the electoral administrator’s conundrum: the better and more efficient the election, the simpler the event appears to voters, candidates and political parties, most of who only interact with the voting process episodically and for a few brief <br> <br>
+          There are a large number of logistically complicated and legislatively complex steps required to deliver elections successfully, including satisfying rapidly evolving community expectations. Our modernisation journey must consider these expectations as well as the realities of our funding, the availability and cost of technology, legislation and the ever-increasing threat of disinformation and cyber security. To continue to safeguard our democracy we must further mature our regulatory capability and work proactively with our stakeholders to solve these multidimensional problems.
+
+          The modernisation of our two main election systems remains critical to ensure these can respond to future changes in legislation and our rapidly changing external environment.
+          <br><br> Investing in training for our permanent employees and large temporary election workforce remains a priority, as stated in our recently launched learning and development strategy.
+
+          This year, we have further refined our performance framework. We have re-focused the six agency directions in last year’s corporate plan to four key activities. These enable us to deliver our purpose and ensure an efficient, effective and secure electoral system for Australia. Our corporate plan continues to guide our agency and is an integral part of our performance and reporting framework.
+
+          Tom Rogers
+          Electoral Commissioner
+
+          Compliance statement
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <section  class="card-container">
 
   
 <div class="card">
@@ -155,29 +171,6 @@ Challenges to the successful administration of electoral events continue to mult
 </div>  
     </section>
 
-
-
-
-=======
-          To remain agile—now and into the future—we must continue refining our election delivery model through our lessons management approach. <br> <br> We will continue to evolve our planning processes, address the delivery of electoral events in a pandemic, and improve our delivery model for future electoral cycles.
->>>>>>> 5f8da56b4cad361fe50ec73dcdfb9fa2e139c476
-
-          Elections are Australia’s largest and most complex single peacetime event. This fact is masked by the electoral administrator’s conundrum: the better and more efficient the election, the simpler the event appears to voters, candidates and political parties, most of who only interact with the voting process episodically and for a few brief <br> <br>
-          There are a large number of logistically complicated and legislatively complex steps required to deliver elections successfully, including satisfying rapidly evolving community expectations. Our modernisation journey must consider these expectations as well as the realities of our funding, the availability and cost of technology, legislation and the ever-increasing threat of disinformation and cyber security. To continue to safeguard our democracy we must further mature our regulatory capability and work proactively with our stakeholders to solve these multidimensional problems.
-
-          The modernisation of our two main election systems remains critical to ensure these can respond to future changes in legislation and our rapidly changing external environment.
-          <br><br> Investing in training for our permanent employees and large temporary election workforce remains a priority, as stated in our recently launched learning and development strategy.
-
-          This year, we have further refined our performance framework. We have re-focused the six agency directions in last year’s corporate plan to four key activities. These enable us to deliver our purpose and ensure an efficient, effective and secure electoral system for Australia. Our corporate plan continues to guide our agency and is an integral part of our performance and reporting framework.
-
-          Tom Rogers
-          Electoral Commissioner
-
-          Compliance statement
-        </p>
-      </div>
-    </section>
-  </div>
 
   <!--Footer conatins the bottom page description-->
   <footer>
