@@ -125,7 +125,8 @@ if (isset($_POST["signup"])) {
         <p id="template"></p>
 
           <!-- REGISTRATION FORM DESIGN -->
-
+<br>
+<br>
 
         <form action="#" method="post" onsubmit="return validateRegister();">
 
@@ -178,7 +179,7 @@ if (isset($_POST["signup"])) {
 
 
           <br>
-
+<!--
           <label for="check">
 
             Already registered?
@@ -188,7 +189,7 @@ if (isset($_POST["signup"])) {
           <br>
           <br>
           <a href="./login.php" style="color:red;"> Login Now</a>
-
+    -->
         </form>
 
       </div>
