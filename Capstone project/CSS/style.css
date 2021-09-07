@@ -320,7 +320,7 @@ a{
 }
 
    
-input{
+input {
   width: 80%;
   padding: 12px;
   height: 55px;
@@ -331,6 +331,19 @@ input{
   border-radius: 3px;
   border: 1.5px solid #d1d1d1;
 }
+textarea{
+    width: 80%;
+    padding: 12px;
+    height: 55px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    /*box-shadow: 0.2px 0.4px 0.2px 0.2px purple ;*/
+    outline: none;
+    border-radius: 3px;
+    border: 1.5px solid #d1d1d1;
+  }
+  
+
 input:focus
  {
   
