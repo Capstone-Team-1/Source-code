@@ -201,9 +201,41 @@ font-family: 'Noto Serif JP', serif;
 font-family: 'Open Sans Condensed', sans-serif;
 
 }
+.reading-content img{
+  
+    max-width: 1000px;
+    left: 20%;
+    border-radius: 30px 1140px 30px 840px;
+    margin-top: 40px;
+}
 .image-container{
     display: flex;
 
+}
+.card {
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 80px 80px;
+    transition: 0.3s;
+    width: 20%;
+    height: 20%;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 426px;
+}
+
+.container {
+    padding: 2px 26px;
 }
 
 /*Ignore the image section*/

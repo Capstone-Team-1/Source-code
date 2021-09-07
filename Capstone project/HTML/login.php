@@ -41,7 +41,7 @@ $citizenVPW = mysqli_real_escape_string($conn, md5($_POST["passWord"]));
  //$fetchCitizenUsername = mysqli_query($conn, "SELECT citizenFName, citizenLName FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'");
 if(mysqli_num_rows($checkcitizenID)>0){   //if citizen id is present than it will direct the user with record of session
   $row = mysqli_fetch_assoc($checkcitizenID);
-  $_SESSION['votersId']= $row['citizenID'];
+ $citizenName = mysqli_query($conn, "SELECT citizenFName, citizenLName FROM citizen WHERE citizenID = '$citizenID'");
  $row = mysqli_fetch_assoc($citizenName);
   $_SESSION['citizenFName']= $row['citizenFName'];
   $_SESSION['citizenLName'] = $row['citizenLName'];
@@ -107,16 +107,23 @@ else{
     <div class="login">
       <h2>Election Commission Of Australia </h2>
       <p id="template"></p>
+<br> 
+<br> 
 
       <form action="tryloginCITIZEN.php" method="POST" onsubmit="return validate();">
         <label for="citizenID"></label>
-        <input type="text" placeholder="Citizen's ID" id="vid" name="citizenID" required">
+        <input type="text" placeholder="Citizen's ID" id="vid" name="citizenID" required>
+        <br> 
+        <br>
         <input type="password" placeholder="Password" id="pw" name="citizenPassword" required>
+         <br> 
+        <br>
         <input type="submit" class="button" Value="Login"></input>
         <br>
         <label for="check"> Not registered?
           <br>Click the link below to register yourself
         </label>
+        <br>
         <a href="register.php" style="color:red;"> Register Now</a>
       </form>
 

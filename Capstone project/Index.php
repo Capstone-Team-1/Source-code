@@ -87,6 +87,7 @@
         <br>
       <Strong>  Please  stay updated, we will be updating any privacy related information to you via the information that we have available
    </strong> </p>
+   <img src="./Images/pexels-hugo-heimendinger-1766215.jpg" alt="" >
 
 
 
@@ -94,7 +95,7 @@
    <div class="main-article">
       <h3 style="color: #009cde;">WELCOME
 Welcome to our corporate plan
-Welcome to the Australian Electoral Commission (AEC) 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3> 
+Welcome to the Election Commission of Australia 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3> 
  <p style="font-size: 1.4rem; text-align: justify;">
 Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
 
@@ -117,7 +118,35 @@ Compliance statement</p>
 
 
 
-    </div>
+    <section  class="card-container">
+
+  
+<div class="card">
+  <img src="./Images/pexels-cottonbro-4669114.jpg" alt="image " >
+  <div class="container">
+    <h4><b>Make your selection</b></h4> 
+    <p></p> 
+  </div>
+</div>   
+<div class="card">
+  <img src="./Images/pexels-artem-podrez-5108648.jpg" alt="card image"  >
+  <div class="container">
+    <h4><b>Your vote matters</b></h4> 
+    <p></p> 
+  </div>
+</div>  
+<div class="card">
+  <img src="./Images/pexels-rijan-hamidovic-2193268.jpg" alt="card image" >
+  <div class="container">
+    <h4><b> Innovating the future</b></h4> 
+    <p></p> 
+  </div>
+</div>  
+    </section>
+
+
+
+
 
     <!--Footer conatins the bottom page description-->
  <footer>

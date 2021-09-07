@@ -1,7 +1,13 @@
 <?php 
 include 'connection.php';
+
 session_start();
 
+ $citizenName = mysqli_query($conn, "SELECT citizenID,citizenFName, citizenLName FROM citizen ");
+ $row = mysqli_fetch_assoc($citizenName);
+ $_SESSION['citizenID']= $row['citizenID'];
+  $_SESSION['citizenFName']= $row['citizenFName'];
+  $_SESSION['citizenLName'] = $row['citizenLName'];
 ?>
 
 
@@ -47,7 +53,7 @@ session_start();
         </div>
         <!---This div class will display the user name as per the session --->
          <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php 
-     echo    $_SESSION['citizenFName'] . " ". $_SESSION['citizenLName'] ;
+     echo   $_SESSION['citizenID'] . $_SESSION['citizenFName'] . " ". $_SESSION['citizenLName'] ;
 
     
    ?>

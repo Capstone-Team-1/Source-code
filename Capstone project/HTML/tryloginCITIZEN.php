@@ -1,16 +1,6 @@
 <?php
+ include 'connection.php';
 
-$host="localhost"; // Host name
-$username="root"; // Mysql username
-$password=""; // Mysql password
-$db_name="voting"; // Database name
-$tbl_name="citizen"; // Table name
-// Connect to server and select databse.
-
-$conn = mysqli_connect("$host", "$username", "$password")or die("cannot connect");
-
-mysqli_select_db($conn, "$db_name")or die("cannot select DB");
-// username and password sent from form
 $myuser=$_POST['citizenID'];
 $mypassword=$_POST['citizenPassword'];
 // To protect MySQL injection (more detail about MySQL injection)
@@ -33,6 +23,7 @@ session_register("mypassword");  */
 header("location: candidate.php");
 }
 else {
-echo "Wrong Username or Password";
+echo " <script> alert('Wrong Username or Password') </script>";
+header('location: login.php');
 }
 ?>

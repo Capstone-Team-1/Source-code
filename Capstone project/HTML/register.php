@@ -121,7 +121,7 @@ else{
  <label for="cid">   </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenID" id="cid" placeholder="Citizenship ID" value="<?php echo $_POST["citizenID"]; ?>">
+<input type="placeholder" name="citizenID" id="cid" placeholder="Citizenship ID" required value="<?php echo $_POST["citizenID"]; ?>">
 <br>
 <br>
 
@@ -130,7 +130,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenFName" id="fname" placeholder="First Name"  value="<?php echo $_POST["citizenFName"]; ?>">
+<input type="placeholder" name="citizenFName" id="fname" placeholder="First Name" required value="<?php echo $_POST["citizenFName"]; ?>">
 <br>
 <br>
 <label for="lname">
@@ -138,7 +138,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["citizenLName"]; ?>">
+<input type="placeholder" name="citizenLName" id="lname" placeholder="Last Name" required value="<?php echo $_POST["citizenLName"]; ?>">
 <br>
 <br>
 <label for="phonenum">
@@ -146,7 +146,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenPhonenum" id="phonenum" placeholder="Phone Number" value="<?php echo $_POST["citizenPhonenum"]; ?>">
+<input type="placeholder" name="citizenPhonenum" id="phonenum" placeholder="Phone Number" required value="<?php echo $_POST["citizenPhonenum"]; ?>">
 <br>
 <br>
 <label for="Dateof">
@@ -154,7 +154,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenDOB" id="Dateof" placeholder="dd/mm/yyyy" value="<?php echo $_POST["citizenDOB"]; ?>">
+<input type="placeholder" name="citizenDOB" id="Dateof" placeholder="dd/mm/yyyy" required value="<?php echo $_POST["citizenDOB"]; ?>">
 <br>
 <br>
 <label for="cEmail">
@@ -162,7 +162,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenEmail" id="cEmail" placeholder="Email"  value="<?php echo $_POST["citizenEmail"]; ?>">
+<input type="placeholder" name="citizenEmail" id="cEmail" placeholder="Email" required value="<?php echo $_POST["citizenEmail"]; ?>">
 <br>
 <br>
 <label for="caddress">
@@ -170,7 +170,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenAddress" id="caddress" placeholder="address"  value="<?php echo $_POST["citizenAddress"]; ?>" >
+<input type="placeholder" name="citizenAddress" id="caddress" placeholder="address"  required value="<?php echo $_POST["citizenAddress"]; ?>" >
 <br>
 <br>
 <label for="city">
@@ -178,7 +178,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenCity" id="city" placeholder="City" value="<?php echo $_POST["citizenCity"]; ?>">
+<input type="placeholder" name="citizenCity" id="city" placeholder="City" required value="<?php echo $_POST["citizenCity"]; ?>">
 <br>
 <br>
 <label for="state">
@@ -186,7 +186,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenState" id="state" placeholder="State" value="<?php echo $_POST["citizenState"]; ?>">
+<input type="placeholder" name="citizenState" id="state" placeholder="State" required value="<?php echo $_POST["citizenState"]; ?>">
 <br>
 <br>
 <label for="Zip">
@@ -194,7 +194,7 @@ else{
 </label> 
 <br>
 <br>
-<input type="placeholder" name="citizenZip" id="Zip" placeholder="Zip"value="<?php echo $_POST["citizenZip"]; ?>">
+<input type="placeholder" name="citizenZip" id="Zip" placeholder="Zip" required  value="<?php echo $_POST["citizenZip"]; ?>">
 <br>
 <br>
 <label for="pw">
@@ -202,7 +202,7 @@ else{
 </label>
 <br>
 <br>
-<input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
+<input type="password" name="pw" id="Citizenpw" placeholder="Password" required value="<?php echo $_POST["pw"]; ?>">
 <br>
 
 <br>
@@ -211,7 +211,7 @@ else{
 </label>
 <br>
 <br>
-<input type="password" name="confirmpw" id="cpw" placeholder="Password"value="<?php echo $_POST["confirmpw"]; ?>">
+<input type="password" name="confirmpw" id="cpw" placeholder="Password" required  value="<?php echo $_POST["confirmpw"]; ?>">
 <br>
 
 <br>
