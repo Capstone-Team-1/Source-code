@@ -69,7 +69,7 @@ session_start();
       
  <section  class="card-container">
 <h3 style="margin-top: 30px; text-decoration: underline; "> Candidates for Election 2021 </h3>
-  
+  <form action="#" method="POST">
 <div class="card">
   <img src="./Images/malcolm-turnbull.jpg" alt="image " style="width: 336px;" >
   <div class="container">
@@ -79,6 +79,7 @@ session_start();
  
     
   </div>
+  <form action="#" method="POST">
 <input type="radio" name="btnOne" class="button"></input>
 
 </div>   
@@ -103,8 +104,11 @@ session_start();
   </div>
   <input type="radio" name="btnThree" class="button" ></input>
 </div>  
+<br>
 <input type="button" name="submit_data" class="button" Value="Vote" id="submit_data"></input>
-    </section>
+    </form>
+
+</section>
 
 
 
