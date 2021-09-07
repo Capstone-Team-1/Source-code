@@ -88,23 +88,23 @@ if (isset($_POST["signup"])) {
         <ion-icon name="menu"></ion-icon>
       </div>
       <div class="container">
-    <div class="item zero"> <a href="./Index.php"> Home</a> </div>
-      <div class="item one">
-        <div class="dropdown"> For Voters
-          <div class="dropdown-content">
-            <a href="./login.php">Voter Login</a>
-            <a href="./register.php"> Registration</a>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="item two"> Candidates </div> -->
-      <div class="item three"> <a href="./about.php"> About election</a>
+                
+                <div class="item one">
+                    <div class="dropdown"> For Voters
+                    <div class="dropdown-content">
+                        <a href="./login.php">Voter Login</a>
+                        <a href="./register.php"> Registration</a>
+                    </div>
+                    </div>
+                </div>
+                <!-- <div class="item two"> Candidates </div> -->
+                <div class="item three"> <a href="./about.php"> About election</a>
 
-      </div>
-      <div class="item four"> Information Centre</div>
-      <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
-
-    </div>
+                </div>
+                <div class="item four"> Information Centre</div>
+                <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
+                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
+                </div>
     </header>
 
     <section class="banner">
