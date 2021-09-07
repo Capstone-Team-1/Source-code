@@ -12,7 +12,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login Page</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     
@@ -33,19 +33,19 @@ session_start();
 </script>
     
 <header>
- <a href="../Index.php">  <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
+ <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
         <h1 class="first">Election Commission of  Australia</h1>
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
-        <div class= "container">
-          <div class="item one">
-                 
-            <a href="../HTML/login.php">For Voters</a> </div>
-              <div class="item two">For candidates </div>
-               <div class="item three"> About election </div>
-                <div class="item four"> Information Centre</div>
-                 <div class="item five ">    <a href="./admin.php"> ECOA</a> </div>
-               <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
-        </div>
+        <div class="container">
+                    <div class="item one">
+
+                        <a href="./dashboard.php">Dashboard</a>
+                    </div>
+                        <div class="item two"><a href="./votersAdminpage.php"> Voters </a></div>
+                    <div class="item three"><a href="./eycandidateRegister.php"> Candidate Register </a></div>
+                    <div class="item four"> Election Results </div>
+                    <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
+                </div>
     </header>
 
 
@@ -102,12 +102,7 @@ session_start();
                       <div class="fooxter-link-three"> <ion-icon name="logo-instagram"></ion-icon></div>
                        
                 </div> 
-         
-
-
-
-
-</div>
+              </div>
 
        
  </footer>
