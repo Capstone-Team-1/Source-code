@@ -381,26 +381,17 @@ margin: 90px 0;
 /* border: 2px solid #8E44AD; */
     width: 700px; /*The max width property hence the form will not over grow when the screen size is larger*/
     color: black;
-<<<<<<< HEAD
     border-radius: 30px 4px 50px 4px;
      transition: all 1s ease-out;
    
    }
-
+/*
    .section-form:hover{
         box-shadow:2px 2px 15px #4c5ae0;
         background-color: whitesmoke;
         transition: all 1s ease-out;
    }
-=======
-  /*  border-radius: 30px 4px 50px 4px;
-    box-shadow:2px 2px 15px  #4c5ae0;*/
-   }
-
-
-
-
->>>>>>> 0ba2d28199cb0a4d52cdcfc2a8fa758fdc958e4d
+   */
   .button{
     width: 40%;
 padding: 15px 30px;
