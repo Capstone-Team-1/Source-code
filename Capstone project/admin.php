@@ -1,7 +1,27 @@
-<?php 
-include 'connection.php';
-session_start();
+<?php
 
+include'connection.php';
+session_start();
+error_reporting(0);
+ if (isset ($_POST['login'])){
+$myuser=$_POST['vid'];
+$mypassword= ($_POST['pw']);
+// To protect MySQL injection (more detail about MySQL injection)
+
+$sql="SELECT * FROM employee WHERE employeeID ='$myuser' and employeePassword ='$mypassword'";
+
+$result=mysqli_query($conn, $sql);
+if($result -> num_rows>0){
+$row= mysqli_fetch_assoc($result);
+$_SESSION['employeeFirstName'] = $row['employeeFirstName'];
+$_SESSION['employeeLastName'] = $row['employeeLastName'];
+header("Location: dashboard.php");
+}
+
+else{
+    echo "<script> alert('Login failed') </script>";
+    header('index.php');
+} }
 ?>
 
 
@@ -64,35 +84,31 @@ session_start();
     <h2>Election Commission Of Australia </h2>
     <p id= "template"></p>
     
-<form action="" method="GET" onsubmit="return validate();" >
-<label for="vid">
-    
-</label> 
+<form action="" method="POST" onsubmit="return validate();" >
+
 <br>
 <br>
 <input type="placeholder" name="vid" id="vid" placeholder="Admin ID">
 
-<label for="pw"></label>
 <br>
 <br>
 <input type="password" name="pw" id="pw" placeholder="Password">
 <br>
-
 <br>
-<input type="submit" class="button">
+<input type="submit" name="login" class="button">
 
 <br>
 <br>
 
 <label for="check">
-    Are you a registered voter?
+    Are you a voter?
     <br>
     <br>
-    Click the link below to login!!
+    Click the link below to be directed towards voters page!!
 </label>
 <br>
 <br>
-<a href="../HTML/login.php" style="color:red;"> Voters Login</a>
+<a href="./login.php" style="color:red;"> Voters Login</a>
 
 </form>
 

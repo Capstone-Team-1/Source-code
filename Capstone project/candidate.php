@@ -2,11 +2,8 @@
 include 'connection.php';
 
 session_start();
-error_reporting(0);
- $session_id=$_SESSION['citizenID'];
-		$user_query = $conn->query("SELECT * FROM citizen WHERE citizenID = '$session_id'");
-		$user_row = $user_query->fetch_array();
-		$user_username = $user_row['citizenFName']." ".$user_row['citizenLName'];
+
+
 ?>
 
 
@@ -51,11 +48,7 @@ error_reporting(0);
                <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
         </div>
         <!---This div class will display the user name as per the session --->
-         <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php 
-     echo   $user_username ;
-
-    
-   ?>
+         <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
     </header>
 
 
@@ -66,8 +59,7 @@ error_reporting(0);
                 <!---This h2 will display the user name as per the session --->
                 <h2 class="banner-header">
 
-                    <br> Welcome <?php 
-     echo $user_username; ?>
+                    <br> Welcome <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
                     <br>Please choose in your Candidate to continue!!!
                 </h2>
                
