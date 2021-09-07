@@ -102,7 +102,7 @@ if (isset($_POST["signup"])) {
 
       </div>
       <div class="item four"> Information Centre</div>
-      <div class="item five "> <a href="./admin.php"> ECOA</a> </div>
+      <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
 
     </div>
     </header>
