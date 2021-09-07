@@ -52,12 +52,6 @@ session_start();
                 <div class="item three"> <a href="./about.php"> About election</a>
 
                 </div>
-        <div class= "container">
-          <div class="item one">
-                 
-            <a href="./login.php">For Voters</a> </div>
-              <div class="item two">For candidates </div>
-               <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
                 <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
                 <div class="item zero"> <a href="./Index.php"> Home</a> </div>
