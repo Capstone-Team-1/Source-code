@@ -1,15 +1,6 @@
 <?php
 
-$host="localhost"; // Host name
-$username="root"; // Mysql username
-$password=""; // Mysql password
-$db_name="voting"; // Database name
-$tbl_name="employee"; // Table name
-// Connect to server and select databse.
-
-$conn = mysqli_connect("$host", "$username", "$password")or die("cannot connect");
-
-mysqli_select_db($conn, "$db_name")or die("cannot select DB");
+include 'connection.php';
 // username and password sent from form
 $myuser=$_POST['employeeUsername'];
 $mypassword=$_POST['employeePassword'];
@@ -29,13 +20,8 @@ if($count==1){
  session_start();
  /*
 session_register("myuser");
-<<<<<<< HEAD
-session_register("mypassword");  
-header("location: success.php"); */
-=======
 session_register("mypassword");  */
 header("location: dashboard.php");
->>>>>>> 0a30133683b2123d3e9f8bf7137e6c77cc835e0b
 }
 else {
 echo "Wrong Username or Password";
