@@ -121,7 +121,7 @@ if (isset($_POST["signup"])) {
 
       <div class="section-form">
 
-        <h2>Election Commission Of Australia </h2>
+        <h2 style="margin-bottom: 40px;">Election Commission Of Australia </h2>
         <p id="template"></p>
 
           <!-- REGISTRATION FORM DESIGN -->

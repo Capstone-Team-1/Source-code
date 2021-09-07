@@ -100,13 +100,24 @@ header{
  }
 
  /*The effect that we get upon hovering oover the contents*/
-.item:hover, .banner-one:hover, .footer-item:hover, .fooxter-link:hover{
+.item a:hover, .item:hover, .banner-one:hover, .footer-item:hover, .fooxter-link:hover{
     text-decoration: underline;
     cursor: pointer;
-    text-shadow: 2px 2px 15px purple;
+    /* text-shadow: 2px 2px 15px purple; */
+    color: #007bff;
 
 transition : all 0.3s ease-in;
 
+}
+.footer-item:hover,
+.fooxter-link:hover{
+
+     text-decoration: underline;
+     cursor: pointer;
+     /* text-shadow: 2px 2px 15px purple; */
+     color: #CAD5E2;
+
+     transition : all 0.3s ease-in;
 }
 .logo:hover{
 
@@ -165,8 +176,8 @@ display: flex;
 
 .dropdown-content a:hover {
 
-    background-image: linear-gradient(135deg, #EE9AE5 10%, #5961F9 100%);
-    transition: background 0.3s ease-in;
+    
+    transition: all 0.3s ease-in;
 }
 /*banner list class is for the details list part we are setting a image a side it */
 
@@ -367,9 +378,21 @@ padding: 10px 40px;
 margin: 90px 0;
    
   /* background: linear-gradient(135deg,#5a2672 0%,#1b2554 75%);  */
-
+/* border: 2px solid #8E44AD; */
     width: 700px; /*The max width property hence the form will not over grow when the screen size is larger*/
     color: black;
+<<<<<<< HEAD
+    border-radius: 30px 4px 50px 4px;
+     transition: all 1s ease-out;
+   
+   }
+
+   .section-form:hover{
+        box-shadow:2px 2px 15px #4c5ae0;
+        background-color: whitesmoke;
+        transition: all 1s ease-out;
+   }
+=======
   /*  border-radius: 30px 4px 50px 4px;
     box-shadow:2px 2px 15px  #4c5ae0;*/
    }
@@ -377,6 +400,7 @@ margin: 90px 0;
 
 
 
+>>>>>>> 0ba2d28199cb0a4d52cdcfc2a8fa758fdc958e4d
   .button{
     width: 40%;
 padding: 15px 30px;
