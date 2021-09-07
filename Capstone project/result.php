@@ -104,7 +104,7 @@ var myChart = new Chart(ctx, {
         labels: ['Scott Morrission',  'Joyce Barnaby', 'Anthony Albanes'],
         datasets: [{
             label: '# of Votes',
-            data: <?php echo json_encode($json) ?>,
+            data: <?php echo json_encode($json2) ?>,
             backgroundColor: [
                   'rgb(255, 99, 132)',
       'rgb(54, 162, 235)',
@@ -128,6 +128,13 @@ var myChart = new Chart(ctx, {
     }
 });
 </script>
+<?php
+			$results = $dbcon->prepare("SELECT sum(voteID) FROM vote");
+			$results->execute();
+			for($i=0; $rows = $results->fetch(); $i++){
+			echo "The total number of vote counts = ".$rows['sum(voteID)'];
+			}
+			?>
 </div>
  
 </section>
