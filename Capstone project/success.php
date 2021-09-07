@@ -38,16 +38,24 @@ session_start();
  <a href="./Index.php">  <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
         <h1 class="first">Election Commission of  Australia</h1>
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
-        <div class= "container">
-          <div class="item one">
-                 
-            <a href="./login.php">For Voters</a> </div>
-              <div class="item two">For candidates </div>
-               <div class="item three"> About election </div>
+        <div class="container">
+                
+                <div class="item one">
+                    <div class="dropdown"> For Voters
+                    <div class="dropdown-content">
+                        <a href="./login.php">Voter Login</a>
+                        <a href="./register.php"> Registration</a>
+                    </div>
+                    </div>
+                </div>
+                <!-- <div class="item two"> Candidates </div> -->
+                <div class="item three"> <a href="./about.php"> About election</a>
+
+                </div>
                 <div class="item four"> Information Centre</div>
-                 <div class="item five ">    <a href="./admin.php"> ECOA</a> </div>
-               <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
-        </div>
+                <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
+                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
+                </div>
     </header>
 
 
@@ -116,7 +124,7 @@ session_start();
 
 
 
-<script src="../JavaScript/script.js"></script>
+<script src="./JavaScript/script.js"></script>
   <!--This is the script towards the google translator api script file-->
     <!-- <script type="text/javascript" 
  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">

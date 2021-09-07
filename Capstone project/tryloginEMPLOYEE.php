@@ -29,8 +29,13 @@ if($count==1){
  session_start();
  /*
 session_register("myuser");
+<<<<<<< HEAD
 session_register("mypassword");  
 header("location: success.php"); */
+=======
+session_register("mypassword");  */
+header("location: dashboard.php");
+>>>>>>> 0a30133683b2123d3e9f8bf7137e6c77cc835e0b
 }
 else {
 echo "Wrong Username or Password";

@@ -25,7 +25,7 @@ if (isset($_POST["signup"])) {
     echo "<script> alert('Hey you have already registered please log in');
     </script>";
   } else {
-    $sql = " INSERT INTO citizen(citizenID, citizenFName, citizenLName, citizenPhone, citizenDOB, citizenEmail, citizenAddress, citizenCity, citizenState, citizenZip, citizenPassword, citizenAllowed, employeeID) VALUES ('$citizenID','$citizenFName','$citizenLName','$citizenPhone','$citizenDOB','$citizenEmail','$citizenAddress','$citizenCity','$citizenState','$citizenZip','$citizenPW','0','1') ";
+    $sql = " INSERT INTO citizen(citizenID, citizenFName, citizenLName, citizenPhone, citizenDOB, citizenEmail, citizenAddress, citizenCity, citizenState, citizenZip, citizenPassword, citizenAllowed, employeeID) VALUES ('$citizenID','$citizenFName','$citizenLName','$citizenPhone','$citizenDOB','$citizenEmail','$citizenAddress','$citizenCity','$citizenState','$citizenZip','$citizenPW','','1') ";
     $result = mysqli_query($conn, $sql);
     header("Location: success.php");
     if ($result) {
@@ -121,65 +121,46 @@ if (isset($_POST["signup"])) {
 
       <div class="section-form">
 
-        <h2 style="margin-bottom: 40px;">Election Commission Of Australia </h2>
+        <h2>Contact us </h2>
         <p id="template"></p>
 
-          <!-- REGISTRATION FORM DESIGN -->
+          <!-- CONTACTUS FORM DESIGN -->
 <br>
 <br>
 
         <form action="#" method="post" onsubmit="return validateRegister();">
 
           <p id="msg" style="color:red;"></p>
-          <label for="cid"></label>
-          <input type="placeholder" name="citizenID" id="cid" placeholder="Citizenship ID" value="<?php echo $_POST["citizenID"]; ?>">
+         
           <label for="fname">
             <!-- First Name -->
           </label>
-          <input type="placeholder" name="citizenFName" id="fname" placeholder="First Name" value="<?php echo $_POST["citizenFName"]; ?>">
+          <input type="placeholder" name="contactName" id="fname" placeholder="First Name" value="<?php echo $_POST["contactFName"]; ?>">
           <label for="lname">
             <!-- Last Name -->
           </label>
-          <input type="placeholder" name="citizenLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["citizenLName"]; ?>">
+          <input type="placeholder" name="contactLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["contactLName"]; ?>">
           <label for="phonenum">
             <!-- Phone Number -->
           </label>
-          <input type="placeholder" name="citizenPhonenum" id="phonenum" placeholder="Phone Number" value="<?php echo $_POST["citizenPhonenum"]; ?>">
+          <input type="placeholder" name="contactPhonenum" id="phonenum" placeholder="Phone Number" value="<?php echo $_POST["contactPhonenum"]; ?>">
           <label for="Dateof">
-            <!-- D.O.B -->
-          </label>
-          <input type="placeholder" name="citizenDOB" id="Dateof" placeholder="dd/mm/yyyy" value="<?php echo $_POST["citizenDOB"]; ?>">
+          
           <label for="cEmail">
             <!-- Email -->
           </label>
-          <input type="placeholder" name="citizenEmail" id="cEmail" placeholder="Email" value="<?php echo $_POST["citizenEmail"]; ?>">
-          <label for="caddress">
-            <!-- Address  -->
-          </label>
-          <input type="placeholder" name="citizenAddress" id="caddress" placeholder="address" value="<?php echo $_POST["citizenAddress"]; ?>">
-          <label for="city">
-            <!-- City -->
-          </label>
-          <input type="placeholder" name="citizenCity" id="city" placeholder="City" value="<?php echo $_POST["citizenCity"]; ?>">
-          <label for="state">
-            <!-- State -->
-          </label>
-          <input type="placeholder" name="citizenState" id="state" placeholder="State" value="<?php echo $_POST["citizenState"]; ?>">
-          <label for="Zip"></label>
-          <input type="placeholder" name="citizenZip" id="Zip" placeholder="Zip" value="<?php echo $_POST["citizenZip"]; ?>">
-          <label for="pw">
-            <!-- Password -->
-          </label>
-          <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
-          <label for="cpw">
-            <!-- Confirm Password -->
-          </label>
-          <input type="password" name="confirmpw" id="cpw" placeholder="Password" value="<?php echo $_POST["confirmpw"]; ?>">
-          <input type="submit" class="button" name="signup" value="SIGN UP">
+          <input type="placeholder" name="contactEmail" id="cEmail" placeholder="Email" value="<?php echo $_POST["contactEmail"]; ?>">
+          
+            <!--Text Area-->
+            <br>
+          <label for="subject"></label>
+          <textarea id="subject" name="subject" placeholder="Question??"></textarea>
+
+          <input type="submit" class="button" name="submit" value="Submit">
 
 
           <br>
-
+<!--
           <label for="check">
 
             Already registered?
@@ -189,7 +170,7 @@ if (isset($_POST["signup"])) {
           <br>
           <br>
           <a href="./login.php" style="color:red;"> Login Now</a>
-   
+    -->
         </form>
 
       </div>
