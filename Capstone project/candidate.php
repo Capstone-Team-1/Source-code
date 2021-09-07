@@ -79,7 +79,7 @@ session_start();
  
     
   </div>
-<input type="submit" name="btnOne" class="button" Value="Vote"></input>
+<input type="radio" name="btnOne" class="button"></input>
 
 </div>   
 
@@ -93,7 +93,7 @@ session_start();
 
 </p> 
   </div>
-  <input type="submit" name="btnTwo" class="button" Value="Vote"></input>
+  <input type="radio" name="btnTwo" class="button" ></input>
 </div>  
 <div class="card">
   <img src="./Images/1200px-Scott_Morrison_2014.jpg" alt="card image" style="width: 336px;">
@@ -101,8 +101,9 @@ session_start();
     <h4><b>Scott Morrison: Liberal Party of Australia</b></h4> 
     <p></p> 
   </div>
-  <input type="submit" name="btnThree" class="button" Value="Vote"></input>
+  <input type="radio" name="btnThree" class="button" ></input>
 </div>  
+<input type="button" name="submit_data" class="button" Value="Vote" id="submit_data"></input>
     </section>
 
 
@@ -154,5 +155,14 @@ session_start();
  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
 
+<script> 
+$(document).ready(function(){
+$('#submit_data').click(function(){
+  var vote = $('input[name=]')
+})
+});
+
+
+</script>
 </body>
 </html>

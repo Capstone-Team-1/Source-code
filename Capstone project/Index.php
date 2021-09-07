@@ -186,7 +186,7 @@ Challenges to the successful administration of electoral events continue to mult
         <div class="footer-container" style="margin-top: 50px;">
           <div class="footer-item one"> For Voters</div>
           <div class="footer-item two">For candidates </div>
-          <div class="footer-item three"> <a href="./eycandidateRegister.php"> About election</a> </div>
+          <div class="footer-item three"> <a href="./result.php"> About election</a> </div>
           <div class="footer-item four"> Information Centre</div>
           <div class="footer-item five "> The ECOA </div>
         </div>

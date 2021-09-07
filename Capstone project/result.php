@@ -1,3 +1,33 @@
+<?php
+//from pdo documentation available in PHP
+$dbhost = 'localhost';
+$dbname = 'voting';
+$dbuser = 'root';
+$dbpass = '';
+
+try{
+  $dbcon = new PDO ("mysql:host = {$dbhost};dbname={$dbname}", $dbuser, $dbpass);
+  $dbcon -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $ex){
+  die($ex-> getMessage());
+}
+$stmt = $dbcon-> prepare("SELECT * FROM vote");
+$stmt -> execute();
+$json = [];
+$json2 = [];
+while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+  extract($row);
+  $json[]=$candidateID;
+ $json2[]= (int)$voteID; //set this according to candidate name or AS REQURIED int if its the vote count
+}
+json_encode($json);
+ json_encode($json2);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,13 +64,13 @@
 
 
 <header>
- <a href="../Index.php">  <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
+ <a href="./Index.php">  <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
         <h1 class="first">Election Commission of  Australia</h1>
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
         <div class= "container">
           <div class="item one">
                  
-            <a href="../Index.php">Homepage</a> </div>
+            <a href="./Index.php">Homepage</a> </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
@@ -69,12 +99,12 @@
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'doughnut',
+    type: 'pie',
     data: {
-        labels: ['Juan', 'Kripu', 'Teresa'],
+        labels: ['Scott Morrission',  'Joyce Barnaby', 'Anthony Albanes'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3],
+            data: <?php echo json_encode($json) ?>,
             backgroundColor: [
                   'rgb(255, 99, 132)',
       'rgb(54, 162, 235)',

@@ -75,7 +75,7 @@ tr:hover {background-color: #D6EEEE;}
               <div class="banner-items" >
                 <h2 class="banner-header">
                     <br> Welcome  Back  Mr.  <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
-                    <br>The list of users available
+                    <br>The list of users  and candidate available
                 </h2>
                
                     </div>
@@ -86,6 +86,7 @@ tr:hover {background-color: #D6EEEE;}
         <!--Start from here-->
 
         <section class="user-display">
+          <h3 style="color:black;"> User List</h3>
           <table style="border:1px solid black;">
             <tr> 
 <th> Citizen ID </th>
