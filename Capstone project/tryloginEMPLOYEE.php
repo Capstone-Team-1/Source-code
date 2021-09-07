@@ -30,7 +30,7 @@ if($count==1){
 /* session_start();
 session_register("myuser");
 session_register("mypassword");  */
-header("location: success.php");
+header("location: dashboard.php");
 }
 else {
 echo "Wrong Username or Password";
