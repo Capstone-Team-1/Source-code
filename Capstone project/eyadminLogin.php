@@ -69,8 +69,10 @@ session_start();
 
                     <br>
                     <br>
-                    <h2>Admin Login <br>Election Commission Of Australia </h2>
+                    <h2 style="margin-top:-30px">Admin Login </h2> 
+                    <br> <h2> Election Commission Of Australia </h2>
                     <p id="template"></p>
+                    <br>
                     <form action="tryloginEMPLOYEE.php" method="POST" onsubmit="return validate();">
                         <label for="employeeUsername"></label>
                         <input type="text" placeholder="ID" name="employeeUsername" required">

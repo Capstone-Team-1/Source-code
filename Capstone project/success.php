@@ -12,7 +12,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login Page</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     
@@ -35,13 +35,13 @@ session_start();
          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     
 <header>
- <a href="../Index.php">  <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
+ <a href="./Index.php">  <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
         <h1 class="first">Election Commission of  Australia</h1>
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
         <div class= "container">
           <div class="item one">
                  
-            <a href="../HTML/login.php">For Voters</a> </div>
+            <a href="./login.php">For Voters</a> </div>
               <div class="item two">For candidates </div>
                <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
@@ -67,7 +67,7 @@ session_start();
             <h5>
                 Thank You, your registartion process is complete!!!!
             </h5>
-            <img src="check.gif" alt="" style="margin-top: 30px;">
+            <img src="./Images/check.gif" alt="" style="margin-top: 30px;">
             <br>
 
             <a href="./login.php" alt="" title="" style="color:black"> Click here to get redirected to login page!! </a>

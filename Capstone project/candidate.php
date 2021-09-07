@@ -105,7 +105,7 @@ session_start();
   <input type="submit" name="btnTwo" class="button" Value="Vote"></input>
 </div>  
 <div class="card">
-  <img src="./Images/1200px-Scott_Morrison_2014.jpg" alt="card image" >
+  <img src="./Images/1200px-Scott_Morrison_2014.jpg" alt="card image" style="width: 336px;">
   <div class="container">
     <h4><b>Scott Morrison: Liberal Party of Australia</b></h4> 
     <p></p> 
