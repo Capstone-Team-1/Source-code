@@ -29,6 +29,7 @@
                         <div class="item two"><a href="./votersAdminpage.php"> Voters </a></div>
                     <div class="item three"><a href="./eycandidateRegister.php"> Candidate Register </a></div>
                     <div class="item four"> Election Results </div>
+                    <div class="item five ">  <a href="./logout.php"> Log Out</a> </div>
                     <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
                 </div>
             </header>
