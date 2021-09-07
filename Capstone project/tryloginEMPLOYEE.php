@@ -26,11 +26,11 @@ $count=mysqli_num_rows($result);
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
 
-
-/* session_start();
+ session_start();
+ /*
 session_register("myuser");
-session_register("mypassword");  */
-header("location: success.php");
+session_register("mypassword");  
+header("location: success.php"); */
 }
 else {
 echo "Wrong Username or Password";

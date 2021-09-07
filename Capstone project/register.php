@@ -179,7 +179,7 @@ if (isset($_POST["signup"])) {
 
 
           <br>
-<!--
+
           <label for="check">
 
             Already registered?
@@ -189,7 +189,7 @@ if (isset($_POST["signup"])) {
           <br>
           <br>
           <a href="./login.php" style="color:red;"> Login Now</a>
-    -->
+   
         </form>
 
       </div>

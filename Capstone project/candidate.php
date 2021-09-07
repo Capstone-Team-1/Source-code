@@ -2,12 +2,11 @@
 include 'connection.php';
 
 session_start();
-
- $citizenName = mysqli_query($conn, "SELECT citizenID,citizenFName, citizenLName FROM citizen ");
- $row = mysqli_fetch_assoc($citizenName);
- $_SESSION['citizenID']= $row['citizenID'];
-  $_SESSION['citizenFName']= $row['citizenFName'];
-  $_SESSION['citizenLName'] = $row['citizenLName'];
+error_reporting(0);
+ $session_id=$_SESSION['citizenID'];
+		$user_query = $conn->query("SELECT * FROM citizen WHERE citizenID = '$session_id'");
+		$user_row = $user_query->fetch_array();
+		$user_username = $user_row['citizenFName']." ".$user_row['citizenLName'];
 ?>
 
 
@@ -53,7 +52,7 @@ session_start();
         </div>
         <!---This div class will display the user name as per the session --->
          <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php 
-     echo   $_SESSION['citizenID'] . $_SESSION['citizenFName'] . " ". $_SESSION['citizenLName'] ;
+     echo   $user_username ;
 
     
    ?>
@@ -68,7 +67,7 @@ session_start();
                 <h2 class="banner-header">
 
                     <br> Welcome <?php 
-     echo $_SESSION['citizenFName'] . " ". $_SESSION['citizenLName'] . "!!" ?>
+     echo $user_username; ?>
                     <br>Please choose in your Candidate to continue!!!
                 </h2>
                
