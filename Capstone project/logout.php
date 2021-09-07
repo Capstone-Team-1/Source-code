@@ -4,7 +4,7 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: ../index.php");
+header("Location: ./index.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +16,6 @@ header("Location: ../index.php");
   <title>Document</title>
 </head>
 <body>
-   <a href="logout.php"> Log out</a>
+   <a href="./logout.php"> Log out</a>
 </body>
 </html>

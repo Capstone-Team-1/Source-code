@@ -52,6 +52,12 @@ session_start();
                 <div class="item three"> <a href="./about.php"> About election</a>
 
                 </div>
+        <div class= "container">
+          <div class="item one">
+                 
+            <a href="./login.php">For Voters</a> </div>
+              <div class="item two">For candidates </div>
+               <div class="item three"> About election </div>
                 <div class="item four"> Information Centre</div>
                 <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
                 <div class="item zero"> <a href="./Index.php"> Home</a> </div>
@@ -75,7 +81,7 @@ session_start();
             <h5>
                 Thank You, your registartion process is complete!!!!
             </h5>
-            <img src="check.gif" alt="" style="margin-top: 30px;">
+            <img src="./Images/check.gif" alt="" style="margin-top: 30px;">
             <br>
 
             <a href="./login.php" alt="" title="" style="color:black"> Click here to get redirected to login page!! </a>
