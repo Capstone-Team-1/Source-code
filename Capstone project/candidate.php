@@ -75,33 +75,44 @@ session_start();
                     </div>
         </div>
 
-        <h1>Candidates</h1>
-        <centre> 
-        <div class="containerT">
-            <div id="C1-box">
-              <h1> Kripu </h1>
-                <p>this will display a picture of the candidate as well as some details relevant to the voter
-</p>
-<Button> Select </Button>
-            </div>
-              
-            <div id="C2-box">
-              <h1>Teresa</h1>
-                <p>
-                   Candidate 2 image here
-                </p>
-                <Button> Select </Button>
-            </div>
-              
-            <div id="C3-box">
-                <!---img src= --->
-              <h1> Juan </h1>
-              <p> candidate 3 image here</p>
-              <Button> Select </Button>
-            </div>
-        </div>
-        </centre>
+      
+ <section  class="card-container">
+<h3 style="margin-top: 30px; text-decoration: underline; "> Candidates for Election 2021 </h3>
+  
+<div class="card">
+  <img src="./Images/malcolm-turnbull.jpg" alt="image " style="width: 336px;" >
+  <div class="container">
+    <h4><b>Malcom Turnbull: National Party of Australia</b></h4> 
+     
+    <p>  </p>
+ 
+    
+  </div>
+<input type="submit" name="btnOne" class="button" Value="Vote"></input>
 
+</div>   
+
+
+<div class="card">
+  <img src="./Images/Albanese_Anthony_170140-11__FillWzMwMCwzODBd.jpg" alt="card image"  >
+  <div class="container">
+    <h4><b>Anthony Albanese: Australian Labor Party</b></h4> 
+    <p>	
+      	
+
+</p> 
+  </div>
+  <input type="submit" name="btnTwo" class="button" Value="Vote"></input>
+</div>  
+<div class="card">
+  <img src="./Images/1200px-Scott_Morrison_2014.jpg" alt="card image" >
+  <div class="container">
+    <h4><b>Scott Morrison: Liberal Party of Australia</b></h4> 
+    <p></p> 
+  </div>
+  <input type="submit" name="btnThree" class="button" Value="Vote"></input>
+</div>  
+    </section>
 
 
 

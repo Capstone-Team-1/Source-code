@@ -25,7 +25,7 @@
 }
 #google_translate_element {
     position: absolute;
-    top: 300px;
+    top: 310px;
     right: 50px;
 }
 
@@ -217,7 +217,7 @@ font-family: 'Open Sans Condensed', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 80px 80px;
     transition: 0.3s;
-    width: 20%;
+  
     height: 20%;
     border-radius: 5px;
     background-color: whitesmoke;
@@ -237,6 +237,14 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 .container {
     padding: 2px 26px;
+    font-size: 16px;
+    font-family: 'Lora',
+    serif;
+    font-family: 'Noto Serif JP',
+    serif;
+    font-family: 'Open Sans Condensed',
+    sans-serif;
+    
 }
 
 /*Ignore the image section*/
@@ -412,6 +420,22 @@ margin-top: 90px  ;
 width: 400px;
   
 } 
+.card  {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   margin: 80px 80px;
+   transition: 0.3s;
+
+   height: 20%;
+   border-radius: 5px;
+   background-color: whitesmoke;
+   color: black;
+}
+#google_translate_element {
+    position: absolute;
+    top: 350px;
+    right: 50px;
+}
+
 
 }
    @media all and (max-width:690px){
@@ -434,14 +458,7 @@ top: 9px;}
 
         margin: 0 0 0 -45px;
     }
-.section-form{
 
-
-
-
-  
-
-   }
 
    .banner-container{
   
@@ -562,35 +579,8 @@ width: 250px;
 
 /*Candidate page boxes*/
 
-        .containerT {
-            width:600px;
-            height:350px;
-            background-color:#1b2554;
-            padding-top:20px;
-            padding-left:15px;
-            padding-right:15px;
-        }
-        #C1-box {
-            float:left;
-            width:180px;
-            height:300px;
-            background-color:white;
-            border:solid black;
-        }
-        #C2-box {
-            float:left;
-            width:180px;
-            height:300px;
-            background-color:white; 
-            border:solid black;
-            margin-left:20px;
-        }
-        #C3-box {
-            float:right;
-            width:180px;
-            height: 300px;px;
-            background-color:white;
-            border:solid black;
+        .card{
+            height: 40%;
         }
         h1 {
             color:#5a2672;

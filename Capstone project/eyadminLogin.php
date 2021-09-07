@@ -32,7 +32,7 @@ session_start();
             <h1 class="first">Election Commission of Australia</h1>
             <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
             <div class="container">
-                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
+                
                 <div class="item one">
                     <div class="dropdown"> For Voters
                     <div class="dropdown-content">
@@ -47,7 +47,7 @@ session_start();
                 </div>
                 <div class="item four"> Information Centre</div>
                 <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
-
+                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
                 </div>
         </header>
 
