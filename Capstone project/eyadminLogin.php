@@ -13,7 +13,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login Page</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -28,19 +28,27 @@ session_start();
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
         <header>
-            <a href="../Index.php"> <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>
+            <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>
             <h1 class="first">Election Commission of Australia</h1>
             <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
             <div class="container">
+                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
                 <div class="item one">
-
-                    <a href="../HTML/login.php">Dashboard</a>
+                    <div class="dropdown"> For Voters
+                    <div class="dropdown-content">
+                        <a href="./login.php">Voter Login</a>
+                        <a href="./register.php"> Registration</a>
+                    </div>
+                    </div>
                 </div>
-                <div class="item two"> Voters </div>
-                <div class="item three"> Candidates </div>
-                <div class="item four"> Election Results </div>
-                <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
-            </div>
+                <!-- <div class="item two"> Candidates </div> -->
+                <div class="item three"> <a href="./about.php"> About election</a>
+
+                </div>
+                <div class="item four"> Information Centre</div>
+                <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
+
+                </div>
         </header>
 
 
