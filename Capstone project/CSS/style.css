@@ -184,7 +184,7 @@ h3 {
 }
 
 .reading-content {
-  margin-top: 10px;
+  margin-top: 50px;
   text-align: center;
   font-size: 1.3rem;
   font-family: "Lora", serif;
@@ -192,9 +192,9 @@ h3 {
   font-family: "Open Sans Condensed", sans-serif;
 }
 .reading-content img {
-  max-width: 1000px;
+  max-width: 100%;
   left: 20%;
-  border-radius: 30px 1140px 30px 840px;
+  /*border-radius: 30px 1140px 30px 840px;*/
   margin-top: 40px; 
 }
 
@@ -287,11 +287,11 @@ a {
   color: white;
 }
 
-/* ---------------- FORM STYLE ---------------------- */
+/* ------------------------------------------- FORM STYLE ---------------------------------------- */
 
 input[type="text"] {
-  width: 40%;
-  padding: 12px;
+  width: 48%;
+  padding: 10px;
   height: 38px;
   margin: 5px 0 15px 0;
   /*display: inline-block;*/
@@ -394,13 +394,13 @@ input:focus {
   border-radius: 30px 4px 50px 4px;
   transition: all 1s ease-out;
 }
-
+/*
 .section-form:hover {
   box-shadow: 2px 2px 15px #4c5ae0;
   background-color: whitesmoke;
   transition: all 1s ease-out;
 }
-
+*/
 .button {
   width: 40%;
   padding: 15px 30px;
@@ -421,9 +421,12 @@ input:focus {
   background: #450087;
   color: white;
   /*radial-gradient(circle, rgba(63, 70, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);*/
-  transition: 0.5s;
-  
+  transition: 0.5s; 
 }
+
+
+/* ---------------------------------- END FORM STYLE ------------------------------------------ */
+
 
 /*setting the margin down to 50px below for better spacing*/
 @keyframes message {
