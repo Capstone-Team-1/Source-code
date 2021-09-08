@@ -33,6 +33,7 @@ session_start();
   }
 </script>
          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        
          <header>
     <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>
     <h1 class="first">Election Commission of Australia</h1>
