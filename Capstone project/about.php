@@ -26,7 +26,6 @@
 </script>
     
 <header>
-<header>
     <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>
     <h1 class="first">Election Commission of Australia</h1>
     <div class="sticky-mobile-nav">
