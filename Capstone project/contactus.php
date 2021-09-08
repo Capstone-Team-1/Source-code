@@ -61,6 +61,8 @@ if (isset($_POST["signup"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./CSS/style.css">
+  
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </head>
 
@@ -129,7 +131,7 @@ if (isset($_POST["signup"])) {
 
         <form action="#" method="post" onsubmit="return validateRegister();">
 
-          <p id="msg" style="color:red;"></p>
+          <p id="msg" style="color: red;"></p>
          
           <input type="text" name="citizenFName" id="fname" placeholder="First Name" value="<?php echo $_POST["citizenFName"]; ?>">
           <input type="text" name="citizenLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["citizenLName"]; ?>">
@@ -138,7 +140,7 @@ if (isset($_POST["signup"])) {
             <!--Text Area-->
             <br>
           <label for="subject"></label>
-          <textarea id="subject" name="subject" placeholder="Enter your message here..."></textarea>
+          <textarea id="subject" name="subject" style="height: 150px;" placeholder="Enter your message here..."></textarea>
 
           <input type="submit" class="button" name="submit" value="Submit">
           <br>
