@@ -80,32 +80,32 @@ if (isset($_POST["signup"])) {
       }
     </script>
 
-    <header>
+<header>
+    <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>
+    <h1 class="first">Election Commission of Australia</h1>
+    <div class="sticky-mobile-nav">
+      <ion-icon name="menu"></ion-icon>
+    </div>
+    <div class="container">
+                
+                <div class="item one">
+                    <div class="dropdown"> For Voters
+                    <div class="dropdown-content">
+                        <a href="./voterLogin.php">Voter Login</a>
+                        <a href="./register.php"> Registration</a>
+                    </div>
+                    </div>
+                </div>
+                <!-- <div class="item two"> Candidates </div> -->
+                <div class="item three"> <a href="./about.php"> About election</a>
 
-      <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
-      <h1 class="first">Election Commission of Australia</h1>
-      <div class="sticky-mobile-nav">
-        <ion-icon name="menu"></ion-icon>
-      </div>
-      <div class="container">
-
-        <div class="item one">
-          <div class="dropdown"> For Voters
-            <div class="dropdown-content">
-              <a href="./login.php">Voter Login</a>
-              <a href="./register.php"> Registration</a>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="item two"> Candidates </div> -->
-        <div class="item three"> <a href="./about.php"> About election</a>
-
-        </div>
-        <div class="item four"> Information Centre</div>
-        <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
-        <div class="item zero"> <a href="./Index.php"> Home</a> </div>
-      </div>
-    </header>
+                </div>
+                <div class="item four"> Information Centre</div>
+                <div class="item five "> <a href="./adminLogin.php"> ECOA</a> </div>
+                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
+                </div>
+ 
+  </header>
 
     <section class="banner">
 
@@ -131,7 +131,7 @@ if (isset($_POST["signup"])) {
         <form action="#" method="post" onsubmit="return validateRegister();">
 
           <p id="msg" style="color:red;"></p>
-          
+
           <input type="text" name="citizenFName" id="fname" placeholder="First Name" value="<?php echo $_POST["citizenFName"]; ?>">
           <input type="text" name="citizenLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["citizenLName"]; ?>">
           <input type="number" name="citizenID" id="cid" placeholder="Citizenship ID" value="<?php echo $_POST["citizenID"]; ?>">
@@ -161,7 +161,7 @@ if (isset($_POST["signup"])) {
           <br>
           <input type="submit" class="button" name="signup" value="SIGN UP">
           <br>
-            Do you have an account? Please, <a href="./login.php" style="color:#4c5ae0;">Login Here</a>
+          Do you have an account? Please, <a href="./login.php" style="color:#4c5ae0;">Login Here</a>
         </form>
 
       </div>
