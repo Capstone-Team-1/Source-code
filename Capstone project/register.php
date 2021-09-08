@@ -88,23 +88,23 @@ if (isset($_POST["signup"])) {
         <ion-icon name="menu"></ion-icon>
       </div>
       <div class="container">
-                
-                <div class="item one">
-                    <div class="dropdown"> For Voters
-                    <div class="dropdown-content">
-                        <a href="./login.php">Voter Login</a>
-                        <a href="./register.php"> Registration</a>
-                    </div>
-                    </div>
-                </div>
-                <!-- <div class="item two"> Candidates </div> -->
-                <div class="item three"> <a href="./about.php"> About election</a>
 
-                </div>
-                <div class="item four"> Information Centre</div>
-                <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
-                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
-                </div>
+        <div class="item one">
+          <div class="dropdown"> For Voters
+            <div class="dropdown-content">
+              <a href="./login.php">Voter Login</a>
+              <a href="./register.php"> Registration</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="item two"> Candidates </div> -->
+        <div class="item three"> <a href="./about.php"> About election</a>
+
+        </div>
+        <div class="item four"> Information Centre</div>
+        <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
+        <div class="item zero"> <a href="./Index.php"> Home</a> </div>
+      </div>
     </header>
 
     <section class="banner">
@@ -124,72 +124,42 @@ if (isset($_POST["signup"])) {
         <h2 style="margin-bottom: 40px;">Election Commission Of Australia </h2>
         <p id="template"></p>
 
-          <!-- REGISTRATION FORM DESIGN -->
-<br>
-<br>
+        <!-- REGISTRATION FORM DESIGN -->
+        <br>
+        <br>
 
         <form action="#" method="post" onsubmit="return validateRegister();">
 
           <p id="msg" style="color:red;"></p>
-          <label for="cid"></label>
-          <input type="placeholder" name="citizenID" id="cid" placeholder="Citizenship ID" value="<?php echo $_POST["citizenID"]; ?>">
-          <label for="fname">
-            <!-- First Name -->
-          </label>
-          <input type="placeholder" name="citizenFName" id="fname" placeholder="First Name" value="<?php echo $_POST["citizenFName"]; ?>">
-          <label for="lname">
-            <!-- Last Name -->
-          </label>
-          <input type="placeholder" name="citizenLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["citizenLName"]; ?>">
-          <label for="phonenum">
-            <!-- Phone Number -->
-          </label>
-          <input type="placeholder" name="citizenPhonenum" id="phonenum" placeholder="Phone Number" value="<?php echo $_POST["citizenPhonenum"]; ?>">
-          <label for="Dateof">
-            <!-- D.O.B -->
-          </label>
-          <input type="placeholder" name="citizenDOB" id="Dateof" placeholder="dd/mm/yyyy" value="<?php echo $_POST["citizenDOB"]; ?>">
-          <label for="cEmail">
-            <!-- Email -->
-          </label>
-          <input type="placeholder" name="citizenEmail" id="cEmail" placeholder="Email" value="<?php echo $_POST["citizenEmail"]; ?>">
-          <label for="caddress">
-            <!-- Address  -->
-          </label>
-          <input type="placeholder" name="citizenAddress" id="caddress" placeholder="address" value="<?php echo $_POST["citizenAddress"]; ?>">
-          <label for="city">
-            <!-- City -->
-          </label>
-          <input type="placeholder" name="citizenCity" id="city" placeholder="City" value="<?php echo $_POST["citizenCity"]; ?>">
-          <label for="state">
-            <!-- State -->
-          </label>
-          <input type="placeholder" name="citizenState" id="state" placeholder="State" value="<?php echo $_POST["citizenState"]; ?>">
-          <label for="Zip"></label>
-          <input type="placeholder" name="citizenZip" id="Zip" placeholder="Zip" value="<?php echo $_POST["citizenZip"]; ?>">
-          <label for="pw">
-            <!-- Password -->
-          </label>
-          <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
-          <label for="cpw">
-            <!-- Confirm Password -->
-          </label>
+          
+          <input type="text" name="citizenFName" id="fname" placeholder="First Name" value="<?php echo $_POST["citizenFName"]; ?>">
+          <input type="text" name="citizenLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["citizenLName"]; ?>">
+          <input type="number" name="citizenID" id="cid" placeholder="Citizenship ID" value="<?php echo $_POST["citizenID"]; ?>">
+          <input type="number" name="citizenPhonenum" id="phonenum" placeholder="Phone Number" value="<?php echo $_POST["citizenPhonenum"]; ?>">
+          <input type="date" name="citizenDOB" id="Dateof" placeholder="dd/mm/yyyy" value="<?php echo $_POST["citizenDOB"]; ?>">
+          <input type="email" name="citizenEmail" id="cEmail" placeholder="Email" value="<?php echo $_POST["citizenEmail"]; ?>">
+          <input type="text" name="citizenAddress" id="caddress" placeholder="Address" value="<?php echo $_POST["citizenAddress"]; ?>">
+          <input type="text" name="citizenCity" id="city" placeholder="City" value="<?php echo $_POST["citizenCity"]; ?>">
+          <select name="citizenState" id="state" value="<?php echo $_POST["citizenState"]; ?>">
+            <option value="NSW">New South Wales</option>
+            <option value="VIC">Victoria</option>
+            <option value="SA">South Australia</option>
+            <option value="WA">Western Australia</option>
+            <option value="TAS">Tasmania</option>
+            <option value="QLD">Queensland</option>
+            <option value="NT">Northern Territory</option>
+          </select>
+          <!-- <input type="text" name="citizenState" id="state" placeholder="State" value="<?php echo $_POST["citizenState"]; ?>"> -->
+          <input type="number" name="citizenZip" id="Zip" placeholder="Postal Code" value="<?php echo $_POST["citizenZip"]; ?>">
+          <br>
+          Insert a Password  <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
+          <br>
+          Confirm the Password
           <input type="password" name="confirmpw" id="cpw" placeholder="Password" value="<?php echo $_POST["confirmpw"]; ?>">
+          <br>
           <input type="submit" class="button" name="signup" value="SIGN UP">
-
-
           <br>
-
-          <label for="check">
-
-            Already registered?
-            <br>
-            Click the link below to Login yourself!!!
-          </label>
-          <br>
-          <br>
-          <a href="./login.php" style="color:red;"> Login Now</a>
-   
+            Do you have an account? Please, <a href="./login.php" style="color:#4c5ae0;">Login Here</a>
         </form>
 
       </div>
