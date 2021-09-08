@@ -37,7 +37,7 @@
       <div class="item one">
         <div class="dropdown"> For Voters
           <div class="dropdown-content">
-            <a href="./login.php">Voter Login</a>
+            <a href="./voterLogin.php">Voter Login</a>
             <a href="./register.php"> Registration</a>
           </div>
         </div>
@@ -47,7 +47,7 @@
 
       </div>
       <div class="item four"> Information Centre</div>
-      <div class="item five "> <a href="./admin.php"> ECOA</a> </div>
+      <div class="item five "> <a href="./adminLogin.php"> ECOA</a> </div>
 
     </div>
     </div>
