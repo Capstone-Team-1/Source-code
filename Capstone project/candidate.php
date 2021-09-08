@@ -3,11 +3,7 @@ include 'connection.php';
 
 session_start();
 
- $citizenName = mysqli_query($conn, "SELECT citizenID,citizenFName, citizenLName FROM citizen ");
- $row = mysqli_fetch_assoc($citizenName);
- $_SESSION['citizenID']= $row['citizenID'];
-  $_SESSION['citizenFName']= $row['citizenFName'];
-  $_SESSION['citizenLName'] = $row['citizenLName'];
+
 ?>
 
 
@@ -52,11 +48,7 @@ session_start();
                <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
         </div>
         <!---This div class will display the user name as per the session --->
-         <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php 
-     echo   $_SESSION['citizenID'] . $_SESSION['citizenFName'] . " ". $_SESSION['citizenLName'] ;
-
-    
-   ?>
+         <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
     </header>
 
 
@@ -67,8 +59,7 @@ session_start();
                 <!---This h2 will display the user name as per the session --->
                 <h2 class="banner-header">
 
-                    <br> Welcome <?php 
-     echo $_SESSION['citizenFName'] . " ". $_SESSION['citizenLName'] . "!!" ?>
+                    <br> Welcome <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
                     <br>Please choose in your Candidate to continue!!!
                 </h2>
                
@@ -78,7 +69,7 @@ session_start();
       
  <section  class="card-container">
 <h3 style="margin-top: 30px; text-decoration: underline; "> Candidates for Election 2021 </h3>
-  
+  <form action="#" method="POST">
 <div class="card">
   <img src="./Images/malcolm-turnbull.jpg" alt="image " style="width: 336px;" >
   <div class="container">
@@ -88,7 +79,8 @@ session_start();
  
     
   </div>
-<input type="submit" name="btnOne" class="button" Value="Vote"></input>
+  <form action="#" method="POST">
+<input type="radio" name="btnOne" class="button"></input>
 
 </div>   
 
@@ -102,7 +94,7 @@ session_start();
 
 </p> 
   </div>
-  <input type="submit" name="btnTwo" class="button" Value="Vote"></input>
+  <input type="radio" name="btnTwo" class="button" ></input>
 </div>  
 <div class="card">
   <img src="./Images/1200px-Scott_Morrison_2014.jpg" alt="card image" style="width: 336px;">
@@ -110,9 +102,13 @@ session_start();
     <h4><b>Scott Morrison: Liberal Party of Australia</b></h4> 
     <p></p> 
   </div>
-  <input type="submit" name="btnThree" class="button" Value="Vote"></input>
+  <input type="radio" name="btnThree" class="button" ></input>
 </div>  
-    </section>
+<br>
+<input type="button" name="submit_data" class="button" Value="Vote" id="submit_data"></input>
+    </form>
+
+</section>
 
 
 
@@ -163,5 +159,14 @@ session_start();
  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
 
+<script> 
+$(document).ready(function(){
+$('#submit_data').click(function(){
+  var vote = $('input[name=]')
+})
+});
+
+
+</script>
 </body>
 </html>

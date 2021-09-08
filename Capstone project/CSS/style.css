@@ -385,13 +385,13 @@ margin: 90px 0;
      transition: all 1s ease-out;
    
    }
-/*
+
    .section-form:hover{
         box-shadow:2px 2px 15px #4c5ae0;
         background-color: whitesmoke;
         transition: all 1s ease-out;
    }
-   */
+   
   .button{
     width: 40%;
 padding: 15px 30px;
@@ -441,6 +441,8 @@ font-size: 1.9rem;
 margin-top: 90px  ;
 
 }
+
+
 
 @media all and (max-width: 813px){
 

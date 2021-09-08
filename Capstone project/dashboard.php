@@ -12,12 +12,29 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login Page</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     
     <style>
-     
+     .user-display{
+    margin-top: 80px;
+  
+}
+table {
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2rem;
+
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover {background-color: #D6EEEE;}
     </style>
 </head>
 <body>
@@ -33,19 +50,22 @@ session_start();
 </script>
     
 <header>
- <a href="../Index.php">  <img src="../Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
+ <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
         <h1 class="first">Election Commission of  Australia</h1>
         <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
-        <div class= "container">
-          <div class="item one">
-                 
-            <a href="../HTML/login.php">For Voters</a> </div>
-              <div class="item two">For candidates </div>
-               <div class="item three"> About election </div>
-                <div class="item four"> Information Centre</div>
-                 <div class="item five ">    <a href="./admin.php"> ECOA</a> </div>
-               <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
-        </div>
+        <div class="container">
+                    <div class="item one">
+
+                        <a href="./dashboard.php">Dashboard</a>
+                    </div>
+                        <div class="item two"><a href="./votersAdminpage.php"> Voters </a></div>
+                    <div class="item three"><a href="./eycandidateRegister.php"> Candidate Register </a></div>
+                    <div class="item four"> Election Results </div>
+                    <div class="item five ">  <a href="./logout.php"> Log Out</a> </div>
+                    <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
+                </div>
+                <!---This div class will display the user name as per the session --->
+         <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo "Mr.". $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
     </header>
 
 
@@ -54,17 +74,41 @@ session_start();
             <div class="banner-container">
               <div class="banner-items" >
                 <h2 class="banner-header">
-                    <br> Welcome to ECOA online voting platform
-                    <br>The list of users available
+                    <br> Welcome  Back  Mr.  <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
+                    <br>The list of users  and candidate available
                 </h2>
                
                     </div>
         </div>
 
 
-
+    </section>
         <!--Start from here-->
 
+        <section class="user-display">
+          <h3 style="color:black;"> User List</h3>
+          <table style="border:1px solid black;">
+            <tr> 
+<th> Citizen ID </th>
+<th>First Name</th>
+<th> Last Name </th>
+<th>  Phone</th>
+<th> Date of Birth</th>
+<th> Email</th>
+<th> Address</th>
+<th> state</th>
+<th> City </th>
+<th> Zip </th>
+
+<tbody id="dataSource"> <!---This will fetch data using ajax---->
+
+</tbody>
+
+            </tr>
+
+          </table>
+
+        </section>
 
 
 
@@ -102,12 +146,7 @@ session_start();
                       <div class="fooxter-link-three"> <ion-icon name="logo-instagram"></ion-icon></div>
                        
                 </div> 
-         
-
-
-
-
-</div>
+              </div>
 
        
  </footer>
@@ -115,7 +154,62 @@ session_start();
 
 
 
-<script src="../JavaScript/script.js"></script>
+<script src="./JavaScript/script.js"></script>
+
+<script>
+  var ajax = new XMLHttpRequest();
+var method = "GET";
+var url = "./data.php"
+var asynchronous = true;
+
+ajax.open(method, url, asynchronous);
+//This is how we are sending request
+ajax.send();
+//This is rweceviing request from our data.php file
+ajax.onreadystatechange = function (){
+   if (this.readyState == 4 && this.status == 200) {
+       //converting JSON back to array
+
+       var data = JSON.parse (this.responseText);
+       console.log(data); //for test
+
+       //html value for table body i.e. tbody
+
+       var html = "";
+       // we have to loop the data through
+       for(var a = 0; a<data.length; a++){
+           var id = data[a].citizenID;
+           var firstName = data[a].citizenFName;
+           var lastName = data[a].citizenLName;
+           var phone = data[a].citizenPhone;
+           var dob= data[a].citizenDOB;
+           var email = data[a].citizenEmail;
+           var address = data[a].citizenAddress;
+           var City= data[a].citizenCity;
+           var state = data[a].citizenState;
+           var zip = data[a].citizenZip;
+
+           //appending in HTML dom
+
+           html+= "<tr> "
+          html += "<td>" + id + "</td>";
+            html += "<td>" + firstName + "</td>";
+              html += "<td>" + lastName + "</td>";
+                html += "<td>" +phone + "</td>";
+                  html += "<td>" + dob+ "</td>";
+                    html += "<td>" + email + "</td>";
+                      html += "<td>" + address + "</td>";
+                        html += "<td>" + City + "</td>";
+                          html += "<td>" + state + "</td>";
+                        html += "<td>" + zip+ "</td>";
+
+          html += "</tr>";
+       }
+//replacing the table body
+document.getElementById('dataSource').innerHTML = html;
+   }
+}
+</script>
   <!--This is the script towards the google translator api script file-->
     <script type="text/javascript" 
  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">

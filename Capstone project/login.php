@@ -1,4 +1,28 @@
+<?php
 
+include'connection.php';
+session_start();
+error_reporting(0);
+ if (isset ($_POST['submit'])){
+$myuser=$_POST['citizenID'];
+$mypassword= md5($_POST['citizenPassword']);
+// To protect MySQL injection (more detail about MySQL injection)
+
+$sql="SELECT * FROM citizen WHERE citizenID ='$myuser' and citizenPassword ='$mypassword'";
+
+$result=mysqli_query($conn, $sql);
+if($result -> num_rows>0){
+$row= mysqli_fetch_assoc($result);
+$_SESSION['citizenFName'] = $row['citizenFName'];
+$_SESSION['citizenLName'] = $row['citizenLName'];
+header("Location: candidate.php");
+}
+
+else{
+    echo "<script> alert('Login failed') </script>";
+    header('index.php');
+} }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -120,15 +144,15 @@ else{
 <br> 
 <br> 
 
-      <form action="tryloginCITIZEN.php" method="POST" onsubmit="return validate();">
+      <form action="" method="POST" onsubmit="return validate();">
         <label for="citizenID"></label>
-        <input type="text" placeholder="Citizen's ID" id="vid" name="citizenID" required>
+        <input type="text" placeholder="Citizen's ID" id="vid" name="citizenID" required >
         <br> 
         <br>
-        <input type="password" placeholder="Password" id="pw" name="citizenPassword" required>
+        <input type="password" placeholder="Password" id="pw" name="citizenPassword" required> 
          <br> 
         <br>
-        <input type="submit" class="button" Value="Login"></input>
+        <input type="submit" class="button" Value="Login" name="submit"></input>
         <br>
         <label for="check"> Not registered?
           <br>Click the link below to register yourself
