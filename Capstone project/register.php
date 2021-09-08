@@ -121,7 +121,7 @@ if (isset($_POST["signup"])) {
 
       <div class="section-form">
 
-        <h2 style="margin-bottom: 40px;">Election Commission Of Australia </h2>
+        <h2 style="margin-bottom: 10px;">Voter Registration Form</h2>
         <p id="template"></p>
 
         <!-- REGISTRATION FORM DESIGN -->
@@ -152,10 +152,12 @@ if (isset($_POST["signup"])) {
           <!-- <input type="text" name="citizenState" id="state" placeholder="State" value="<?php echo $_POST["citizenState"]; ?>"> -->
           <input type="number" name="citizenZip" id="Zip" placeholder="Postal Code" value="<?php echo $_POST["citizenZip"]; ?>">
           <br>
-          Insert a Password  <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
+          <label for="pw">Insert a Password</label>
+          <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
           <br>
-          Confirm the Password
+          <label for="confirmpw">Confirm the Password</label>
           <input type="password" name="confirmpw" id="cpw" placeholder="Password" value="<?php echo $_POST["confirmpw"]; ?>">
+          <br>
           <br>
           <input type="submit" class="button" name="signup" value="SIGN UP">
           <br>
@@ -163,7 +165,6 @@ if (isset($_POST["signup"])) {
         </form>
 
       </div>
-
 
       <footer>
 
