@@ -94,7 +94,7 @@ else{
   </section>
   <div class="section-form">
     <div class="login">
-      <h2>Election Commission Of Australia </h2>
+      <h2>Voter Login </h2>
       <p id="template"></p>
 <br> 
 <br> 
@@ -110,11 +110,8 @@ else{
         <br>
         <input type="submit" class="button" Value="Login" name="submit"></input>
         <br>
-        <label for="check"> Not registered?
-          <br>Click the link below to register yourself
-        </label>
         <br>
-        <a href="register.php" style="color:red;"> Register Now</a>
+            Not registred? Please, <a href="./login.php" style="color:#4c5ae0;">Register Here</a>
       </form>
 
 
