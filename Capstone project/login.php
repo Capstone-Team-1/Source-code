@@ -31,56 +31,11 @@ else{
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login Page</title>
+  <title>Voter's Login</title>
   <link rel="stylesheet" href="./CSS/style.css">
 
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-  <style>
-
-  </style>
-
-  <!-- ------- this code was at the top of this page. I (JUAN) commented and pasted here to try another connection
-write the php opening tag to use
-
-include 'connection.php';
-session_start();
-error_reporting(0);
-//session start done so that browser can know about who the user is once log in
-if (isset($_SESSION["votersId"])) {
-  header("Location: ./candidate.php");
-}
-//the isset method keeps the session id and the directs the users towards candidate page if the user is authorised
-
-
-
-//Here we check whether the available informatioon is in database or not 
-if (isset($_POST["login"])){
-  
-  $citizenID = mysqli_real_escape_string($conn, $_POST["votersId"]); //if you check the forms the value on the post methods match hence they communicate with each other regarding the infromation entered
-$citizenVPW = mysqli_real_escape_string($conn, md5($_POST["passWord"]));
-//$citizenVCPW = mysqli_real_escape_string($conn, md5($_POST["cpassWord"]));
-     //   $citizenCPW = mysqli_real_escape_string($conn, md5($_POST["confirmpw"]));
- $checkcitizenID = mysqli_query($conn, "SELECT * FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'");
- $citizenName = mysqli_query($conn, "SELECT citizenFName, citizenLName FROM citizen WHERE citizenID = '$citizenID'");
- //This is the query to check the information passed on
- //$fetchCitizenUsername = mysqli_query($conn, "SELECT citizenFName, citizenLName FROM citizen WHERE citizenID='$citizenID' AND citizenPassword = '$citizenVPW'");
-if(mysqli_num_rows($checkcitizenID)>0){   //if citizen id is present than it will direct the user with record of session
-  $row = mysqli_fetch_assoc($checkcitizenID);
- $citizenName = mysqli_query($conn, "SELECT citizenFName, citizenLName FROM citizen WHERE citizenID = '$citizenID'");
- $row = mysqli_fetch_assoc($citizenName);
-  $_SESSION['citizenFName']= $row['citizenFName'];
-  $_SESSION['citizenLName'] = $row['citizenLName'];
-  header("Location : ./candidate.php");
-
-}
-
-else{
-
-  echo "<script> alert('The details does not match') </script>";
-}
-}
-?> -->
 </head>
 
 <body>
@@ -146,10 +101,11 @@ else{
 
       <form action="" method="POST" onsubmit="return validate();">
         <label for="citizenID"></label>
-        <input type="text" placeholder="Citizen's ID" id="vid" name="citizenID" required >
+        <input type="text" placeholder="" id="vid" name="citizenID" required ></input>
         <br> 
         <br>
-        <input type="password" placeholder="Password" id="pw" name="citizenPassword" required> 
+        <label for="citizenPassword"></label>
+        <input type="password" placeholder="" id="pw" name="citizenPassword" required></input> 
          <br> 
         <br>
         <input type="submit" class="button" Value="Login" name="submit"></input>
