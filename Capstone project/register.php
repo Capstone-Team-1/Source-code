@@ -81,53 +81,53 @@ if (isset($_POST["signup"])) {
     </script>
 
 <header>
-    <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>
-    <h1 class="first">Election Commission of Australia</h1>
-    <div class="sticky-mobile-nav">
-      <ion-icon name="menu"></ion-icon>
+    
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="ecoa-logo">
+        <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
+        <h1 class="organization-name">Electoral Commission of Australia</h1>
     </div>
-    <div class="container">
-                
-                <div class="item one">
-                    <div class="dropdown"> For Voters
-                    <div class="dropdown-content">
-                        <a href="./voterLogin.php">Voter Login</a>
-                        <a href="./register.php"> Registration</a>
-                    </div>
-                    </div>
-                </div>
-                <!-- <div class="item two"> Candidates </div> -->
-                <div class="item three"> <a href="./about.php"> About election</a>
-
-                </div>
-                <div class="item four"> Information Centre</div>
-                <div class="item five "> <a href="./adminLogin.php"> ECOA</a> </div>
-                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
-                </div>
- 
-  </header>
+      <ul>
+        <li><a href="./Index.php">Home</a></li>
+        <li><a href="">Voters</a> 
+          <ul class="dropdown">
+          <li><a href="./voterLogin.php">Voter Login</a></li>
+          <li><a href="./register.php">Registration</a></li>
+          </ul>
+        </li> 
+        <li><a href="./about.php">About Elections</a></li>
+        <li><a href="">Instructive Video</a></li>
+        <li><a href="">ECOA</a>
+          <ul class="dropdown">
+          <li><a href="./adminLogin.php">Staff Login</a></li>
+          <li><a href="./contactus.php">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </header>
 
     <section class="banner">
 
-      <div class="banner-container">
-        <div class="banner-items">
-          <h2 class="banner-header">
-            <br> Welcome to ECOA online voting platform
-            <br>Please Register Yourself !!!!!
-          </h2>
+    <div class="banner-container">
+      <div class="banner-items" style ="text-align: center; font-size: 20px;">
+      <br>
+      <br> 
+      <h2 >Voter Registration Page</h2>
 
-        </div>
       </div>
-
-      <div class="section-form">
-
-        <h2 style="margin-bottom: 10px;">Voter Registration Form</h2>
-        <p id="template"></p>
-
-        <!-- REGISTRATION FORM DESIGN -->
-        <br>
-        <br>
-
+    </div>
+  </section>
+  
+  <div class="section-form">
+    <div class="login">
+      <h3>Please enter your details </h3>
+      <p id="template"></p>
+    <br>
         <form action="#" method="post" onsubmit="return validateRegister();">
 
           <p id="msg" style="color:red;"></p>
@@ -160,6 +160,7 @@ if (isset($_POST["signup"])) {
           <br>
           <br>
           <input type="submit" class="button" name="signup" value="SIGN UP">
+          <br>
           <br>
           Do you have an account? Please, <a href="./login.php" style="color:#4c5ae0;">Login Here</a>
         </form>
