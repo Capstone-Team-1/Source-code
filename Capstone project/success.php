@@ -33,31 +33,37 @@ session_start();
   }
 </script>
          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        
+         <header>
     
-<header>
- <a href="./Index.php">  <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
-        <h1 class="first">Election Commission of  Australia</h1>
-        <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
-        <div class="container">
-                
-                <div class="item one">
-                    <div class="dropdown"> For Voters
-                    <div class="dropdown-content">
-                        <a href="./login.php">Voter Login</a>
-                        <a href="./register.php"> Registration</a>
-                    </div>
-                    </div>
-                </div>
-                <!-- <div class="item two"> Candidates </div> -->
-                <div class="item three"> <a href="./about.php"> About election</a>
-
-                </div>
-                <div class="item four"> Information Centre</div>
-                <div class="item five "> <a href="./eyadminLogin.php"> ECOA</a> </div>
-                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
-                </div>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="ecoa-logo">
+        <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
+        <h1 class="organization-name">Electoral Commission of Australia</h1>
+    </div>
+      <ul>
+        <li><a href="./Index.php">Home</a></li>
+        <li><a href="">Voters</a> 
+          <ul class="dropdown">
+          <li><a href="./voterLogin.php">Voter Login</a></li>
+          <li><a href="./register.php">Registration</a></li>
+          </ul>
+        </li> 
+        <li><a href="./about.php">About Elections</a></li>
+        <li><a href="">Instructive Video</a></li>
+        <li><a href="">ECOA</a>
+          <ul class="dropdown">
+          <li><a href="./adminLogin.php">Staff Login</a></li>
+          <li><a href="./contactus.php">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     </header>
-
 
     <section class="banner">
      

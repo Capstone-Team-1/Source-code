@@ -24,34 +24,34 @@
   </script>
   <!--Header contains nav and heading following the semantic tags from HTML5--->
   <header>
-    <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif" alt="" class="logo"></a>
-    <h1 class="first">Election Commission of Australia</h1>
-    <!--The first div is for mobile menu which will trigger height equivalent to the size of the menu items once button is clicked-->
-    <div class="sticky-mobile-nav">
-      <ion-icon name="menu"></ion-icon>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="ecoa-logo">
+        <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
+        <h1 class="organization-name">Electoral Commission of Australia</h1>
     </div>
-
-    <!--Container class contains all the nav menu and it is set to flex--->
-
-    <div class="container">
-      <div class="item one">
-        <div class="dropdown"> For Voters
-          <div class="dropdown-content">
-            <a href="./login.php">Voter Login</a>
-            <a href="./register.php"> Registration</a>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="item two"> Candidates </div> -->
-      <div class="item three"> <a href="./about.php"> About election</a>
-
-      </div>
-      <div class="item four"> Information Centre</div>
-      <div class="item five "> <a href="./admin.php"> ECOA</a> </div>
-
-    </div>
-    </div>
-  </header>
+      <ul>
+        <li><a href="./Index.php">Home</a></li>
+        <li><a href="">Voters</a> 
+          <ul class="dropdown">
+          <li><a href="./voterLogin.php">Voter Login</a></li>
+          <li><a href="./register.php">Registration</a></li>
+          </ul>
+        </li> 
+        <li><a href="./about.php">About Elections</a></li>
+        <li><a href="">Instructive Video</a></li>
+        <li><a href="">ECOA</a>
+          <ul class="dropdown">
+          <li><a href="./adminLogin.php">Staff Login</a></li>
+          <li><a href="./contactus.php">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </header>
 
   <!--Section class contains all our main content present in the body as per name specified by the class--->
 
@@ -59,6 +59,8 @@
 
   <div class="banner-container">
     <div class="banner-image"> </div>
+    <br>
+    <br>
     <h2 class="banner-header">ECOA ONLINE VOTING SYSTEM
 
       <!-- <div class="banner-list">
