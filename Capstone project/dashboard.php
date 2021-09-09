@@ -49,25 +49,26 @@ tr:hover {background-color: #D6EEEE;}
   }
 </script>
     
-<header>
- <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
-        <h1 class="first">Election Commission of  Australia</h1>
-        <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
-        <div class="container">
-                    <div class="item one">
-
-                        <a href="./dashboard.php">Dashboard</a>
-                    </div>
-                        <div class="item two"><a href="./votersAdminpage.php"> Voters </a></div>
-                    <div class="item three"><a href="./eycandidateRegister.php"> Candidate Register </a></div>
-                    <div class="item four"> Election Results </div>
-                    <div class="item five ">  <a href="./logout.php"> Log Out</a> </div>
-                    <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
-                </div>
-                <!---This div class will display the user name as per the session --->
-         <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo "Mr.". $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
+    <header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="ecoa-logo">
+        <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
+        <h1 class="organization-name">Electoral Commission of Australia</h1>
+    </div>
+      <ul>
+        <li><a href="./dashboard.php">Dashboard</a></li>
+        <li><a href="./votersAdminpage.php">Voters List</a></li>
+        <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
+        <li><a href="">Elections Resutls</a></li>
+        <li><a href="./logout.php">Logout</a></li>
+        </ul>
+    </nav>
+    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
     </header>
-
 
     <section class="banner">
      
