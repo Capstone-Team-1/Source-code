@@ -166,51 +166,51 @@ if (isset($_POST["signup"])) {
         </form>
 
       </div>
-
+    </div>
       <footer>
 
-        <div class="footer-banner">
-          <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
+<div class="footer-banner">
+  <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
 
-            <div class="footer-details">
-              <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
-
-
-              <div class="footer-container" style="margin-top: 50px;">
-                <div class="footer-item one"> For Voters</div>
-                <div class="footer-item two">For candidates </div>
-                <div class="footer-item three"> About election </div>
-                <div class="footer-item four"> Information Centre</div>
-                <div class="footer-item five "> The ECOA </div>
-              </div>
+    <div class="footer-details">
+      <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em; justify-content:center">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
-
-
-            </div>
-
-            <div class="footer-link">
-
-              <div class="footxer-link-one">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </div>
-              <div class="footxer-link-two">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </div>
-              <div class="fooxter-link-three">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </div>
-
-            </div>
+      <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item one"> <a href="./result.php"> For Voters</a> </div>
+        <div class="footer-item two">For candidates </div>
+        <div class="footer-item three"> About election </div>
+        <div class="footer-item four"> Information Centre</div>
+        <div class="footer-item five "> The ECOA </div>
+      </div>
 
 
 
 
+    </div>
 
-        </div>
+    <div class="footer-link">
+
+      <div class="footxer-link-one">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </div>
+      <div class="footxer-link-two">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+      <div class="fooxter-link-three">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </div>
+
+    </div>
 
 
-      </footer>
+
+
+
+</div>
+
+
+</footer>
 
 
 
