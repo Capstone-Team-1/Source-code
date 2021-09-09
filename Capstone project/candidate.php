@@ -34,23 +34,26 @@ session_start();
   }
 </script>
     
-<header>
- <a href="./Index.php">  <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>  
-        <h1 class="first">Election Commission of  Australia</h1>
-        <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
-        <div class= "container">
-          <div class="item one">
-             <a href="./Index.php">Homepage</a> </div>
-              <div class="item two">candidates </div>
-               <div class="item three"> About election </div>
-                <div class="item four"> Information Centre</div>
-                 <div class="item five ">    <a href="./logout.php"> Log Out</a> </div>
-               <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
-        </div>
-        <!---This div class will display the user name as per the session --->
-         <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
+    <header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="ecoa-logo">
+        <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
+        <h1 class="organization-name">Electoral Commission of Australia</h1>
+    </div>
+      <ul>
+        <li><a href="./Index.php">Home</a></li>
+        <li><a href="./about.php">About Elections</a></li>
+        <li><a href="">Instructive Video</a></li>
+        <li><a href="./contactus.php">Contact Us</a></li>
+        <li><a href="./logout.php">Logout</a></li>
+        </ul>
+    </nav>
+    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
     </header>
-
 
     <section class="banner">
      
