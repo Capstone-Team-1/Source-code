@@ -166,6 +166,7 @@ if (isset($_POST["signup"])) {
         </form>
 
       </div>
+    </div>
 
       <footer>
 

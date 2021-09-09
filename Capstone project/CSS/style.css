@@ -241,7 +241,7 @@ h3 {
 
 .banner-container {
   text-align: left;
-  background: linear-gradient(200deg, #ffffff -120%, #1b2554 75%);
+  background: linear-gradient(200deg, #ffffff -580%, #1b2554 75%);
   background-size: cover;
   font-size: 1rem;
   color: white;
@@ -479,7 +479,7 @@ input:focus {
   font-family: "Open Sans Condensed", sans-serif;
   color: white;
   background-color: white;
-  background: linear-gradient(135deg, #5a2672 0%, #1b2554 75%);
+  background: linear-gradient(200deg, #ffffff -580%, #1b2554 75%);
 
   font-size: 1.9rem;
   margin-top: 90px;
