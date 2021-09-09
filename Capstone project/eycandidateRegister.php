@@ -18,21 +18,25 @@
             <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
             <header>
-                <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>
-                <h1 class="first">Election Commission of Australia</h1>
-                <div class="sticky-mobile-nav" ><ion-icon name="menu"></ion-icon></div>
-                <div class="container">
-                    <div class="item one">
-
-                        <a href="./dashboard.php">Dashboard</a>
-                    </div>
-                        <div class="item two"><a href="./votersAdminpage.php"> Voters </a></div>
-                    <div class="item three"><a href="./eycandidateRegister.php"> Candidate Register </a></div>
-                    <div class="item four"> Election Results </div>
-                    <div class="item five ">  <a href="./logout.php"> Log Out</a> </div>
-                    <!---  <div class="item six"><ion-icon name="menu"></ion-icon></div>-->
-                </div>
-            </header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="ecoa-logo">
+        <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
+        <h1 class="organization-name">Electoral Commission of Australia</h1>
+    </div>
+      <ul>
+        <li><a href="./dashboard.php">Dashboard</a></li>
+        <li><a href="./votersAdminpage.php">Voters List</a></li>
+        <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
+        <li><a href="">Elections Resutls</a></li>
+        <li><a href="./logout.php">Logout</a></li>
+        </ul>
+    </nav>
+    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
+    </header>
             <section class="banner">
 
                 <div class="banner-container">
@@ -51,13 +55,13 @@
                         <br>
                         <br>
                         <label for="canid"> Citzenship ID : </label>
-                        <input type="placeholder" name="canid" id="canid" placeholder="Candidate ID">
+                        <input type="text" name="canid" id="canid" placeholder="Candidate ID"><br>  
                         <label for="fname"> Candidate Party : </label>
-                        <input type="placeholder" name="Party" id="Party" placeholder="Candidate Party">
+                        <input type="text" name="Party" id="Party" placeholder="Candidate Party"><br>
                         <label for="lname"> Candidate Name : </label>
-                        <input type="placeholder" name="Name" id="Name" placeholder="Candidate Name">
+                        <input type="text" name="Name" id="Name" placeholder="Candidate Name"><br>
                         <label for="Ideology">Ideology : </label>
-                        <input type="placeholder" name="Ideology" id="Ideology" placeholder="Ideology">
+                        <input type="text" name="Ideology" id="Ideology" placeholder="Ideology">
                         <br>
                         <input type="submit" class="button">
                     </form>
