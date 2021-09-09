@@ -26,31 +26,35 @@
 </script>
     
 <header>
-    <a href="./Index.php"> <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo"></a>
-    <h1 class="first">Election Commission of Australia</h1>
-    <div class="sticky-mobile-nav">
-      <ion-icon name="menu"></ion-icon>
+    
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="ecoa-logo">
+        <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
+        <h1 class="organization-name">Electoral Commission of Australia</h1>
     </div>
-    <div class="container">
-                
-                <div class="item one">
-                    <div class="dropdown"> For Voters
-                    <div class="dropdown-content">
-                        <a href="./voterLogin.php">Voter Login</a>
-                        <a href="./register.php"> Registration</a>
-                    </div>
-                    </div>
-                </div>
-                <!-- <div class="item two"> Candidates </div> -->
-                <div class="item three"> <a href="./about.php"> About election</a>
-
-                </div>
-                <div class="item four"> Information Centre</div>
-                <div class="item five "> <a href="./adminLogin.php"> ECOA</a> </div>
-                <div class="item zero"> <a href="./Index.php"> Home</a> </div>
-                </div>
- 
-  </header>
+      <ul>
+        <li><a href="./Index.php">Home</a></li>
+        <li><a href="">Voters</a> 
+          <ul class="dropdown">
+          <li><a href="./voterLogin.php">Voter Login</a></li>
+          <li><a href="./register.php">Registration</a></li>
+          </ul>
+        </li> 
+        <li><a href="./about.php">About Elections</a></li>
+        <li><a href="">Instructive Video</a></li>
+        <li><a href="">ECOA</a>
+          <ul class="dropdown">
+          <li><a href="./adminLogin.php">Staff Login</a></li>
+          <li><a href="./contactus.php">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </header>
 
 
     <section class="banner">
@@ -58,7 +62,7 @@
             <div class="banner-container">
               <div class="banner-items" >
                 <h2 class="banner-header">
-                    <br> Welcome to ECOA online voting platform
+                    <br> Contact Us Page
                     <br>Information Center
                 </h2>
                
@@ -74,7 +78,7 @@
 <footer>
 
 <div class="footer-banner" style="text-align: justify;" >
-    <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
+    <h3>Election comission of Australia</h1>
 
 <div class= "footer-details">
     <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>   
