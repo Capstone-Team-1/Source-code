@@ -296,6 +296,34 @@ h3 {
   display: flex;
 }
 
+
+.user-display{
+margin-top: 80px;
+
+}
+
+table {
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2rem;
+
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #D6EEEE;
+}
+
+
 .card {
   display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

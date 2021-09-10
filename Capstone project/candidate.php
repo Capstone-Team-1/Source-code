@@ -16,9 +16,9 @@ if(empty($_SESSION['citizenID']))
             $candidate_id = $_POST['candidate_id'];
             $voter_id = $_POST['voter_id'];
             
-            $insert_vote = "INSERT INTO vote (voterID, candidateID) VALUES ('$voter_id','$candidate_id')";
+            $insert_vote = "INSERT INTO vote ( voteDate, candidateID, citizenID) VALUES (now(), '2'. '200574')";
             $insert_vote_result = mysqli_query($conn, $insert_vote);
-            if($insert_vote_result == '1')
+            if($insert_vote_result==1)
             {
                 echo '<script>alert("Voted Successfully")</script>';
                 echo '<script>';
@@ -156,7 +156,7 @@ if(empty($_SESSION['citizenID']))
   <div class="container">
     <h4><b>Scott Morrison: Liberal Party of Australia</b></h4> 
   </div>
-  <input type="button" name="buttonThree" class="button" value="Vote" ></input>
+  <input type="button" name="buttonThree" class="buttonThree" value="Vote" ></input>
 </div>  
 <br>
 <!-- <input type="button" name="submit_data" class="button" Value="Vote" id="submit_data"></input> -->
@@ -214,16 +214,33 @@ if(empty($_SESSION['citizenID']))
 </script>
 <script >
 
-  const a = document.querySelector('.buttonOne');
+  const btnOne = document.querySelector('.buttonOne');
+  const btnTwo = document.querySelector('.buttonTwo');
+  const btnThree = document.querySelector('.buttonThree');
   const b = document.querySelector('#popup');
   const c = document.querySelector('.btnNo');
   const d = document.querySelector('.blur');
 
-a.addEventListener('click', ()=>{
+btnOne.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 
 })
+btnTwo.addEventListener('click', ()=>{
+b.classList.add('modal-body-click');
+d.classList.add('bg-blur');
+
+})
+btnThree.addEventListener('click', ()=>{
+b.classList.add('modal-body-click');
+d.classList.add('bg-blur');
+
+})
+
+
+
+
+
 c.addEventListener('click', ()=>{
   b.classList.remove('modal-body-click');
   d.classList.remove('bg-blur');
