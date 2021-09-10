@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -42,8 +42,7 @@
                 <div class="banner-container">
                     <div class="banner-items">
                         <h2 class="banner-header">
-                            <br> Welcome to ECOA online voting platform
-                            <br>Please Register Yourself !!!!!
+                            <br> New Candidate Registration Page
                         </h2>
 
                     </div>
@@ -53,9 +52,7 @@
                     <p id="template"></p>
                     <form action="" method="GET" onsubmit="return validateRegister();">
                         <br>
-                        <br>
-                        <label for="canid"> Citzenship ID &nbsp &nbsp : </label>
-                        <input type="text" name="canid" id="canid" placeholder="Candidate ID"><br>  
+                        <br> 
                         <label for="fname"> Candidate Party : </label>
                         <input type="text" name="Party" id="Party" placeholder="Candidate Party"><br>
                         <label for="lname"> Candidate Name : </label>
