@@ -366,7 +366,7 @@ input[type="number"] {
 }
 
 input[type="password"] {
-  width: 70%;
+  width: 48%;
   padding: 12px;
   height: 38px;
   margin: 5px 0 15px 0;
