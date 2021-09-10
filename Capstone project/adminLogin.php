@@ -13,6 +13,7 @@ if (isset($_POST['login'])) {
   $result = mysqli_query($conn, $sql);
   if ($result->num_rows > 0) {
     $row = mysqli_fetch_assoc($result);
+    $_SESSION['employeeID']= $row['employeeID'];
     $_SESSION['employeeFirstName'] = $row['employeeFirstName'];
     $_SESSION['employeeLastName'] = $row['employeeLastName'];
     header("Location: dashboard.php");

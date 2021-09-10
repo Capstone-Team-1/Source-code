@@ -13,6 +13,7 @@ $sql="SELECT * FROM citizen WHERE citizenID ='$myuser' and citizenPassword ='$my
 $result=mysqli_query($conn, $sql);
 if($result -> num_rows>0){
 $row= mysqli_fetch_assoc($result);
+$_SESSION['citizenID'] = $row['citizenID'];
 $_SESSION['citizenFName'] = $row['citizenFName'];
 $_SESSION['citizenLName'] = $row['citizenLName'];
 header("Location: candidate.php");

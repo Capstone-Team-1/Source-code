@@ -12,6 +12,25 @@ try{
 catch(PDOException $ex){
   die($ex-> getMessage());
 }
+$candidateOne = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '1'");
+	$candidateOne->execute();
+			for($i=0; $rows = $candidateOne->fetch(); $i++){
+			echo " Mr. Scott Morrission received = ".$rows['count(voteID)'];
+			}
+      
+      $candidateTwo = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '2'");
+			$candidateTwo->execute();
+			for($i=0; $rows = $candidateTwo->fetch(); $i++){
+			echo "Mr. Joyce Barnaby   = ".$rows['count(voteID)'];
+			}
+
+      $candidateThree = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '3'");
+			$candidateThree->execute();
+			for($i=0; $rows = $candidateThree->fetch(); $i++){
+			echo "Mr. Albanase Anthony  = ".$rows['count(voteID)'];
+			}
+
+
 $stmt = $dbcon-> prepare("SELECT * FROM vote");
 $stmt -> execute();
 $json = [];
@@ -22,7 +41,18 @@ while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
  $json2[]= (int)$voteID; //set this according to candidate name or AS REQURIED int if its the vote count
 }
 json_encode($json);
- json_encode($json2);
+ json_encode(count($json2));
+
+
+include 'connection.php';
+session_start();
+
+
+if(empty($_SESSION['employeeID']))
+ {
+        header("Location:adminLogin.php");
+    }
+
 
 ?>
 
@@ -99,9 +129,9 @@ json_encode($json);
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'bar',
     data: {
-        labels: ['Scott Morrission',  'Joyce Barnaby', 'Anthony Albanes'],
+        labels: ['Scott Morrission',  'Joyce Barnaby', 'Anthony Albanese'],
         datasets: [{
             label: '# of Votes',
             data: <?php echo json_encode($json2) ?>,
@@ -129,11 +159,30 @@ var myChart = new Chart(ctx, {
 });
 </script>
 <?php
-			$results = $dbcon->prepare("SELECT sum(voteID) FROM vote");
+			$results = $dbcon->prepare("SELECT count(voteID) FROM vote");
 			$results->execute();
 			for($i=0; $rows = $results->fetch(); $i++){
-			echo "The total number of vote counts = ".$rows['sum(voteID)'];
+			echo "The total number of vote counts = ".$rows['count(voteID)'];
 			}
+    
+	$candidateOne = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '1'");
+			$candidateOne->execute();
+			for($i=0; $rows = $candidateOne->fetch(); $i++){
+			echo " Mr. Scott Morrission received = ".$rows['count(voteID)'];
+			}
+      
+      $candidateTwo = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '2'");
+			$candidateTwo->execute();
+			for($i=0; $rows = $candidateTwo->fetch(); $i++){
+			echo "Mr. Joyce Barnaby   = ".$rows['count(voteID)'];
+			}
+
+      $candidateThree = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '3'");
+			$candidateThree->execute();
+			for($i=0; $rows = $candidateThree->fetch(); $i++){
+			echo "Mr. Albanase Anthony  = ".$rows['count(voteID)'];
+			}
+
 			?>
 </div>
  

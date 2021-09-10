@@ -2,6 +2,12 @@
 include 'connection.php';
 session_start();
 
+
+if(empty($_SESSION['employeeID']))
+ {
+        header("Location:index.php");
+    }
+
 ?>
 
 
@@ -11,7 +17,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login Page</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="./CSS/style.css">
     
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -67,7 +73,7 @@ tr:hover {background-color: #D6EEEE;}
         <li><a href="./logout.php">Logout</a></li>
         </ul>
     </nav>
-    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
+    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">     <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
     </header>
 
     <section class="banner">
