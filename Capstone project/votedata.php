@@ -10,4 +10,19 @@ while ($row = mysqli_fetch_assoc($result)){
 }
 
 echo json_encode($data);
+
+//$result = $dbcon-> query("SELECT voteID FROM vote where candidateID=1");
+
+//guessing a variable to store data
+// $dbdata = array();
+
+// //fetching the data in the associative empty array
+
+
+//   while ( $row = $result->fetch(PDO::FETCH_ASSOC))  {
+// 	$dbdata[]=$row;
+//   }
+//   echo json_encode($dbdata);
 ?>
+
+

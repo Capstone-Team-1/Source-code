@@ -13,18 +13,30 @@ catch(PDOException $ex){
   die($ex-> getMessage());
 }
 
+// $result = $dbcon-> query("SELECT voteID FROM vote where candidateID= '1'");
 
-$stmt = $dbcon-> prepare("SELECT * FROM vote");
+// // guessing a variable to store data
+// $dbdata = array();
+
+// //fetching the data in the associative empty array
+
+
+//   while ( $row = $result->fetch(PDO::FETCH_ASSOC))  {
+// 	$dbdata[]=$row;
+//   }
+//   echo json_encode($dbdata);
+
+$stmt = $dbcon-> prepare("SELECT voteID FROM vote where candidateID=2");
 $stmt -> execute();
-$json = [];
+// $json = [];
 $json2 = [];
 while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
   extract($row);
-  $json[]=$candidateID;
+  // $json[]=$candidateID;
  $json2[]= (int)$voteID; //set this according to candidate name or AS REQURIED int if its the vote count
 }
-json_encode($json);
- json_encode(count($json2));
+// json_encode($json);
+ echo json_encode(count($json2));
 
 
 include 'connection.php';
