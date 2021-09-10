@@ -54,14 +54,15 @@
                     <form action="" method="GET" onsubmit="return validateRegister();">
                         <br>
                         <br>
-                        <label for="canid"> Citzenship ID : </label>
+                        <label for="canid"> Citzenship ID &nbsp &nbsp : </label>
                         <input type="text" name="canid" id="canid" placeholder="Candidate ID"><br>  
                         <label for="fname"> Candidate Party : </label>
                         <input type="text" name="Party" id="Party" placeholder="Candidate Party"><br>
                         <label for="lname"> Candidate Name : </label>
                         <input type="text" name="Name" id="Name" placeholder="Candidate Name"><br>
-                        <label for="Ideology">Ideology : </label>
+                        <label for="Ideology">Ideology &nbsp &nbsp &nbsp &nbsp &nbsp : </label>
                         <input type="text" name="Ideology" id="Ideology" placeholder="Ideology">
+                        <br>
                         <br>
                         <input type="submit" class="button">
                     </form>
