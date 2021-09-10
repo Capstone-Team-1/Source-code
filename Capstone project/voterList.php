@@ -128,11 +128,11 @@ tr:hover {background-color: #D6EEEE;}
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 
-             <div class="footer-item one"> For Voters</div>
-              <div class="footer-item two">For candidates </div>
-               <div class="footer-item three"> About election </div>
-                <div class="footer-item four"> Information Centre</div>
-                 <div class ="footer-item five "> The ECOA </div>
+     <li><a href="./dashboard.php">Dashboard</a></li>
+        <li><a href="./voterList.php">Voters List</a></li>
+        <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
+        <li><a href="./electionsResults.php">Elections Resutls</a></li>
+        <li><a href="./logout.php">Logout</a></li>
                   </div>
 
 
