@@ -100,6 +100,7 @@ tr:hover {background-color: #D6EEEE;}
 <th> state</th>
 <th> City </th>
 <th> Zip </th>
+<th> Status <th>
 
 <tbody id="dataSource"> <!---This will fetch data using ajax---->
 
@@ -203,6 +204,7 @@ ajax.onreadystatechange = function (){
                         html += "<td>" + City + "</td>";
                           html += "<td>" + state + "</td>";
                         html += "<td>" + zip+ "</td>";
+
 
           html += "</tr>";
        }
