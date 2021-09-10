@@ -15,9 +15,9 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voters List Page</title>
-
     <link rel="stylesheet" href="./CSS/style.css">
-</head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
 <body>
 <header>
     <nav>
