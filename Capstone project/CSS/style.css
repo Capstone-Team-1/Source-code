@@ -69,7 +69,7 @@ header {
   border: 2px solid black;
   
   right: 30%;
-  top: 20%;
+  top: 50%;
     z-index: 100;
 
 }
@@ -492,7 +492,9 @@ input:focus {
   transition: all 1s ease-out;
 }
 
-.button, button {
+.button,
+button,
+input[type="button"] {
   width: 35%;
   padding: 10px 30px;
   border-radius: 50px 50px;
@@ -506,7 +508,9 @@ input:focus {
   margin-bottom: 10px;
 }
 
-.button:hover, button:hover {
+.button:hover,
+button:hover,
+input[type="button"]:hover {
   background: #450087;
   color: white;
   transition: 0.5s; 
@@ -638,7 +642,7 @@ input:focus {
         transition: all 1s ease-out;
       }
       
-      .button {
+      .button  {
         width: 35%;
         padding: 10px 30px;
         border-radius: 50px 50px;
