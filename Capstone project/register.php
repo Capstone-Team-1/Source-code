@@ -162,7 +162,7 @@ if (isset($_POST["signup"])) {
           <input type="submit" class="button" name="signup" value="SIGN UP">
           <br>
           <br>
-          Do you have an account? Please, <a href="./login.php" style="color:#4c5ae0;">Login Here</a>
+          Do you have an account? Please, <a href="./voterLogin.php" style="color:#4c5ae0;">Login Here</a>
         </form>
 
       </div>
