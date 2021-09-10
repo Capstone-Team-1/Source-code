@@ -134,9 +134,10 @@ cursor: pointer;
 }
 
 a:hover{
-  background: #1b9bff;
-  color: #d1d1d1;
-  transition: 0.5s;
+  /*background: #1b9bff;*/
+  color: #7d21a5;
+font-weight: 600;
+  transition: 0.05s;
 }
 
                   /* ------- Design of dropdown buttons in Navbar ---- */
@@ -379,9 +380,9 @@ input[type="text"] {
 }
 
 input[type="number"] {
-  width: 30%;
+  width: 48%;
   padding: 12px;
-  height: 38px;
+  height: 40px;
   margin: 5px 0 15px 0;
   outline: none;
   border-radius: 5px;
@@ -389,7 +390,7 @@ input[type="number"] {
 }
 
 input[type="password"] {
-  width: 30%;
+  width: 48%;
   padding: 12px;
   height: 38px;
   margin: 5px 0 15px 0;
@@ -399,7 +400,7 @@ input[type="password"] {
 }
 
 input[type="email"] {
-    width: 60%;
+    width: 66%;
     padding: 12px;
     height: 38px;
     margin: 5px 0 15px 0;
@@ -408,8 +409,9 @@ input[type="email"] {
     border: 1.5px solid #d1d1d1;
   }
 
+
   input[type="date"] {
-    width: 25%;
+    width: 30%;
     padding: 12px;
     height: 38px;
     margin: 5px 0 15px 0;
@@ -420,11 +422,12 @@ input[type="email"] {
     border: 1.5px solid #d1d1d1;
   }  
 
+ 
   select {
-    width: 25%;
+    width: 48%;
     padding: 12px;
     height: 40px;
-    margin: 0px 0 15px 0;
+    margin: 5px 0 15px 0;
     /*display: inline-block;
     /*box-shadow: 0.2px 0.4px 0.2px 0.2px purple ;*/
     outline: none;
@@ -507,8 +510,132 @@ input:focus {
 
   font-size: 1.9rem;
   margin-top: 90px;
+  padding: 30px;
 }
 /*   ------------------------ Responsive Design of Pages --------------------*/
+
+@media all and (max-width: 800px) {
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        height: 38px;
+        margin: 5px 0 15px 0;
+        outline: none;
+        border-radius: 5px;
+        border: 1.5px solid #d1d1d1;
+      }
+      
+      input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        height: 40px;
+        margin: 5px 0 15px 0;
+        outline: none;
+        border-radius: 5px;
+        border: 1.5px solid #d1d1d1;
+      }
+      
+      input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        height: 38px;
+        margin: 5px 0 15px 0;
+        outline: none;
+        border-radius: 5px;
+        border: 1.5px solid #d1d1d1;
+      }
+      
+      input[type="email"] {
+        width: 100%;
+          padding: 12px;
+          height: 38px;
+          margin: 5px 0 15px 0;
+          outline: none;
+          border-radius: 5px;
+          border: 1.5px solid #d1d1d1;
+        }
+      
+      
+        input[type="date"] {
+            width: 100%;
+          padding: 12px;
+          height: 38px;
+          margin: 5px 0 15px 0;
+          /*display: inline-block;
+          /*box-shadow: 0.2px 0.4px 0.2px 0.2px purple ;*/
+          outline: none;
+          border-radius: 5px;
+          border: 1.5px solid #d1d1d1;
+        }  
+      
+       
+        select {
+            width: 100%;
+          padding: 12px;
+          height: 40px;
+          margin: 5px 0 15px 0;
+          /*display: inline-block;
+          /*box-shadow: 0.2px 0.4px 0.2px 0.2px purple ;*/
+          outline: none;
+          border-radius: 5px;
+          border: 1.5px solid #d1d1d1;
+        }  
+      
+      textarea {
+        width: 100%;
+        padding: 12px;
+        height: 55px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        /*box-shadow: 0.2px 0.4px 0.2px 0.2px purple ;*/
+        outline: none;
+        border-radius: 3px;
+        border: 1.5px solid #d1d1d1;
+      }
+      
+      input:focus {
+        outline: none;
+        border-color: #b8bcf7;
+      }
+      
+      .section-form {
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: 10px 40px;
+        margin: 90px 0;
+        width: 700px; /*The max width property hence the form will not over grow when the screen size is larger*/
+        color: black;
+        border-radius: 30px 4px 50px 4px;
+        transition: all 1s ease-out;
+      }
+      
+      .button {
+        width: 35%;
+        padding: 10px 30px;
+        border-radius: 50px 50px;
+        outline: none;
+        background: rgb(250, 249, 249); /*linear-gradient(135deg, #5a2672 0%, #1b2554 75%);*/
+        color: #450087;
+        line-height: 1.2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border: 1px solid #d1d1d1;
+        margin-bottom: 10px;
+      }
+      
+      .button:hover {
+        background: #450087;
+        color: white;
+        transition: 0.5s; 
+      }
+      
+  }
+
+
+
+
+
 @media all and (max-width: 813px) {
   .section-form {
     width: 400px;

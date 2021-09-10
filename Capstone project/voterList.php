@@ -2,12 +2,6 @@
 include 'connection.php';
 session_start();
 
-
-if(empty($_SESSION['employeeID']))
- {
-        header("Location:index.php");
-    }
-
 ?>
 
 
@@ -17,10 +11,10 @@ if(empty($_SESSION['employeeID']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>login Page</title>
     <link rel="stylesheet" href="./CSS/style.css">
     
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     
     <style>
      .user-display{
@@ -66,14 +60,14 @@ tr:hover {background-color: #D6EEEE;}
         <h1 class="organization-name">Electoral Commission of Australia</h1>
     </div>
       <ul>
-      <li><a href="./dashboard.php">Dashboard</a></li>
-        <li><a href="./voterList.php">Voters List</a></li>
+        <li><a href="./dashboard.php">Dashboard</a></li>
+        <li><a href="./votersAdminpage.php">Voters List</a></li>
         <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
-        <li><a href="./electionsResults.php">Elections Resutls</a></li>
+        <li><a href="">Elections Resutls</a></li>
         <li><a href="./logout.php">Logout</a></li>
         </ul>
     </nav>
-    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">     <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
+    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
     </header>
 
     <section class="banner">
@@ -134,11 +128,11 @@ tr:hover {background-color: #D6EEEE;}
 
 
      <div class= "footer-container" style="margin-top: 50px;"> 
-             <div class="footer-item one"> For Voters</div>
-              <div class="footer-item two">For candidates </div>
-               <div class="footer-item three"> About election </div>
-                <div class="footer-item four"> Information Centre</div>
-                 <div class ="footer-item five "> The ECOA </div>
+     <li><a href="./dashboard.php">Dashboard</a></li>
+        <li><a href="./voterList.php">Voters List</a></li>
+        <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
+        <li><a href="./electionsResults.php">Elections Resutls</a></li>
+        <li><a href="./logout.php">Logout</a></li>
                   </div>
 
 

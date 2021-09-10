@@ -13,6 +13,8 @@ include 'connection.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Election Commission of Australlia</title>
   <link rel="stylesheet" href="./CSS/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>

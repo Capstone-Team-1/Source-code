@@ -152,17 +152,17 @@ if (isset($_POST["signup"])) {
           <!-- <input type="text" name="citizenState" id="state" placeholder="State" value="<?php echo $_POST["citizenState"]; ?>"> -->
           <input type="number" name="citizenZip" id="Zip" placeholder="Postal Code" value="<?php echo $_POST["citizenZip"]; ?>">
           <br>
-          <label for="pw">Insert a Password</label>
+          <label for="pw">Insert a Password &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
           <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>">
           <br>
-          <label for="confirmpw">Confirm the Password</label>
+          <label for="confirmpw">Confirm the Password &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label>
           <input type="password" name="confirmpw" id="cpw" placeholder="Password" value="<?php echo $_POST["confirmpw"]; ?>">
           <br>
           <br>
           <input type="submit" class="button" name="signup" value="SIGN UP">
           <br>
           <br>
-          Do you have an account? Please, <a href="./login.php" style="color:#4c5ae0;">Login Here</a>
+          Do you have an account? Please, <a href="./voterLogin.php" style="color:#4c5ae0;">Login Here</a>
         </form>
 
       </div>

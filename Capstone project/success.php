@@ -14,7 +14,7 @@ session_start();
     <title>login Page</title>
     <link rel="stylesheet" href="./CSS/style.css">
     
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     
     <style>
      a:hover{
@@ -84,7 +84,7 @@ session_start();
             <img src="./Images/check.gif" alt="" style="margin-top: 30px;">
             <br>
 
-            <a href="./login.php" alt="" title="" style="color:black"> Click here to get redirected to login page!! </a>
+            <a href="./voterLogin.php" alt="" title="" style="color:black"> Click here to get redirected to login page!! </a>
         </section>
 
 <footer>

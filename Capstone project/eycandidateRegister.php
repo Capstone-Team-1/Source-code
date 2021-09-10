@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -28,10 +28,10 @@
         <h1 class="organization-name">Electoral Commission of Australia</h1>
     </div>
       <ul>
-        <li><a href="./dashboard.php">Dashboard</a></li>
-        <li><a href="./votersAdminpage.php">Voters List</a></li>
+      <li><a href="./dashboard.php">Dashboard</a></li>
+        <li><a href="./voterList.php">Voters List</a></li>
         <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
-        <li><a href="">Elections Resutls</a></li>
+        <li><a href="./electionsResults.php">Elections Resutls</a></li>
         <li><a href="./logout.php">Logout</a></li>
         </ul>
     </nav>
@@ -42,8 +42,7 @@
                 <div class="banner-container">
                     <div class="banner-items">
                         <h2 class="banner-header">
-                            <br> Welcome to ECOA online voting platform
-                            <br>Please Register Yourself !!!!!
+                            <br> New Candidate Registration Page
                         </h2>
 
                     </div>
@@ -53,15 +52,14 @@
                     <p id="template"></p>
                     <form action="" method="GET" onsubmit="return validateRegister();">
                         <br>
-                        <br>
-                        <label for="canid"> Citzenship ID : </label>
-                        <input type="text" name="canid" id="canid" placeholder="Candidate ID"><br>  
+                        <br> 
                         <label for="fname"> Candidate Party : </label>
                         <input type="text" name="Party" id="Party" placeholder="Candidate Party"><br>
                         <label for="lname"> Candidate Name : </label>
                         <input type="text" name="Name" id="Name" placeholder="Candidate Name"><br>
-                        <label for="Ideology">Ideology : </label>
+                        <label for="Ideology">Ideology &nbsp &nbsp &nbsp &nbsp &nbsp : </label>
                         <input type="text" name="Ideology" id="Ideology" placeholder="Ideology">
+                        <br>
                         <br>
                         <input type="submit" class="button">
                     </form>
