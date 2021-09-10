@@ -113,7 +113,7 @@ else{
         <input type="submit" class="button" Value="Login" name="submit"></input>
         <br>
         <br>
-            Not registred? Please, <a href="./login.php" style="color:#4c5ae0;">Register Here</a>
+            Not registred? Please, <a href="./register.php" style="color:#4c5ae0;">Register Here</a>
       </form>
 
 
