@@ -14,7 +14,7 @@ if(empty($_SESSION['citizenID']))
    if(isset($_POST['submit_vote']))
         {
             $candidate_id = $_POST['candidate_id'];
-            $voter_id = $_POST['voter_id'];
+            $voter_id = $_SESSION['citizenID'];
             
             $insert_vote = "INSERT INTO vote ( voteDate, candidateID, citizenID) VALUES (now(), '2'. '200574')";
             $insert_vote_result = mysqli_query($conn, $insert_vote);
@@ -70,7 +70,7 @@ if(empty($_SESSION['citizenID']))
   }
 </script>
 
-<!---This is the mpopup modal that appears when the vote button is clicked--->
+        <form action="" method="post">
       <div class="modal-body" id="popup">
             <p>Are you sure you want to give vote to this candidate?</p>
             <p>This action is irreversible.</p>
@@ -82,10 +82,7 @@ if(empty($_SESSION['citizenID']))
             <button type="button" class="btnNo">No</button>
             <button type="submit" name="submit_vote" class="submit">Yes</button>
        </div>
-       
-
-
-
+        </form>
     <div class="blur">
     <header>
     <nav>
