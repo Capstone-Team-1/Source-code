@@ -71,7 +71,47 @@
 </section>
 
 <section class="reading-content">
+  <div class="about">
+    <div class="aboutH1">
+Australia is a representative democracy in which it is compulsory for all Australians over 18 years of age to enrol and vote for people to represent them.
+    </div>
+There are three levels of government in Australia, and we vote to elect representatives to each of these levels: federal, state or territory and local.
+</br>
+Poster: The three levels of Government
+</br>
+</br>
+</br>
+<h1>Federal government</h1>
+</br>
+The decision-making body of the federal government is Federal Parliament, which consists of two houses – the House of Representatives and the Senate.
+People elected to the House of Representatives each represent a separate division or electorate in Australia. The leader of the federal government is called the Prime Minister. This is a person who has been elected (by their fellow party members) as the leader of the party that has won the majority of members elected to the House of Representatives. 
+</br>
+When is a federal election held?
+How is federal Government formed?
+The Senate is also often referred to as the ‘state’s house’ or the ‘house of review’ and plays a joint role with the House of Representatives in reviewing, debating and voting on proposed laws. Representatives elected to the Senate are called senators. They represent a whole state or territory - there are 12 senators for every state and two senators for each territory.
+</br>
+Federal government responsibilities include: foreign affairs, social security, industrial relations, trade, immigration, currency, defence.
+</br></br></br>
+<h1>State and territory government</h1>
+</br>
+The decision-making body of state government is the state parliament which meets in the Parliament House of the particular state. Each state parliament, except for the Queensland Parliament, is made up of two houses.
 
+Representatives elected to state parliaments are generally known as 'Members' – Members of the Legislative Assembly (MLA) or Members of the House of Assembly (MHA) or Members of the Legislative Council (MLC). The leader of a state government is called the Premier.
+
+The Northern Territory and the Australian Capital Territory have a different arrangement. Each territory parliament has one house called the Legislative Assembly. The leader of each territory government is called the Chief Minister.
+
+State and territory government responsibilities include: justice, consumer affairs, health, education, forestry, public transport, main roads.
+
+</br></br></br>
+<h1>Local government</h1>
+</br>
+The decision-making body of local government is usually called the city council or shire council. Councils are established by state governments to look after the particular needs of a city or local community.
+
+The people's representatives who form the Council are called aldermen or councillors. The head of the Council is the Mayor or Shire President.
+
+Local government responsibilities include: local road maintenance, garbage collection, building regulations and land subdivisions, public health and recreation facilities such as swimming pools.
+
+</div>
 
 </section>
 
