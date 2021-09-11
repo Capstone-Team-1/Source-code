@@ -8,16 +8,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
 <body>
-
-    <body>
-
-        <header>
-            <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-            <header>
+    <header>
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -31,12 +26,13 @@
       <li><a href="./dashboard.php">Dashboard</a></li>
         <li><a href="./voterList.php">Voters List</a></li>
         <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
-        <li><a href="./electionsResults.php">Elections Resutls</a></li>
+        <li><a href="./electionResults.php">Election Resutls</a></li>
         <li><a href="./logout.php">Logout</a></li>
         </ul>
     </nav>
-    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
+     <!-- <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">     <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?> -->
     </header>
+
             <section class="banner">
 
                 <div class="banner-container">

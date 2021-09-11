@@ -49,7 +49,7 @@ tr:hover {background-color: #D6EEEE;}
   }
 </script>
     
-    <header>
+<header>
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -60,22 +60,23 @@ tr:hover {background-color: #D6EEEE;}
         <h1 class="organization-name">Electoral Commission of Australia</h1>
     </div>
       <ul>
-        <li><a href="./dashboard.php">Dashboard</a></li>
-        <li><a href="./votersAdminpage.php">Voters List</a></li>
+      <li><a href="./dashboard.php">Dashboard</a></li>
+        <li><a href="./voterList.php">Voters List</a></li>
         <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
-        <li><a href="">Elections Resutls</a></li>
+        <li><a href="./electionResults.php">Election Resutls</a></li>
         <li><a href="./logout.php">Logout</a></li>
         </ul>
     </nav>
-    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
+    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">     <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
     </header>
+
 
     <section class="banner">
      
             <div class="banner-container">
               <div class="banner-items" >
                 <h2 class="banner-header">
-                    <br> Welcome  Back  Mr.  <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
+                    <br> Welcome  Back <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
                     <br>The list of users  and candidate available
                 </h2>
                

@@ -1,28 +1,27 @@
 <?php
 
-include'connection.php';
+include 'connection.php';
 session_start();
 error_reporting(0);
- if (isset ($_POST['submit'])){
-$myuser=$_POST['citizenID'];
-$mypassword= md5($_POST['citizenPassword']);
-// To protect MySQL injection (more detail about MySQL injection)
+if (isset($_POST['submit'])) {
+  $myuser = $_POST['citizenID'];
+  $mypassword = md5($_POST['citizenPassword']);
+  // To protect MySQL injection (more detail about MySQL injection)
 
-$sql="SELECT * FROM citizen WHERE citizenID ='$myuser' and citizenPassword ='$mypassword'";
+  $sql = "SELECT * FROM citizen WHERE citizenID ='$myuser' and citizenPassword ='$mypassword'";
 
-$result=mysqli_query($conn, $sql);
-if($result -> num_rows>0){
-$row= mysqli_fetch_assoc($result);
-$_SESSION['citizenID'] = $row['citizenID'];
-$_SESSION['citizenFName'] = $row['citizenFName'];
-$_SESSION['citizenLName'] = $row['citizenLName'];
-header("Location: candidate.php");
-}
-
-else{
+  $result = mysqli_query($conn, $sql);
+  if ($result->num_rows > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $_SESSION['citizenID'] = $row['citizenID'];
+    $_SESSION['citizenFName'] = $row['citizenFName'];
+    $_SESSION['citizenLName'] = $row['citizenLName'];
+    header("Location: candidate.php");
+  } else {
     echo "<script> alert('Login failed') </script>";
     header('index.php');
-} }
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,8 +52,8 @@ else{
     }
   </script>
 
-<header>
-    
+  <header>
+
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -63,115 +62,100 @@ else{
       <div class="ecoa-logo">
         <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
         <h1 class="organization-name">Electoral Commission of Australia</h1>
-    </div>
+      </div>
       <ul>
         <li><a href="./Index.php">Home</a></li>
-        <li><a href="">Voters</a> 
+        <li><a href="">Voters</a>
           <ul class="dropdown">
-          <li><a href="./voterLogin.php">Voter Login</a></li>
-          <li><a href="./register.php">Registration</a></li>
+            <li><a href="./voterLogin.php">Voter Login</a></li>
+            <li><a href="./register.php">Registration</a></li>
           </ul>
-        </li> 
+        </li>
         <li><a href="./about.php">About Elections</a></li>
         <li><a href="">Instructive Video</a></li>
         <li><a href="">ECOA</a>
           <ul class="dropdown">
-          <li><a href="./adminLogin.php">Staff Login</a></li>
-          <li><a href="./contactus.php">Contact Us</a></li>
+            <li><a href="./adminLogin.php">Staff Login</a></li>
+            <li><a href="./contactus.php">Contact Us</a></li>
           </ul>
         </li>
       </ul>
     </nav>
-    </header>
+  </header>
 
 
   <section class="banner">
 
-  <div class="banner-container">
-      <div class="banner-items" style ="text-align: center; font-size: 20px;">
-      <br>
-      <br> 
-      <h2 >Voter Login Page</h2>
+    <div class="banner-container">
+      <div class="banner-items" style="text-align: center; font-size: 20px;">
+        <br>
+        <br>
+        <h2>Voter Login Page</h2>
 
       </div>
     </div>
   </section>
-  
+
   <div class="section-form">
     <div class="login">
       <h3>Please enter your credentials </h3>
       <p id="template"></p>
-    <br>
+      <br>
       <form action="" method="POST" onsubmit="return validate();">
         <label for="citizenID"></label>
-        <input type="text" placeholder="ID Number" id="vid" name="citizenID" required ></input>
-        <br> 
+        <input type="text" placeholder="ID Number" id="vid" name="citizenID" required></input>
+        <br>
         <br>
         <label for="citizenPassword"></label>
-        <input type="password" placeholder="Password" id="pw" name="citizenPassword" required></input> 
-         <br> 
+        <input type="password" placeholder="Password" id="pw" name="citizenPassword" required></input>
+        <br>
         <br>
         <input type="submit" class="button" Value="Login" name="submit"></input>
         <br>
         <br>
-            Not registred? Please, <a href="./register.php" style="color:#4c5ae0;">Register Here</a>
+        Not registred? Please, <a href="./register.php" style="color:#4c5ae0;">Register Here</a>
       </form>
 
 
     </div>
   </div>
+  
   <footer>
-
-    <div class="footer-banner" style="text-align: justify;">
-      <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
-
-        <div class="footer-details">
-          <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+    <div class="footer-details">
+      <h3>Election Comission of Australia</h3>
+      <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
-          <div class="footer-container" style="margin-top: 50px;">
-            <div class="footer-item one"> Homepage</div>
-            <div class="footer-item two">For candidates </div>
-            <div class="footer-item three"> About election </div>
-            <div class="footer-item four"> Information Centre</div>
-            <div class="footer-item five "> The ECOA </div>
-          </div>
-
-
-
-
-        </div>
-
-        <div class="footer-link">
-
-          <div class="footxer-link-one"> <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a> </div>
-          <div class="footxer-link-two"> <a href="https://twitter.com/auselectoralcom">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a> </div>
-          <div class="fooxter-link-three"> <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a> </div>
-
-        </div>
-
-
-
-
-
+      <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item"> <a href="./login.php">Voters Login</a></div>
+        <div class="footer-item"> <a href="./registration.php">Create Account</a></div>
+        <div class="footer-item"> <a href="./about.php">About Elections</a></div>
+        <div class="footer-item"> <a href="./about.php">Instructive Video</a></div>
+        <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
+        <div class="footer-item"> <a href="./contactus.php">Contact Us</a></div>
+      </div>
     </div>
+    <!--This div in particular contains links to various platforms and is set to flex-->
 
+    <div class="footer-social-links">
+
+      <div>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </div>
+    </div>
 
   </footer>
 
 
-
-
   <script src="./JavaScript/script.js"></script>
   <!--This is the script towards the google translator api script file-->
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
