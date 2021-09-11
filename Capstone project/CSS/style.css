@@ -320,6 +320,7 @@ h3 {
   text-align: center;
   color: #450087;
   font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 /*The effect that we get upon hovering oover the contents*/
@@ -370,7 +371,7 @@ table {
   text-align: center;
   display: inline-block;
   font-size: 1.2rem;
-
+  /*border:1px solid black;*/
 }
 
 th,
