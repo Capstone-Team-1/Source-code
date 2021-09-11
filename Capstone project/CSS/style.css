@@ -337,8 +337,9 @@ h3 {
 }
 
 .banner-header {
-  margin: 0 0 40px 10px;
+  margin: 0 0 40px 100px;
 }
+
 
 .reading-content {
   margin-top: 50px;
@@ -567,8 +568,15 @@ input[type="button"]:hover {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
 }
-
-
+/*   ------------------------ About pages --------------------*/
+ .about {
+   padding: 100px;
+   text-align: justify;
+ }
+ .aboutH1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+ }
 /*   ------------------------ Responsive Design of Pages --------------------*/
 
 @media all and (max-width: 800px) {
