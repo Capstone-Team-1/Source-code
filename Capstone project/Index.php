@@ -14,7 +14,7 @@ include 'connection.php';
   <title>Election Commission of Australlia</title>
   <link rel="stylesheet" href="./CSS/style.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -40,26 +40,26 @@ include 'connection.php';
       <div class="ecoa-logo">
         <img src="./Images/Citizens Electoral.jfif " alt="ecoa logo" class="logo">
         <h1 class="organization-name">Electoral Commission of Australia</h1>
-    </div>
+      </div>
       <ul>
         <li><a href="./Index.php">Home</a></li>
-        <li><a href="">Voters</a> 
+        <li><a href="">Voters</a>
           <ul class="dropdown">
-          <li><a href="./voterLogin.php">Voter Login</a></li>
-          <li><a href="./register.php">Registration</a></li>
+            <li><a href="./voterLogin.php">Voter Login</a></li>
+            <li><a href="./register.php">Registration</a></li>
           </ul>
-        </li> 
+        </li>
         <li><a href="./about.php">About Elections</a></li>
         <li><a href="">Instructive Video</a></li>
         <li><a href="">ECOA</a>
           <ul class="dropdown">
-          <li><a href="./adminLogin.php">Staff Login</a></li>
-          <li><a href="./contactus.php">Contact Us</a></li>
+            <li><a href="./adminLogin.php">Staff Login</a></li>
+            <li><a href="./contactus.php">Contact Us</a></li>
           </ul>
         </li>
       </ul>
     </nav>
-    </header>
+  </header>
 
   <!--Section class contains all our main content present in the body as per name specified by the class--->
 
@@ -78,26 +78,6 @@ include 'connection.php';
                           Update my details</div>
                         <div class="banner-three">General information</div>
                 </div> -->
-                </div>
-                    </div>
-                    
-                
-          
-        </div>
-
-
-
-    <div class="reading-content">
-   
-
-
-<h3>What's Happening?</h3>
-<section>
-    <p>The website is under construction and will be live to be used on 7th of october 2021
-        <br>
-      <Strong>  Please  stay updated, we will be updating any privacy related information to you via the information that we have available
-   </strong> </p>
-   <img src="./Images/pexels-hugo-heimendinger-1766215.jpg" alt="" >
   </div>
   </div>
 
@@ -105,12 +85,6 @@ include 'connection.php';
 
   </div>
 
-   <div class="main-article">
-      <h3 style="color: #009cde;">WELCOME
-Welcome to our corporate plan
-Welcome to the Election Commission of Australia 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3> 
- <p style="font-size: 1.4rem; text-align: justify;">
-Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
 
 
   <div class="reading-content">
@@ -124,98 +98,121 @@ Challenges to the successful administration of electoral events continue to mult
         <Strong> Please stay updated, we will be updating any privacy related information to you via the information that we have available
         </strong>
       </p>
-
-      <div class="main-article">
-        <h3 style="color: #009cde;">WELCOME
-          Welcome to our corporate plan
-          Welcome to the Australian Electoral Commission (AEC) 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3>
-        <p style="font-size: 1.4rem; text-align: justify;">
-          Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
-
-    
+      <img src="./Images/pexels-hugo-heimendinger-1766215.jpg" alt="">
+  </div>
+  </div>
 
 
 
-          To remain agile—now and into the future—we must continue refining our election delivery model through our lessons management approach. <br> <br> We will continue to evolve our planning processes, address the delivery of electoral events in a pandemic, and improve our delivery model for future electoral cycles.
+  </div>
 
-          Elections are Australia’s largest and most complex single peacetime event. This fact is masked by the electoral administrator’s conundrum: the better and more efficient the election, the simpler the event appears to voters, candidates and political parties, most of who only interact with the voting process episodically and for a few brief <br> <br>
-          There are a large number of logistically complicated and legislatively complex steps required to deliver elections successfully, including satisfying rapidly evolving community expectations. Our modernisation journey must consider these expectations as well as the realities of our funding, the availability and cost of technology, legislation and the ever-increasing threat of disinformation and cyber security. To continue to safeguard our democracy we must further mature our regulatory capability and work proactively with our stakeholders to solve these multidimensional problems.
+  <div class="main-article">
+    <h3 style="color: #009cde;">WELCOME
+      Welcome to our corporate plan
+      Welcome to the Election Commission of Australia 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3>
+    <p style="font-size: 1.4rem; text-align: justify;">
+      Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
 
-          The modernisation of our two main election systems remains critical to ensure these can respond to future changes in legislation and our rapidly changing external environment.
-          <br><br> Investing in training for our permanent employees and large temporary election workforce remains a priority, as stated in our recently launched learning and development strategy.
 
-          This year, we have further refined our performance framework. We have re-focused the six agency directions in last year’s corporate plan to four key activities. These enable us to deliver our purpose and ensure an efficient, effective and secure electoral system for Australia. Our corporate plan continues to guide our agency and is an integral part of our performance and reporting framework.
+    <div class="reading-content">
 
-          Tom Rogers
-          Electoral Commissioner
 
-          Compliance statement
+
+      <h3>What's Happening?</h3>
+      <section>
+        <p>The website is under construction and will be live to be used on 7th of october 2021
+          <br>
+          <Strong> Please stay updated, we will be updating any privacy related information to you via the information that we have available
+          </strong>
         </p>
-      </div>
-    </section>
-  </div>
-  </div>
-  <section  class="card-container">
 
-  
-<div class="card">
-  <img src="./Images/pexels-cottonbro-4669114.jpg" alt="image " >
-  <div class="container">
-    <h4><b>Make your selection</b></h4> 
-    <p></p> 
+        <div class="main-article">
+          <h3 style="color: #009cde;">WELCOME
+            Welcome to our corporate plan
+            Welcome to the Australian Electoral Commission (AEC) 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3>
+          <p style="font-size: 1.4rem; text-align: justify;">
+            Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
+
+
+
+
+
+            To remain agile—now and into the future—we must continue refining our election delivery model through our lessons management approach. <br> <br> We will continue to evolve our planning processes, address the delivery of electoral events in a pandemic, and improve our delivery model for future electoral cycles.
+
+            Elections are Australia’s largest and most complex single peacetime event. This fact is masked by the electoral administrator’s conundrum: the better and more efficient the election, the simpler the event appears to voters, candidates and political parties, most of who only interact with the voting process episodically and for a few brief <br> <br>
+            There are a large number of logistically complicated and legislatively complex steps required to deliver elections successfully, including satisfying rapidly evolving community expectations. Our modernisation journey must consider these expectations as well as the realities of our funding, the availability and cost of technology, legislation and the ever-increasing threat of disinformation and cyber security. To continue to safeguard our democracy we must further mature our regulatory capability and work proactively with our stakeholders to solve these multidimensional problems.
+
+            The modernisation of our two main election systems remains critical to ensure these can respond to future changes in legislation and our rapidly changing external environment.
+            <br><br> Investing in training for our permanent employees and large temporary election workforce remains a priority, as stated in our recently launched learning and development strategy.
+
+            This year, we have further refined our performance framework. We have re-focused the six agency directions in last year’s corporate plan to four key activities. These enable us to deliver our purpose and ensure an efficient, effective and secure electoral system for Australia. Our corporate plan continues to guide our agency and is an integral part of our performance and reporting framework.
+
+            Tom Rogers
+            Electoral Commissioner
+
+            Compliance statement
+          </p>
+        </div>
+      </section>
+    </div>
   </div>
-</div>   
-<div class="card">
-  <img src="./Images/pexels-artem-podrez-5108648.jpg" alt="card image"  >
-  <div class="container">
-    <h4><b>Your vote matters</b></h4> 
-    <p></p> 
-  </div>
-</div>  
-<div class="card">
-  <img src="./Images/pexels-rijan-hamidovic-2193268.jpg" alt="card image" >
-  <div class="container">
-    <h4><b> Innovating the future</b></h4> 
-    <p></p> 
-  </div>
-</div>  
-    </section>
+  <section class="card-container">
+
+
+    <div class="card">
+      <img src="./Images/pexels-cottonbro-4669114.jpg" alt="image ">
+      <div class="container">
+        <h4><b>Make your selection</b></h4>
+        <p></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./Images/pexels-artem-podrez-5108648.jpg" alt="card image">
+      <div class="container">
+        <h4><b>Your vote matters</b></h4>
+        <p></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./Images/pexels-rijan-hamidovic-2193268.jpg" alt="card image">
+      <div class="container">
+        <h4><b> Innovating the future</b></h4>
+        <p></p>
+      </div>
+    </div>
+  </section>
 
 
   <!--Footer conatins the bottom page description-->
   <footer>
-
-    <div class="footer-banner">
-
-
-      <div class="footer-details">
-        <h3 style="color: azure; font-size: 1.8rem; font-weight: 550px;">Election Comission of Australia</h3>
-        <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+    <div class="footer-details">
+      <h3>Election Comission of Australia</h3>
+      <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
-        <div class="footer-container" style="margin-top: 50px;">
-          <div class="footer-item one"> For Voters</div>
-          <div class="footer-item two">For candidates </div>
-          <div class="footer-item three"> <a href="./result.php"> About election</a> </div>
-          <div class="footer-item four"> Information Centre</div>
-          <div class="footer-item five "> The ECOA </div>
-        </div>
-      </div>
-      <!--This div in particular contains links to various platforms and is set to flex-->
-      <div class="footer-link">
-
-        <div class="footxer-link-one">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </div>
-        <div class="footxer-link-two">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </div>
-        <div class="fooxter-link-three">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </div>
+      <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item"> <a href="./login.php">Voters Login</a></div>
+        <div class="footer-item"> <a href="./registration.php">Create Account</a></div>
+        <div class="footer-item"> <a href="./about.php">About Elections</a></div>
+        <div class="footer-item"> <a href="./about.php">Instructive Video</a></div>
+        <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
+        <div class="footer-item"> <a href="./contactus.php">Contact Us</a></div>
       </div>
     </div>
+    <!--This div in particular contains links to various platforms and is set to flex-->
 
+    <div class="footer-social-links">
+
+      <div>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </div>
+    </div>
 
   </footer>
 

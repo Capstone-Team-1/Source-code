@@ -76,46 +76,35 @@
 </section>
 
 <footer>
+    <div class="footer-details">
+      <h3>Election Comission of Australia</h3>
+      <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
-<div class="footer-banner" style="text-align: justify;" >
-    <h3>Election comission of Australia</h1>
+      <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item"> <a href="./login.php">Voters Login</a></div>
+        <div class="footer-item"> <a href="./registration.php">Create Account</a></div>
+        <div class="footer-item"> <a href="./about.php">About Elections</a></div>
+        <div class="footer-item"> <a href="./about.php">Instructive Video</a></div>
+        <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
+        <div class="footer-item"> <a href="./contactus.php">Contact Us</a></div>
+      </div>
+    </div>
+    <!--This div in particular contains links to various platforms and is set to flex-->
 
-<div class= "footer-details">
-    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>   
+    <div class="footer-social-links">
 
+      <div>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </div>
+    </div>
 
-     <div class= "footer-container" style="margin-top: 50px;"> 
-             <div class="footer-item one"> Homepage</div>
-              <div class="footer-item two">For candidates </div>
-               <div class="footer-item three"> About election </div>
-                <div class="footer-item four"> Information Centre</div>
-                 <div class ="footer-item five "> The ECOA </div>
-                  </div>
-
-
-
-
-</div>
-
-       <div class="footer-link">
-
-                    <div class="footxer-link-one">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-facebook"></ion-icon></a>  </div>
-                    <div class="footxer-link-two">   <a href="https://twitter.com/auselectoralcom"> <ion-icon name="logo-twitter"></ion-icon></a>   </div>
-                      <div class="fooxter-link-three">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-instagram"></ion-icon></a>  </div>
-                       
-                </div> 
-         
-
-
-
-
-</div>
-
-       
- </footer>
-    
-
-
+  </footer>
 
 <script src="./JavaScript/script.js"></script>
   <!--This is the script towards the google translator api script file-->

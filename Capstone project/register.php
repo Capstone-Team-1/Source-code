@@ -61,7 +61,7 @@ if (isset($_POST["signup"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./CSS/style.css">
-
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -81,7 +81,6 @@ if (isset($_POST["signup"])) {
     </script>
 
 <header>
-    
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -109,6 +108,7 @@ if (isset($_POST["signup"])) {
         </li>
       </ul>
     </nav>
+    </header>
     </header>
 
     <section class="banner">
@@ -167,53 +167,36 @@ if (isset($_POST["signup"])) {
 
       </div>
     </div>
-      <footer>
-
-<div class="footer-banner">
-  <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
-
+    <footer>
     <div class="footer-details">
-      <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em; justify-content:center">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
-
+      <h3>Election Comission of Australia</h3>
+      <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
       <div class="footer-container" style="margin-top: 50px;">
-        <div class="footer-item one"> <a href="./result.php"> For Voters</a> </div>
-        <div class="footer-item two">For candidates </div>
-        <div class="footer-item three"> About election </div>
-        <div class="footer-item four"> Information Centre</div>
-        <div class="footer-item five "> The ECOA </div>
+        <div class="footer-item"> <a href="./login.php">Voters Login</a></div>
+        <div class="footer-item"> <a href="./registration.php">Create Account</a></div>
+        <div class="footer-item"> <a href="./about.php">About Elections</a></div>
+        <div class="footer-item"> <a href="./about.php">Instructive Video</a></div>
+        <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
+        <div class="footer-item"> <a href="./contactus.php">Contact Us</a></div>
       </div>
-
-
-
-
     </div>
+    <!--This div in particular contains links to various platforms and is set to flex-->
 
-    <div class="footer-link">
+    <div class="footer-social-links">
 
-      <div class="footxer-link-one">
+      <div>
         <ion-icon name="logo-facebook"></ion-icon>
       </div>
-      <div class="footxer-link-two">
+      <div>
         <ion-icon name="logo-twitter"></ion-icon>
       </div>
-      <div class="fooxter-link-three">
+      <div>
         <ion-icon name="logo-instagram"></ion-icon>
       </div>
-
     </div>
 
-
-
-
-
-</div>
-
-
-</footer>
-
-
-
+  </footer>
 
       <script src="./JavaScript/register.js"></script>
       <!--This is the script towards the google translator api script file-->

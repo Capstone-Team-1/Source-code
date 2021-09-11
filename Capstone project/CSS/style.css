@@ -31,7 +31,7 @@ body {
   top: 310px;
   right: 50px;
 }
-
+/* -------------------------------------------------------*/
 /* --------- Header and Navigation Bar Style ------------ */
 header {
   top: 0;
@@ -69,7 +69,7 @@ header {
   border: 2px solid black;
   
   right: 30%;
-  top: 20%;
+  top: 50%;
     z-index: 100;
 
 }
@@ -114,7 +114,6 @@ padding-left: 0;
 
 nav ul li {
 width: 20%;
-display: block;
 float: left;
 position: relative;
 text-decoration: none;
@@ -127,6 +126,7 @@ font-size: 17px;
 font-weight: 400;
 padding: 4px 25px 2px 25px;
 border-radius: 3px;
+text-decoration: none;
 }
 
 li:hover {
@@ -136,7 +136,7 @@ cursor: pointer;
 a:hover{
   /*background: #1b9bff;*/
   color: #7d21a5;
-font-weight: 600;
+  font-weight: 600;
   transition: 0.05s;
 }
 
@@ -166,14 +166,14 @@ ul li ul li {
 clear: both;
 width: 100%;
 }
-                /* ------- End Design of dropdown buttons in Navbar---- */
+                
 
 .checkbtn {
-  font-size: 30px;
+  font-size: 28px;
   color: #2c3e50;
   float: right;
   line-height: 80px;
-  margin-right: 40px;
+  margin: 10px 23px 0 22px ;
   cursor: pointer;
   display: none
 }
@@ -181,7 +181,8 @@ width: 100%;
 #check {
   display: none
 }
-
+                        /* ------- End Design of dropdown buttons in Navbar---- */
+                        /* ------- Responsive Navbar (only) ------ */
 @media (max-width: 952px){
   label.logo{
       font-size: 30px;
@@ -189,30 +190,38 @@ width: 100%;
       
   }
 }
-/* ------- Responsive Navbar (only) ------ */
+                        
 @media (max-width: 858px){
   .checkbtn{
-      position: absolute;
-      top:15px;
-      right: 85%;
+      /*position: absolute;
+      top:14px;
+      right: 85%;*/
       display: block;
   }
-  .header-page {
+  .ecoa-logo {
     display: inline-flex;
   }
-
+  .ecoa-logo img {
+    width: 65px;
+    margin: 18px 15px 0 0 ;
+  }
+  .organization-name {
+    font-size: 1.4rem;
+    margin: 18px 0 0 0;
+  }
   ul {
       position: fixed;
       width: 100%;
       height: 100vh;
       background: #2c3e50;
-      top: 80px;
+      top: 125px;
       left: -100%;
       text-align: center;
       transition: all .5s;
   }
   nav ul li {
       display: block;
+      width: 100%;
       margin: 50px 0;
       line-height: 30px;
   }
@@ -226,12 +235,86 @@ width: 100%;
   #check:checked ~ ul{
       left: 0;
   }
+                            /* ---- resposnive drowpdown*/
+  ul li ul {
+    visibility: hidden;
+    position: absoulte;
+    margin-top: 3px;
+    left: 0;
+    display: none;
+    }
+    
+    ul li ul a {
+    color: #d1d1d1;
+    opacity: 1;
+    }
+    ul li:hover > ul,
+    
+    ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    color: #d1d1d1;
+    display: block;
+    }
+    
+    ul li ul li {
+    clear: both;
+    width: 100%;
+    }
 }
 
+/* -------------------------------------------------------*/
+/* ---------End Header and Navigation Bar Style ------------ */
 
+/* -------------------------------------------------------*/
+/* --------------- Footer Style ------------------------ */
 
-/* -------- End Header and Navigation Bar Style ------------*/
+footer {
+  color: azure; 
+  background: linear-gradient(200deg, #ffffff -580%, #1b2554 75%);
+  margin: 90px 0px;
+  padding: 30px;
+}
 
+footer a {
+  color: azure; 
+  text-decoration: none;
+}
+.footer-details {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.footer-details h3 {
+  color: azure; 
+  font-size: 1.8rem; 
+  font-weight: 500;
+  padding: 10px;
+}
+
+.footer-details p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+}
+
+.footer-container {
+  display: flex;
+}
+.footer-item {
+  flex: 1;
+  justify-content: space-around;
+}
+
+.footer-social-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 1.9rem;
+}
+
+/* -------------------------------------------------------*/
+/* ---------------End of Footer Style ------------------------ */
 
 h3 {
   text-align: center;
@@ -242,26 +325,6 @@ h3 {
 /*The effect that we get upon hovering oover the contents*/
 
 .banner-one:hover,
-.footer-item:hover,
-
-.fooxter-link:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  /* text-shadow: 2px 2px 15px purple; */
-  color: #007bff;
-  transition: all 0.3s ease-in;
-}
-.footer-item:hover,
-.fooxter-link:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  /* text-shadow: 2px 2px 15px purple; */
-  color: #cad5e2;
-
-  transition: all 0.3s ease-in;
-}
-
-
 
 .banner-container {
   text-align: left;
@@ -295,6 +358,34 @@ h3 {
 .image-container {
   display: flex;
 }
+
+
+.user-display{
+margin-top: 80px;
+
+}
+
+table {
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2rem;
+
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #D6EEEE;
+}
+
 
 .card {
   display: inline-block;
@@ -337,35 +428,6 @@ h3 {
   font-size: 0.7rem;
 }
 
-.footer-details {
-  font-size: 1.1rem;
-  text-align: center;
-}
-.footer-container {
-  display: flex;
-}
-.footer-item {
-  flex: 1;
-  justify-content: space-around;
-}
-
-.footer-link {
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  margin-top: 30px;
-  padding: 10px;
-  /* font-size: 1.9rem; */
-}
-a {
-  color: white;
-  text-decoration: none;
-  transition: 0.5s;
-}
-.fooxter-link a {
-  flex: 1;
-  color: white;
-}
 
 /* ------------------------------------------- FORM STYLE ---------------------------------------- */
 
@@ -464,7 +526,9 @@ input:focus {
   transition: all 1s ease-out;
 }
 
-.button, button {
+.button,
+button,
+input[type="button"] {
   width: 35%;
   padding: 10px 30px;
   border-radius: 50px 50px;
@@ -478,7 +542,9 @@ input:focus {
   margin-bottom: 10px;
 }
 
-.button:hover, button:hover {
+.button:hover,
+button:hover,
+input[type="button"]:hover {
   background: #450087;
   color: white;
   transition: 0.5s; 
@@ -502,16 +568,7 @@ input:focus {
   animation-timing-function: ease-in;
 }
 
-.footer-banner {
-  font-family: "Open Sans Condensed", sans-serif;
-  color: white;
-  background-color: white;
-  background: linear-gradient(200deg, #ffffff -580%, #1b2554 75%);
 
-  font-size: 1.9rem;
-  margin-top: 90px;
-  padding: 30px;
-}
 /*   ------------------------ Responsive Design of Pages --------------------*/
 
 @media all and (max-width: 800px) {
@@ -610,7 +667,7 @@ input:focus {
         transition: all 1s ease-out;
       }
       
-      .button {
+      .button  {
         width: 35%;
         padding: 10px 30px;
         border-radius: 50px 50px;
@@ -629,12 +686,7 @@ input:focus {
         color: white;
         transition: 0.5s; 
       }
-      
   }
-
-
-
-
 
 @media all and (max-width: 813px) {
   .section-form {
@@ -644,7 +696,6 @@ input:focus {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 80px 80px;
     transition: 0.3s;
-
     height: 20%;
     border-radius: 5px;
     background-color: whitesmoke;
@@ -655,19 +706,27 @@ input:focus {
     top: 350px;
     right: 50px;
   }
+  .footer-container {
+    display: block;
+    padding-top: 10px;
+    font-size: 1rem;
+  }
 }
 @media all and (max-width: 690px) {
   .banner-container {
     background: linear-gradient(200deg, #ffffff -120%, #1b2554 75%);
     font-size: 0.7rem;
   }
-
   .show-container {
     height: 8.3rem;
   }
-
   .button {
     padding: 10px;
+  }
+  .footer-container {
+    display: block;
+    padding-top: 10px;
+    font-size: 1rem;
   }
 }
 
@@ -688,13 +747,9 @@ input:focus {
   .footer-link,
   .footer-container {
     display: block;
-
-    font-size: 0.8rem;
+    padding-top: 10px;
+    font-size: 1rem;
   }
-}
-/* The links not being aligned on the side is fixed with this one */
-.footer-link {
-  text-align: center;
 }
 
 @media all and (max-width: 380px) {

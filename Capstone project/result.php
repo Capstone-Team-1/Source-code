@@ -12,36 +12,31 @@ try{
 catch(PDOException $ex){
   die($ex-> getMessage());
 }
-$candidateOne = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '1'");
-	$candidateOne->execute();
-			for($i=0; $rows = $candidateOne->fetch(); $i++){
-			echo " Mr. Scott Morrission received = ".$rows['count(voteID)'];
-			}
-      
-      $candidateTwo = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '2'");
-			$candidateTwo->execute();
-			for($i=0; $rows = $candidateTwo->fetch(); $i++){
-			echo "Mr. Joyce Barnaby   = ".$rows['count(voteID)'];
-			}
 
-      $candidateThree = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '3'");
-			$candidateThree->execute();
-			for($i=0; $rows = $candidateThree->fetch(); $i++){
-			echo "Mr. Albanase Anthony  = ".$rows['count(voteID)'];
-			}
+// $result = $dbcon-> query("SELECT voteID FROM vote where candidateID= '1'");
+
+// // guessing a variable to store data
+// $dbdata = array();
+
+// //fetching the data in the associative empty array
 
 
-$stmt = $dbcon-> prepare("SELECT * FROM vote");
+//   while ( $row = $result->fetch(PDO::FETCH_ASSOC))  {
+// 	$dbdata[]=$row;
+//   }
+//   echo json_encode($dbdata);
+
+$stmt = $dbcon-> prepare("SELECT voteID FROM vote where candidateID=2");
 $stmt -> execute();
-$json = [];
+// $json = [];
 $json2 = [];
 while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
   extract($row);
-  $json[]=$candidateID;
+  // $json[]=$candidateID;
  $json2[]= (int)$voteID; //set this according to candidate name or AS REQURIED int if its the vote count
 }
-json_encode($json);
- json_encode(count($json2));
+// json_encode($json);
+ echo json_encode(count($json2));
 
 
 include 'connection.php';
@@ -76,6 +71,29 @@ if(empty($_SESSION['employeeID']))
     display: inline-block;
     margin: 100px 0;
 }
+
+
+
+     .user-display{
+    margin-top: 80px;
+  
+}
+table {
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2rem;
+  
+
+}
+
+th, td {
+  text-align: left;
+  padding: 30px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover {background-color: #D6EEEE;}
+  
 </style>
     
 </head>
@@ -111,7 +129,7 @@ if(empty($_SESSION['employeeID']))
         <li><a href="./logout.php">Logout</a></li>
         </ul>
     </nav>
-    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
+    <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
     </header>
 
     <section class="banner">
@@ -126,6 +144,47 @@ if(empty($_SESSION['employeeID']))
                     </div>
         </div>
 </section>
+   <section class="user-display" >
+          <h3 style="color:black;"> Total Votes</h3>
+          <table style="border:1px solid black; ">
+            <tr style="width:300px;"> 
+<th> Vote ID </th>
+<th> Voters Name</th>
+
+
+
+
+
+<tbody id="dataSource"> <!---This will fetch data using ajax---->
+
+</tbody>
+
+            </tr>
+
+          </table>
+          <br>
+<?php $candidateOne = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '1'");
+	$candidateOne->execute();
+			for($i=0; $rows = $candidateOne->fetch(); $i++){
+			echo " Mr. Scott Morrission received = ".$rows['count(voteID)'] ."<br/>" ;
+			}
+   
+     
+      $candidateTwo = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '2'");
+			$candidateTwo->execute();
+			for($i=0; $rows = $candidateTwo->fetch(); $i++){
+			echo "Mr. Joyce Barnaby received  = ".$rows['count(voteID)'] ."<br/>";
+			} 
+   
+
+      $candidateThree = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '3'");
+			$candidateThree->execute();
+			for($i=0; $rows = $candidateThree->fetch(); $i++){
+			echo "Mr. Albanase Anthony received  = ".$rows['count(voteID)']."<br/>";
+			} ?>
+
+        </section>
+
 
 <section class="reading-content">
 <div class="chart">  
@@ -239,6 +298,57 @@ var myChart = new Chart(ctx, {
     <script type="text/javascript" 
  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
+<script>
+  var ajax = new XMLHttpRequest();
+var method = "GET";
+var url = "./votedata.php"
+var asynchronous = true;
 
+ajax.open(method, url, asynchronous);
+//This is how we are sending request
+ajax.send();
+//This is rweceviing request from our data.php file
+ajax.onreadystatechange = function (){
+   if (this.readyState == 4 && this.status == 200) {
+       //converting JSON back to array
+
+       var data = JSON.parse (this.responseText);
+       console.log(data); //for test
+
+       //html value for table body i.e. tbody
+
+       var html = "";
+       // we have to loop the data through
+       for(var a = 0; a<data.length; a++){
+           var id = data[a].voteID;
+          //  var firstName = data[a].voteDate;
+           var candidateID = data[a].candidateID;
+           
+
+           //appending in HTML dom
+if(candidateID == 1){
+  candidateID = " Scott Morrission";
+}
+
+else if(candidateID == 2){
+  candidateID = " Joyce Barnaby";
+  
+}
+else{
+  candidateID+=" Anthony Albanese";
+}
+           html+= "<tr> "
+          html += "<td>" + id+ "</td>";
+            // html += "<td>" + firstName + "</td>";
+              html += "<td>" + candidateID+ "</td>";
+                
+
+          html += "</tr>";
+       }
+//replacing the table body
+document.getElementById('dataSource').innerHTML = html;
+   }
+}
+</script>
 </body>
 </html>
