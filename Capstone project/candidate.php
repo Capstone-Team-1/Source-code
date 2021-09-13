@@ -13,7 +13,7 @@ if(empty($_SESSION['citizenID']))
 
    if(isset($_POST['submit_vote']))
         {
-            $candidate_id = $_POST['candidate_id'];
+            //$candidate_id = $_POST['candidate_id'];
             $voter_id = $_SESSION['citizenID'];
             
             $insert_vote = "INSERT INTO vote ( voteDate, candidateID, citizenID) VALUES (now(), '2'. '111222')";
@@ -76,9 +76,12 @@ if(empty($_SESSION['citizenID']))
             <p>This action is irreversible.</p>
             <p>Once you click '<b>Yes</b>', you cannot change your vote.</p>
             
-                        <input type="hidden" name="candidate_id" id="candidate_id">
-                        <input type="hidden" name="voter_id" id="voter_id">
+                        <!-- <input type="hidden" name="candidate_id" id="candidate_id">
+                        <input type="hidden" name="voter_id" id="voter_id"> -->
+    <!-- <input list="candidates" name="candidates-List"> -->
+  <select id="final-list" >
    
+</select>
             <button type="button" class="btnNo">No</button>
             <button type="submit" name="submit_vote" class="submit">Yes</button>
        </div>
@@ -212,21 +215,36 @@ if(empty($_SESSION['citizenID']))
   const b = document.querySelector('#popup');
   const c = document.querySelector('.btnNo');
   const d = document.querySelector('.blur');
+const selected_list = document.querySelector('#final-list');
 
 btnOne.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
+const newElement = document.createElement('option');
+const newNode = document.createTextNode(1);
+newElement.setAttribute('value', 1);
+newElement.appendChild(newNode);
+selected_list.appendChild(newElement);
 
 })
 btnTwo.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
+const newElement = document.createElement('option');
+const newNode = document.createTextNode(2);
+newElement.setAttribute('value', 2);
+newElement.appendChild(newNode);
+selected_list.appendChild(newElement);
 
 })
 btnThree.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
-
+const newElement = document.createElement('option');
+const newNode = document.createTextNode(3);
+newElement.setAttribute('value', 3);
+newElement.appendChild(newNode);
+selected_list.appendChild(newElement);
 })
 
 
