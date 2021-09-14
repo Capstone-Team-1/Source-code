@@ -145,7 +145,7 @@ tr:hover {background-color: #D6EEEE;}
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
           ['Scott Morrison',    <?php echo $countdbdata;?> ],
-          ['Joyce Barnaby',      <?php echo $countdataTwo ?>],
+          ['Malcom Turnbull',      <?php echo $countdataTwo ?>],
           ['Anthony Alabanese',  <?php echo$countdataThree;?>]
         ]);
 
@@ -242,7 +242,7 @@ tr:hover {background-color: #D6EEEE;}
       $candidateTwo = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '2'");
 			$candidateTwo->execute();
 			for($i=0; $rows = $candidateTwo->fetch(); $i++){
-			echo "Mr. Joyce Barnaby received  = ".$rows['count(voteID)'] ."<br/>";
+			echo "Mr. Malcom Turnbull received  = ".$rows['count(voteID)'] ."<br/>";
 			} 
    
 
@@ -271,7 +271,7 @@ tr:hover {background-color: #D6EEEE;}
       $candidateTwo = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '2'");
 			$candidateTwo->execute();
 			for($i=0; $rows = $candidateTwo->fetch(); $i++){
-			echo "Mr. Joyce Barnaby   = ".$rows['count(voteID)']. " votes"."<br>";
+			echo "Mr. Malcom Turnbull  = ".$rows['count(voteID)']. " votes"."<br>";
 			}
 
       $candidateThree = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '3'");

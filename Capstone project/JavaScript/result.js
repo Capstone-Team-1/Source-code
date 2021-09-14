@@ -30,11 +30,11 @@ if(candidateID == 1){
 }
 
 else if(candidateID == 2){
-  candidateID = " Joyce Barnaby";
+  candidateID = " Malcomm Turnbull";
   
 }
 else{
-  candidateID+=" Anthony Albanese";
+  candidateID =" Anthony Albanese";
 }
            html+= "<tr> "
           html += "<td>" + id+ "</td>";
