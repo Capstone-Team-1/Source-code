@@ -173,7 +173,7 @@ width: 100%;
 
 .checkbtn {
   font-size: 28px;
-   background: linear-gradient(200deg, #ffffff -580%, #1b2554 75%);
+  
   float: right;
   line-height: 80px;
   margin: 10px 23px 0 22px ;
@@ -216,7 +216,7 @@ width: 100%;
       position: fixed;
       width: 100%;
       height: 100vh;
-      background: #2c3e50;
+     background: linear-gradient(200deg, #ffffff -580%, #1b2554 75%);
       top: 125px;
       left: -100%;
       text-align: center;

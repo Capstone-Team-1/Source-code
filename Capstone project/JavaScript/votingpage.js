@@ -1,3 +1,4 @@
+
 //this is the part for our voting page. Please change as necessary
 
  const btnOne = document.querySelector('.buttonOne'); //this selects the first button among the candidate i.e. Malcom
@@ -16,12 +17,12 @@ const candidate = document.querySelector('#candidate_ID'); //this will be the na
 //we will add event listener to every buttons.
 
 
-
+const newElement = document.createElement('option');
 
 btnOne.addEventListener('click', ()=>{
 b.classList.add('modal-body-click'); //we are adding the class 
 d.classList.add('bg-blur'); //adding the background blur class
-const newElement = document.createElement('option'); //creating a element to select the candidate
+ //creating a element to select the candidate
 const newNode = document.createTextNode(2);  //this is the value that is passed to db
 newElement.setAttribute('name', "vote"); //setting the attribute hence PHP can understand
 candidate.innerHTML = "Mr. Malcomm Turnbull"; //appending the name as per the button selection
@@ -32,10 +33,12 @@ selected_list.appendChild(newElement); //and appending the new element into our 
 })
 
 
+
+
 btnTwo.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
-const newElement = document.createElement('option');
+
 const newNode = document.createTextNode(3);
 newElement.setAttribute('name', "vote");
 
@@ -49,7 +52,7 @@ selected_list.appendChild(newElement);
 btnThree.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
-const newElement = document.createElement('option');
+
 const newNode = document.createTextNode(1);
 newElement.setAttribute('name', "vote");
 candidate.innerHTML = "Mr. Scott Morrison";
@@ -64,4 +67,5 @@ selected_list.appendChild(newElement);
 c.addEventListener('click', ()=>{
   b.classList.remove('modal-body-click');
   d.classList.remove('bg-blur');
+  selected_list.removeChild(newElement);
 })
