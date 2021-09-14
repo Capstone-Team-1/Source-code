@@ -69,7 +69,7 @@ if(empty($_SESSION['citizenID']))
             <div class="banner-container">
               <div class="banner-items" >
                 <h2 class="banner-header">
-                    <br> Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>, welcome to ECOA online voting platform
+                    <br> Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>, Thank you for using ECOA online voting platform
                     <br>Thank you for voting!
                 </h2>
                

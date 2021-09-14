@@ -3,6 +3,11 @@
 include 'connection.php';
 session_start();
 error_reporting(0);
+//this is checking if the user has already signed in if signed in then the location will be towards candidate.php
+if(($_SESSION['employeeID']))
+ {
+        header("Location:dashboard.php");
+    }
 if (isset($_POST['login'])) {
   $myuser = $_POST['vid'];
   $mypassword = ($_POST['pw']);

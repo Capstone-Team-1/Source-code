@@ -3,6 +3,13 @@
 include 'connection.php';
 session_start();
 error_reporting(0);
+
+//this is checking if the user has already signed in if signed in then the location will be towards candidate.php
+if(($_SESSION['citizenID']))
+ {
+        header("Location:candidate.php");
+    }
+
 if (isset($_POST['submit'])) {
   $myuser = $_POST['citizenID'];
   $mypassword = md5($_POST['citizenPassword']);

@@ -273,11 +273,11 @@ var myChart = new Chart(ctx, {
 
 </div>
 
-       <div class="footer-link">
+       <div class="footer-link" style="text-align: center; word-spacing: 10rem; margin-top: 30px; ">
 
-                    <div class="footxer-link-one">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-facebook"></ion-icon></a>  </div>
-                    <div class="footxer-link-two">   <a href="https://twitter.com/auselectoralcom"> <ion-icon name="logo-twitter"></ion-icon></a>   </div>
-                      <div class="fooxter-link-three">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-instagram"></ion-icon></a>  </div>
+                    <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-facebook"></ion-icon></a>  
+                <a href="https://twitter.com/auselectoralcom"> <ion-icon name="logo-twitter"></ion-icon></a>   
+                      <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-instagram"></ion-icon></a>  
                        
                 </div> 
          
@@ -298,57 +298,8 @@ var myChart = new Chart(ctx, {
     <script type="text/javascript" 
  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
-<script>
-  var ajax = new XMLHttpRequest();
-var method = "GET";
-var url = "./votedata.php"
-var asynchronous = true;
-
-ajax.open(method, url, asynchronous);
-//This is how we are sending request
-ajax.send();
-//This is rweceviing request from our data.php file
-ajax.onreadystatechange = function (){
-   if (this.readyState == 4 && this.status == 200) {
-       //converting JSON back to array
-
-       var data = JSON.parse (this.responseText);
-       console.log(data); //for test
-
-       //html value for table body i.e. tbody
-
-       var html = "";
-       // we have to loop the data through
-       for(var a = 0; a<data.length; a++){
-           var id = data[a].voteID;
-          //  var firstName = data[a].voteDate;
-           var candidateID = data[a].candidateID;
-           
-
-           //appending in HTML dom
-if(candidateID == 1){
-  candidateID = " Scott Morrission";
-}
-
-else if(candidateID == 2){
-  candidateID = " Joyce Barnaby";
-  
-}
-else{
-  candidateID+=" Anthony Albanese";
-}
-           html+= "<tr> "
-          html += "<td>" + id+ "</td>";
-            // html += "<td>" + firstName + "</td>";
-              html += "<td>" + candidateID+ "</td>";
-                
-
-          html += "</tr>";
-       }
-//replacing the table body
-document.getElementById('dataSource').innerHTML = html;
-   }
-}
+<script src="./JavaScript/result.js">
+ 
 </script>
 </body>
 </html>

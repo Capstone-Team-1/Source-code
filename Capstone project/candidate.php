@@ -14,13 +14,13 @@ if(empty($_SESSION['citizenID']))
 
 if (isset($_POST["submit_vote"])) {
   echo "connection is done";
-  $citizenID = mysqli_real_escape_string($conn, $_SESSION["citizenID"]);
+  $citizenID = mysqli_real_escape_string($conn, $_SESSION["citizenID"]); //taking the users session ID as a inmput
   $vote = mysqli_real_escape_string($conn, $_POST["vote"] );
   
 
   $checkcitizenID= mysqli_num_rows(mysqli_query($conn, "SELECT citizenID FROM vote WHERE citizenID='$citizenID'"));
   if ($checkcitizenID  > 0) {
- ##checking if the input data match
+ ##checking if user has already voted
  header('location: alreadyvoted.php');
 
   } else if ($checkcitizenID > 1) {

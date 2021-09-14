@@ -22,7 +22,7 @@ btnOne.addEventListener('click', ()=>{
 b.classList.add('modal-body-click'); //we are adding the class 
 d.classList.add('bg-blur'); //adding the background blur class
 const newElement = document.createElement('option'); //creating a element to select the candidate
-const newNode = document.createTextNode(1);  //this is the value that is passed to db
+const newNode = document.createTextNode(2);  //this is the value that is passed to db
 newElement.setAttribute('name', "vote"); //setting the attribute hence PHP can understand
 candidate.innerHTML = "Mr. Malcomm Turnbull"; //appending the name as per the button selection
 
@@ -36,7 +36,7 @@ btnTwo.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 const newElement = document.createElement('option');
-const newNode = document.createTextNode(2);
+const newNode = document.createTextNode(3);
 newElement.setAttribute('value', "vote");
 
 candidate.innerHTML = "Mr. Anthony Albanese";
@@ -50,7 +50,7 @@ btnThree.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 const newElement = document.createElement('option');
-const newNode = document.createTextNode(3);
+const newNode = document.createTextNode(1);
 newElement.setAttribute('value', "vote");
 candidate.innerHTML = "Mr. Scott Morrison";
 newElement.appendChild(newNode);

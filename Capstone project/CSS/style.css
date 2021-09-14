@@ -173,7 +173,7 @@ width: 100%;
 
 .checkbtn {
   font-size: 28px;
-  color: #2c3e50;
+   background: linear-gradient(200deg, #ffffff -580%, #1b2554 75%);
   float: right;
   line-height: 80px;
   margin: 10px 23px 0 22px ;
@@ -315,6 +315,9 @@ footer a {
   font-size: 1.9rem;
 }
 
+.footer-link {
+ text-align: center;
+}
 /* -------------------------------------------------------*/
 /* ---------------End of Footer Style ------------------------ */
 
