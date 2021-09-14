@@ -136,7 +136,7 @@ tr:hover {background-color: #D6EEEE;}
   
 </style>
     
-
+<!-- The underneath link is for piechart -->
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
@@ -151,7 +151,7 @@ tr:hover {background-color: #D6EEEE;}
 
         var options = {
           title: 'Vote Leaderboard',
-          pieHole: 0.4,
+          pieHole: 0.9,
           is3D: true,
         };
 
@@ -159,10 +159,40 @@ tr:hover {background-color: #D6EEEE;}
         chart.draw(data, options);
       }
     </script>
+<!-- the underneath link is for barchart -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
 
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Move', 'Percentage'],
+          ['Scott Morrison',    <?php echo $countdbdata;?> ],
+          ['Malcom Turnbull',      <?php echo $countdataTwo ?>],
+          ['Anthony Alabanese',  <?php echo$countdataThree;?>]
+        ]);
 
+        var options = {
+          width: 800,
+          legend: { position: 'none' },
+          chart: {
+            title: 'Voters leaderboard',
+            subtitle: 'Lead by vote count' },
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Vote counts'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
 
-
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        // Convert the Classic options to Material options.
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+    </script>
+     
 
 
 </head>
@@ -206,8 +236,8 @@ tr:hover {background-color: #D6EEEE;}
             <div class="banner-container">
               <div class="banner-items" >
                 <h2 class="banner-header">
-                    <br> Welcome to ECOA online voting platform
-                    <br>Information Center
+                    <br> Welcome  Back <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
+                    <br>Results 
                 </h2>
                
                     </div>
@@ -215,7 +245,7 @@ tr:hover {background-color: #D6EEEE;}
 </section>
    <section class="user-display" >
           <h3 style="color:black;"> Total Votes</h3>
-          <table style="border:1px solid black; ">
+          <!-- <table style="border:1px solid black; ">
             <tr style="width:300px;"> 
 <th> Vote ID </th>
 <th> Voters Name</th>
@@ -228,7 +258,7 @@ tr:hover {background-color: #D6EEEE;}
 
 </tbody>
 
-            </tr>
+            </tr> 
 
           </table>
           <br>
@@ -257,7 +287,7 @@ tr:hover {background-color: #D6EEEE;}
 
 <section class="reading-content">
    <div id="piechart_3d" style="width: 1100px; height: 600px; display:inline-block"></div>
-
+  <div id="top_x_div" style="width: 800px; height: 600px; display:inline-block; z-index:10;">"></div>
 
    <div style="margin-top: 60px;">
 <?php
