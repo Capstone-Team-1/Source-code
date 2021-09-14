@@ -24,8 +24,11 @@ body {
   word-spacing: 1px;
   line-height: 35px;
 }
-
-
+/* Font for sucess, voted and confirmation page */
+h5{
+  font-size: 2.3rem;
+  color: green;
+}
 #google_translate_element {
   position: absolute;
   top: 310px;

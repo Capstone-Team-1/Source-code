@@ -204,7 +204,7 @@ if (isset($_POST["submit_vote"])) {
 
 </div>
 
-<script src="./JavaScript/script.js">
+<script src="./JavaScript/votingpage.js">
 </script>
   <!--This is the script towards the google translator api script file-->
     <script type="text/javascript" 
