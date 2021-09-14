@@ -1,6 +1,10 @@
 <?php 
 include 'connection.php';
 session_start();
+if(empty($_SESSION['citizenID']))
+ {
+        header("Location:voterLogin.php");
+    }
 
 ?>
 
@@ -16,7 +20,7 @@ session_start();
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     
-   
+    
 </head>
 <body>
     
@@ -30,7 +34,8 @@ session_start();
          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     
 <header>
-<nav>
+
+    <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
@@ -55,7 +60,8 @@ session_start();
       </ul>
     </nav>
      <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
-    </header>
+  </header>
+
 
 
     <section class="banner">
@@ -63,7 +69,7 @@ session_start();
             <div class="banner-container">
               <div class="banner-items" >
                 <h2 class="banner-header">
-                      <br> Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>, Thank you for using ECOA online voting platform
+                    <br> Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>, Thank you for using ECOA online voting platform
                     <br>Thank you for voting!
                 </h2>
                
@@ -71,57 +77,46 @@ session_start();
         </div>
 
         <section class="success">
-          <h1 style="font-size: 2.3rem; color: green" >
-                Thank You, Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?> your vote has been recorded!!!!
+            <h1 style="font-size: 2.3rem; color: green" >
+                Thank You, Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?> you have already voted!!!!
             </h1>
-            <img src="./Images/check.gif" alt="" style="margin-top: 30px;">
+            <img src="./Images/ezgif.com-gif-maker.gif" alt="" style="margin-top: 30px;">
             <br>
 
-            <a href="./index.php" alt="" title="" style="color:black"> Click here to get redirected to main page!! </a>
+            <a href="./index.php" alt="" title="" style="color:black"> Click here to get redirected to main page and wait for result!! </a>
         </section>
 
-<footer>
+  <footer>
+    <div class="footer-details">
+      <h3>Election Comission of Australia</h3>
+      <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
-<div class="footer-banner" >
-    <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
+      <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item"> <a href="./login.php">Voters Login</a></div>
+        <div class="footer-item"> <a href="./registration.php">Create Account</a></div>
+        <div class="footer-item"> <a href="./about.php">About Elections</a></div>
+        <div class="footer-item"> <a href="./about.php">Instructive Video</a></div>
+        <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
+        <div class="footer-item"> <a href="./contactus.php">Contact Us</a></div>
+      </div>
+    </div>
+    <!--This div in particular contains links to various platforms and is set to flex-->
 
-<div class= "footer-details">
-    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
+    <div class="footer-social-links">
 
+      <div>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </div>
+    </div>
 
-     <div class= "footer-container" style="margin-top: 50px;"> 
-             <div class="footer-item one"> For Voters</div>
-              <div class="footer-item two">For candidates </div>
-               <div class="footer-item three"> About election </div>
-                <div class="footer-item four"> Information Centre</div>
-                 <div class ="footer-item five "> The ECOA </div>
-                  </div>
-
-
-
-
-</div>
-
-       <div class="footer-link">
-
-                    <div class="footxer-link-one">   <ion-icon name="logo-facebook"></ion-icon></div>
-                    <div class="footxer-link-two"> <ion-icon name="logo-twitter"></ion-icon></div>
-                      <div class="fooxter-link-three"> <ion-icon name="logo-instagram"></ion-icon></div>
-                       
-                </div> 
-         
-
-
-
-
-</div>
-
-       
- </footer>
-    
-
-
+  </footer>
 
 <script src="./JavaScript/script.js"></script>
   <!--This is the script towards the google translator api script file-->

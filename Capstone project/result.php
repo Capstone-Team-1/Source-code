@@ -13,30 +13,70 @@ catch(PDOException $ex){
   die($ex-> getMessage());
 }
 
-// $result = $dbcon-> query("SELECT voteID FROM vote where candidateID= '1'");
+$result = $dbcon-> query("SELECT voteID FROM vote where candidateID= '1'");
 
-// // guessing a variable to store data
-// $dbdata = array();
+// guessing a variable to store data
+$dbdata = array();
 
-// //fetching the data in the associative empty array
+//fetching the data in the associative empty array
 
 
-//   while ( $row = $result->fetch(PDO::FETCH_ASSOC))  {
-// 	$dbdata[]=$row;
-//   }
-//   echo json_encode($dbdata);
+  while ( $row = $result->fetch(PDO::FETCH_ASSOC))  {
+	$dbdata[]=$row;
+  }
 
-$stmt = $dbcon-> prepare("SELECT voteID FROM vote where candidateID=2");
-$stmt -> execute();
-// $json = [];
-$json2 = [];
-while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
-  extract($row);
-  // $json[]=$candidateID;
- $json2[]= (int)$voteID; //set this according to candidate name or AS REQURIED int if its the vote count
-}
+  $countdbdata = count($dbdata);
+ 
+
+
+
+
+
+
+
+  $resultTwo = $dbcon-> query("SELECT voteID FROM vote where candidateID= '2'");
+
+// guessing a variable to store data
+$dataTwo = array();
+
+//fetching the data in the associative empty array
+
+
+  while ( $row = $resultTwo->fetch(PDO::FETCH_ASSOC))  {
+	$dataTwo[]=$row;
+  }
+
+  $countdataTwo = count($dataTwo);
+
+
+
+    $resultThree = $dbcon-> query("SELECT voteID FROM vote where candidateID= '3'");
+
+// guessing a variable to store data
+$dataThree = array();
+
+//fetching the data in the associative empty array
+
+
+  while ( $row = $resultThree->fetch(PDO::FETCH_ASSOC))  {
+	$dataThree[]=$row;
+  }
+
+  $countdataThree = count($dataThree);
+
+  
+
+// $stmt = $dbcon-> prepare("SELECT voteID FROM vote where candidateID=2");
+// $stmt -> execute();
+// // $json = [];
+// $json2 = [];
+// while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+//   extract($row);
+//   // $json[]=$candidateID;
+//  $json2[]= (int)$voteID; //set this according to candidate name or AS REQURIED int if its the vote count
+
 // json_encode($json);
- echo json_encode(count($json2));
+//  echo json_encode(count($json2));
 
 
 include 'connection.php';
@@ -96,6 +136,35 @@ tr:hover {background-color: #D6EEEE;}
   
 </style>
     
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Scott Morrison',    <?php echo $countdbdata;?> ],
+          ['Joyce Barnaby',      <?php echo $countdataTwo ?>],
+          ['Anthony Alabanese',  <?php echo$countdataThree;?>]
+        ]);
+
+        var options = {
+          title: 'Vote Leaderboard',
+          pieHole: 0.4,
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
+
+
+
 </head>
 <body>
     
@@ -187,73 +256,44 @@ tr:hover {background-color: #D6EEEE;}
 
 
 <section class="reading-content">
-<div class="chart">  
-  <canvas id="myChart" width="400" height="400"></canvas>
-<script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Scott Morrission',  'Joyce Barnaby', 'Anthony Albanese'],
-        datasets: [{
-            label: '# of Votes',
-            data: <?php echo json_encode($json2) ?>,
-            backgroundColor: [
-                  'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)'
-            ],
-            borderColor: [
-                  'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)'
-            ],
-               hoverOffset: 4,
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>
+   <div id="piechart_3d" style="width: 1100px; height: 600px; display:inline-block"></div>
+
+
+   <div style="margin-top: 60px;">
 <?php
-			$results = $dbcon->prepare("SELECT count(voteID) FROM vote");
-			$results->execute();
-			for($i=0; $rows = $results->fetch(); $i++){
-			echo "The total number of vote counts = ".$rows['count(voteID)'];
-			}
-    
+			
 	$candidateOne = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '1'");
 			$candidateOne->execute();
 			for($i=0; $rows = $candidateOne->fetch(); $i++){
-			echo " Mr. Scott Morrission received = ".$rows['count(voteID)'];
+			echo " Mr. Scott Morrission received = ".$rows['count(voteID)']. " votes". "<br>";
 			}
       
       $candidateTwo = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '2'");
 			$candidateTwo->execute();
 			for($i=0; $rows = $candidateTwo->fetch(); $i++){
-			echo "Mr. Joyce Barnaby   = ".$rows['count(voteID)'];
+			echo "Mr. Joyce Barnaby   = ".$rows['count(voteID)']. " votes"."<br>";
 			}
 
       $candidateThree = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '3'");
 			$candidateThree->execute();
 			for($i=0; $rows = $candidateThree->fetch(); $i++){
-			echo "Mr. Albanase Anthony  = ".$rows['count(voteID)'];
+			echo "Mr. Albanase Anthony  = ".$rows['count(voteID)']. " votes"."<br>" . "<br>";
 			}
+      $results = $dbcon->prepare("SELECT count(voteID) FROM vote");
+			$results->execute();
+			for($i=0; $rows = $results->fetch(); $i++){
+			echo "The total number of vote received = ".$rows['count(voteID)']. " votes"."<br>";
+			}
+    
 
 			?>
 </div>
  
 </section>
 
-<footer>
+<footer style="margin-top:60px;">
 
-<div class="footer-banner" style="text-align: justify"; >
+<div class="footer-banner" style="text-align: justify; " >
     <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
 
 <div class= "footer-details">
@@ -273,11 +313,11 @@ var myChart = new Chart(ctx, {
 
 </div>
 
-       <div class="footer-link">
+       <div class="footer-link" style="text-align: center; word-spacing: 10rem; margin-top: 30px;">
 
-                    <div class="footxer-link-one">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-facebook"></ion-icon></a>  </div>
-                    <div class="footxer-link-two">   <a href="https://twitter.com/auselectoralcom"> <ion-icon name="logo-twitter"></ion-icon></a>   </div>
-                      <div class="fooxter-link-three">   <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-instagram"></ion-icon></a>  </div>
+                    <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-facebook"></ion-icon></a>  
+                <a href="https://twitter.com/auselectoralcom"> <ion-icon name="logo-twitter"></ion-icon></a>   
+                      <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-instagram"></ion-icon></a>  
                        
                 </div> 
          
@@ -298,57 +338,8 @@ var myChart = new Chart(ctx, {
     <script type="text/javascript" 
  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
-<script>
-  var ajax = new XMLHttpRequest();
-var method = "GET";
-var url = "./votedata.php"
-var asynchronous = true;
-
-ajax.open(method, url, asynchronous);
-//This is how we are sending request
-ajax.send();
-//This is rweceviing request from our data.php file
-ajax.onreadystatechange = function (){
-   if (this.readyState == 4 && this.status == 200) {
-       //converting JSON back to array
-
-       var data = JSON.parse (this.responseText);
-       console.log(data); //for test
-
-       //html value for table body i.e. tbody
-
-       var html = "";
-       // we have to loop the data through
-       for(var a = 0; a<data.length; a++){
-           var id = data[a].voteID;
-          //  var firstName = data[a].voteDate;
-           var candidateID = data[a].candidateID;
-           
-
-           //appending in HTML dom
-if(candidateID == 1){
-  candidateID = " Scott Morrission";
-}
-
-else if(candidateID == 2){
-  candidateID = " Joyce Barnaby";
-  
-}
-else{
-  candidateID+=" Anthony Albanese";
-}
-           html+= "<tr> "
-          html += "<td>" + id+ "</td>";
-            // html += "<td>" + firstName + "</td>";
-              html += "<td>" + candidateID+ "</td>";
-                
-
-          html += "</tr>";
-       }
-//replacing the table body
-document.getElementById('dataSource').innerHTML = html;
-   }
-}
+<script src="./JavaScript/result.js">
+ 
 </script>
 </body>
 </html>
