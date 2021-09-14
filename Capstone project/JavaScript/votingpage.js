@@ -37,7 +37,7 @@ b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 const newElement = document.createElement('option');
 const newNode = document.createTextNode(3);
-newElement.setAttribute('value', "vote");
+newElement.setAttribute('name', "vote");
 
 candidate.innerHTML = "Mr. Anthony Albanese";
 newElement.appendChild(newNode);
@@ -51,7 +51,7 @@ b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 const newElement = document.createElement('option');
 const newNode = document.createTextNode(1);
-newElement.setAttribute('value', "vote");
+newElement.setAttribute('name', "vote");
 candidate.innerHTML = "Mr. Scott Morrison";
 newElement.appendChild(newNode);
 selected_list.appendChild(newElement);
