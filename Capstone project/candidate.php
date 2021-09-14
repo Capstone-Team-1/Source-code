@@ -1,4 +1,6 @@
 <?php 
+
+error_reporting(0);
 session_start();
 include 'connection.php';
 
@@ -10,38 +12,37 @@ if(empty($_SESSION['citizenID']))
 
 
 
+if (isset($_POST["submit_vote"])) {
+  echo "connection is done";
+  $citizenID = mysqli_real_escape_string($conn, $_SESSION["citizenID"]);
+  $vote = mysqli_real_escape_string($conn, $_POST["vote"] );
+  
 
-   if(isset($_POST['submit_vote']))
-        {
-            //$candidate_id = $_POST['candidate_id'];
-            $voter_id = $_SESSION['citizenID'];
-            
-            $insert_vote = "INSERT INTO vote ( voteDate, candidateID, citizenID) VALUES (now(), '2'. '111222')";
+  $checkcitizenID= mysqli_num_rows(mysqli_query($conn, "SELECT citizenID FROM vote WHERE citizenID='$citizenID'"));
+  if ($checkcitizenID  > 0) {
+ ##checking if the input data match
+ header('location: alreadyvoted.php');
+
+  } else if ($checkcitizenID > 1) {
+    echo "<script> alert('Hey you have voted');
+    </script>";
+  } else {
+   $insert_vote = "INSERT INTO vote ( voteDate, candidateID, citizenID) VALUES (now(), $vote, $citizenID)";
             $insert_vote_result = mysqli_query($conn, $insert_vote);
-            if($insert_vote_result==1)
-            {
-                echo '<script>alert("Voted Successfully")</script>';
-                echo '<script>';
-                echo 'window.location="'.$base_url.'logout.php"';
-                echo '</script>';
-            }
-            else
-            {
-                echo '<script>alert("Failed to Vote")</script>';
-            }
-        }
+    header("Location: sucessVoting.php");
+    if ($insert_vote_result) {
 
+      $_SESSION["citizenID"] = "";
+      $_POST["vote"] = "";
+     
 
-
-
-
-
-
-
-
-
+      echo "<script> alert ('success.'); </script>";
+    } else {
+      echo "<script> alert ('failed.'); </script>";
+    }
+  }
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,15 +74,16 @@ if(empty($_SESSION['citizenID']))
         <form action="" method="post">
       <div class="modal-body" id="popup">
             <p>Are you sure you want to give vote to this candidate?</p>
+              <select id="final-list" name="vote" value="<?php echo $_POST["vote"]; ?>"> 
+  
+</select>
             <p>This action is irreversible.</p>
             <p>Once you click '<b>Yes</b>', you cannot change your vote.</p>
             
                         <!-- <input type="hidden" name="candidate_id" id="candidate_id">
                         <input type="hidden" name="voter_id" id="voter_id"> -->
     <!-- <input list="candidates" name="candidates-List"> -->
-  <select id="final-list" >
-   
-</select>
+
             <button type="button" class="btnNo">No</button>
             <button type="submit" name="submit_vote" class="submit">Yes</button>
        </div>
@@ -222,7 +224,9 @@ b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 const newElement = document.createElement('option');
 const newNode = document.createTextNode(1);
-newElement.setAttribute('value', 1);
+newElement.setAttribute('name', "vote");
+
+
 newElement.appendChild(newNode);
 selected_list.appendChild(newElement);
 
@@ -232,7 +236,7 @@ b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 const newElement = document.createElement('option');
 const newNode = document.createTextNode(2);
-newElement.setAttribute('value', 2);
+newElement.setAttribute('value', "vote");
 newElement.appendChild(newNode);
 selected_list.appendChild(newElement);
 
@@ -242,7 +246,7 @@ b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 const newElement = document.createElement('option');
 const newNode = document.createTextNode(3);
-newElement.setAttribute('value', 3);
+newElement.setAttribute('value', "vote");
 newElement.appendChild(newNode);
 selected_list.appendChild(newElement);
 })
