@@ -68,4 +68,10 @@ c.addEventListener('click', ()=>{
   b.classList.remove('modal-body-click');
   d.classList.remove('bg-blur');
   selected_list.removeChild(newElement);
+
+
+  for(let i = 0; i<selected_list.children.length; i++){
+  
+
+selected_list.removeChild(selected_list.children[0]);
 })
