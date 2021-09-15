@@ -82,7 +82,7 @@ if (isset($_POST["submit_vote"])) {
                         <input type="hidden" name="voter_id" id="voter_id"> -->
     <!-- <input list="candidates" name="candidates-List"> -->
   <select id="final-list" name="vote" value="<?php echo $_POST["vote"]; ?>" style="display: none;"> 
-  
+  <option name="vote" id="candidateID"></option>
 </select>
             <button type="button" class="btnNo">No</button>
             <button type="submit" name="submit_vote" class="submit">Yes</button>
