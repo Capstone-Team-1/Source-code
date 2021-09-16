@@ -286,8 +286,8 @@ tr:hover {background-color: #D6EEEE;}
 
 
 <section class="reading-content">
-   <div id="piechart_3d" style="width: 1100px; height: 600px; display:inline-block"></div>
-  <div id="top_x_div" style="width: 800px; height: 600px; display:inline-block; z-index:10;">"></div>
+   <div id="piechart_3d" style="width: 1100px; height: 600px; display:inline-block; position:relative; z-index:-999;"></div>
+  <div id="top_x_div" style="width: 800px; height: 600px; display:inline-block; position:relative; z-index:-999;">"></div>
 
    <div style="margin-top: 60px;">
 <?php
