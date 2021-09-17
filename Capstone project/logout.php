@@ -6,7 +6,7 @@ session_destroy();
 
 header("Location: ./index.php");
 ?>
-
+<!-- This page will unset and destory the recorded session once user clicks the log out button -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
