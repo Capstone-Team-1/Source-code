@@ -8,7 +8,7 @@ if(empty($_SESSION['citizenID']))
 
 ?>
 
-
+<!-- Once the user clicks the vote button and accepts the submission user will get directed towards this page  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
