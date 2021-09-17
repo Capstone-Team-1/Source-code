@@ -166,7 +166,8 @@ var asynchronous = true;
 ajax.open(method, url, asynchronous);
 //This is how we are sending request
 ajax.send();
-//This is rweceviing request from our data.php file
+//This is rweceviing request from our data.php file refer to that file if you would like to understand how we are fetching data
+// You can use Fetch API rather than XML request. Refer to FETCH API documentation and use the concept of promises while you work on them
 ajax.onreadystatechange = function (){
    if (this.readyState == 4 && this.status == 200) {
        //converting JSON back to array
