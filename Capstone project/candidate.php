@@ -71,7 +71,7 @@ if (isset($_POST["submit_vote"])) {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
   }
 </script>
-
+<!-- The form resposnible in storing the vote in DB -->
         <form action="" method="post">
       <div class="modal-body" id="popup">
             <p>Are you sure you want to give your vote to <strong id="candidate_ID"> </strong>  ?</p>
@@ -79,11 +79,10 @@ if (isset($_POST["submit_vote"])) {
             <p>This action is irreversible.</p>
             <p>Once you click '<b>Yes</b>', you cannot change your vote.</p>
             
-                        <!-- <input type="hidden" name="candidate_id" id="candidate_id">
-                        <input type="hidden" name="voter_id" id="voter_id"> -->
-    <!-- <input list="candidates" name="candidates-List"> -->
+        
   <select id="final-list" name="vote" value="<?php echo $_POST["vote"]; ?>" style="display: none;"> 
-  <option name="vote" id="candidateID"></option>
+  <option name="vote" id="candidateID"></option> 
+  <!-- The option will alter as per the button clicke which is located on every candidate -->
 </select>
             <button type="button" class="btnNo">No</button>
             <button type="submit" name="submit_vote" class="submit">Yes</button>
