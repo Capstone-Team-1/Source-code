@@ -10,7 +10,7 @@ if(empty($_SESSION['employeeID']))
 
 ?>
 
-
+<!-- Admin dashborad this requires minimal changes please feel free to tweak as you desire -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
