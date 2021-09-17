@@ -110,13 +110,15 @@ if (isset($_POST["submit_vote"])) {
     <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">         <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
     </header>
 
+
+    <!-- section class starts here and it contains the banner -->
     <section class="banner">
      
             <div class="banner-container">
               <div class="banner-items" >
                 <!---This h2 will display the user name as per the session --->
                 <h2 class="banner-header">
-
+<!-- we echo out the session user name which will display the user details -->
                     <br> Welcome <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?>
                     <br>Please choose in your Candidate to continue!!!
                 </h2>
