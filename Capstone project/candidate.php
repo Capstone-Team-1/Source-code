@@ -136,19 +136,16 @@ if (isset($_POST["submit_vote"])) {
 <h3 style="margin-top: 30px; text-decoration: underline; "> Candidates for Election 2021 </h3>
  <form action="action.php" method="POST">
 
-
+<!-- candidate one -->
 <div class="card">
   <img src="./Images/malcolm-turnbull.jpg" alt="image " style="width: 336px;" >
   <div class="container">
     <h4><b>Malcom Turnbull: National Party of Australia</b></h4> 
      <input type="button" name="buttonOne" class="buttonOne"value="Vote"></input>
   </div>
- 
-
-
 </div>   
 
-
+<!-- candidate two -->
 <div class="card">
   <img src="./Images/Albanese_Anthony_170140-11__FillWzMwMCwzODBd.jpg" alt="card image"  >
   <div class="container">
@@ -157,7 +154,7 @@ if (isset($_POST["submit_vote"])) {
   <input type="button" name="buttonTwo" class="buttonTwo" value="Vote" ></input>
 </div>  
 
-
+<!-- candidate three -->
 <div class="card">
   <img src="./Images/1200px-Scott_Morrison_2014.jpg" alt="card image" style="width: 336px;">
   <div class="container">
@@ -171,7 +168,7 @@ if (isset($_POST["submit_vote"])) {
 
 </section>
 
-
+<!-- Footer begins here -->
 <footer>
     <div class="footer-details">
       <h3>Election Comission of Australia</h3>

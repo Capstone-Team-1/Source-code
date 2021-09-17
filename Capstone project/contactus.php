@@ -51,7 +51,7 @@ if (isset($_POST["signup"])) {
 }
 ?>
 
-
+<!-- The contact us page -->
 <!DOCTYPE html>
 <html lang="en">
 
