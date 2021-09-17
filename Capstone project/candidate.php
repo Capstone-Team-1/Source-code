@@ -130,7 +130,7 @@ if (isset($_POST["submit_vote"])) {
     </section>
 
       
-
+<!-- section which consists of cards which is the candidates each of them have event listeners assigned to them and they trigger when the button is clicked please check the votingpage.js for how the each button click triggers respective value accordingly -->
 
  <section  class="card-container">
 <h3 style="margin-top: 30px; text-decoration: underline; "> Candidates for Election 2021 </h3>
