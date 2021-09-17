@@ -44,6 +44,7 @@ if (isset($_POST["submit_vote"])) {
 }
 ?>
 
+<!-- this page consists of the list of candidates that are available in the election -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
