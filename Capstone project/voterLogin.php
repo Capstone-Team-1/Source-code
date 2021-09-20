@@ -120,7 +120,7 @@ if (isset($_POST['submit'])) {
         <input type="submit" class="button" Value="Login" name="submit"></input>
         <br>
         <br>
-        Not registred? Please, <a href="./register.php" style="color:#4c5ae0;">Register Here</a>
+        Not registered? Please, <a href="./register.php" style="color:#4c5ae0;">Register Here</a>
       </form>
 
 
