@@ -1,5 +1,6 @@
 
 //this is the part for our voting page. Please change as necessary
+// There has been some simplification on the code please have a look as necessary
 
  const btnOne = document.querySelector('.buttonOne'); //this selects the first button among the candidate i.e. Malcom
   const btnTwo = document.querySelector('.buttonTwo'); //this selects the second button mong the candiate i.e. Anothony
