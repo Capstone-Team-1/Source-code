@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
     $_SESSION['employeeLastName'] = $row['employeeLastName'];
     header("Location: dashboard.php");
   } else {
-    echo "<script> alert('Login failed') </script>";
+    echo "<script> alert('Inavlid username or password') </script>";
     header('index.php');
   }
 }
