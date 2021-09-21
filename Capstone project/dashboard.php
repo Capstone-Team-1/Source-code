@@ -124,8 +124,8 @@ tr:hover {background-color: #D6EEEE;}
 
 
 
-        <footer>
-    <div class="footer-details">
+        <footer style="margin-top: 140px;">
+    <div class="footer-details" >
       <h3>Election Comission of Australia</h3>
       <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
