@@ -137,8 +137,8 @@ cursor: pointer;
 }
 
 a:hover{
-  /*background: #1b9bff;*/
-  color: #7d21a5;
+  background: #1b9bff;
+  color: gray;
   font-weight: 600;
   transition: 0.05s;
 }
@@ -281,6 +281,10 @@ footer {
 footer a {
   color: azure; 
   text-decoration: none;
+}
+
+footer a:hover{
+  color:gray;
 }
 .footer-details {
   font-size: 1.1rem;

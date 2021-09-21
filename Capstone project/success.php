@@ -97,32 +97,32 @@ session_start();
     <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
-     <div class= "footer-container" style="margin-top: 50px;"> 
-             <div class="footer-item one"> For Voters</div>
-              <div class="footer-item two">For candidates </div>
-               <div class="footer-item three"> About election </div>
-                <div class="footer-item four"> Information Centre</div>
-                 <div class ="footer-item five "> The ECOA </div>
-                  </div>
+     <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item"> <a href="./voterLogin.php">Voters Login</a></div>
+        <div class="footer-item"> <a href="./register.php">Create Account</a></div>
+        <div class="footer-item"> <a href="./about.php">About Elections</a></div>
+        <div class="footer-item"> <a href="./about.php">Instructive Video</a></div>
+        <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
+        <div class="footer-item"> <a href="./contactus.php">Contact Us</a></div>
+      </div>
+    </div>
+
+       <div class="footer-social-links">
+
+      <div>
+       <a href="https://www.facebook.com/AusElectoralCom"> <ion-icon name="logo-facebook"> </ion-icon> </a> 
+      </div>
+      <div>
+     <a href="https://twitter.com/AusElectoralCom">   <ion-icon name="logo-twitter"></ion-icon> </a>
+      </div>
+      <div>
+      <a href="https://www.instagram.com/AusElectoralCom/">  <ion-icon name="logo-instagram"></ion-icon> </a>
+      </div>
+    </div>
 
 
 
 
-</div>
-
-       <div class="footer-link">
-
-                    <div class="footxer-link-one">   <ion-icon name="logo-facebook"></ion-icon></div>
-                    <div class="footxer-link-two"> <ion-icon name="logo-twitter"></ion-icon></div>
-                      <div class="fooxter-link-three"> <ion-icon name="logo-instagram"></ion-icon></div>
-                       
-                </div> 
-         
-
-
-
-
-</div>
 
        
  </footer>

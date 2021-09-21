@@ -141,9 +141,9 @@ if (isset($_POST["signup"])) {
       <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
-      <div class="footer-container" style="margin-top: 50px;">
-        <div class="footer-item"> <a href="./login.php">Voters Login</a></div>
-        <div class="footer-item"> <a href="./registration.php">Create Account</a></div>
+       <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item"> <a href="./voterLogin.php">Voters Login</a></div>
+        <div class="footer-item"> <a href="./register.php">Create Account</a></div>
         <div class="footer-item"> <a href="./about.php">About Elections</a></div>
         <div class="footer-item"> <a href="./about.php">Instructive Video</a></div>
         <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
@@ -155,13 +155,13 @@ if (isset($_POST["signup"])) {
     <div class="footer-social-links">
 
       <div>
-        <ion-icon name="logo-facebook"></ion-icon>
+       <a href="https://www.facebook.com/AusElectoralCom"> <ion-icon name="logo-facebook"> </ion-icon> </a> 
       </div>
       <div>
-        <ion-icon name="logo-twitter"></ion-icon>
+     <a href="https://twitter.com/AusElectoralCom">   <ion-icon name="logo-twitter"></ion-icon> </a>
       </div>
       <div>
-        <ion-icon name="logo-instagram"></ion-icon>
+      <a href="https://www.instagram.com/AusElectoralCom/">  <ion-icon name="logo-instagram"></ion-icon> </a>
       </div>
     </div>
 

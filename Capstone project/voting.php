@@ -74,13 +74,15 @@ session_start();
                             <p style="font-family: 'Dancing Script', cursive;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
-                            <div class="footer-container" style="margin-top: 50px;">
-                                <div class="footer-item one"> For Voters</div>
-                                <div class="footer-item two">For candidates </div>
-                                <div class="footer-item three"> About election </div>
-                                <div class="footer-item four"> Information Centre</div>
-                                <div class="footer-item five "> The ECOA </div>
-                            </div>
+                          <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item"> <a href="./voterLogin.php">Voters Login</a></div>
+        <div class="footer-item"> <a href="./register.php">Create Account</a></div>
+        <div class="footer-item"> <a href="./about.php">About Elections</a></div>
+        <div class="footer-item"> <a href="./about.php">Instructive Video</a></div>
+        <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
+        <div class="footer-item"> <a href="./contactus.php">Contact Us</a></div>
+      </div>
+    </div>
 
 
 
