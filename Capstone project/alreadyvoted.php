@@ -78,7 +78,7 @@ if(empty($_SESSION['citizenID']))
 
         <section class="success">
             <h1 style="font-size: 2.3rem; color: green" >
-                Thank You, Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?> you have already voted!!!!
+                Sorry, Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?> you have already voted!!!!
             </h1>
             <img src="./Images/ezgif.com-gif-maker.gif" alt="" style="margin-top: 30px;">
             <br>
