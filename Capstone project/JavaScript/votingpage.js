@@ -8,7 +8,7 @@
   const b = document.querySelector('#popup'); //this is the pop up which appears when you click on any of the candidates
   const c = document.querySelector('.btnNo'); //this button is the no bbutton which is removingb the blur background if the user does not wants to vote
   const d = document.querySelector('.blur'); // this is use to select the background blur class and add and remove it
-// const selected_list = document.querySelector('#final-list'); //this will be the list that we add dynamically
+
 const candidate = document.querySelector('#candidate_ID'); //this will be the name of our candidate as the button click
 const candidateID = document.querySelector('#candidateID');
 
@@ -18,18 +18,12 @@ const candidateID = document.querySelector('#candidateID');
 //we will add event listener to every buttons.
 
 
-// const newElement = document.createElement('option');
 
 btnOne.addEventListener('click', ()=>{
 b.classList.add('modal-body-click'); //we are adding the class 
 d.classList.add('bg-blur'); //adding the background blur class
- //creating a element to select the candidate
-// const newNode = document.createTextNode(2);  //this is the value that is passed to db
-// newElement.setAttribute('name', "vote"); //setting the attribute hence PHP can understand
 candidate.innerHTML = "Mr. Malcomm Turnbull"; //appending the name as per the button selection
 candidateID.innerHTML= 2; //made it more simpler to change the value upon click of the button and reduction of using loop to delete the values thats added on every click
-// newElement.appendChild(newNode); //appening the text node that we created in our element
-// selected_list.appendChild(newElement); //and appending the new element into our select list that we have slected here using JS
 
 })
 
@@ -40,13 +34,11 @@ btnTwo.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 
-// const newNode = document.createTextNode(3);
-// newElement.setAttribute('name', "vote");
+
 
 candidate.innerHTML = "Mr. Anthony Albanese";
 candidateID.innerHTML= 3;
-// newElement.appendChild(newNode);
-// selected_list.appendChild(newElement);
+
 
 })
 
@@ -55,13 +47,10 @@ btnThree.addEventListener('click', ()=>{
 b.classList.add('modal-body-click');
 d.classList.add('bg-blur');
 
-// const newNode = document.createTextNode(1);
-// newElement.setAttribute('name', "vote");
+
 candidate.innerHTML = "Mr. Scott Morrison";
 candidateID.innerHTML= 1;
-// newElement.appendChild(newNode);
-// selected_list.appendChild(newElement);
-// })
+
 
 })
 
@@ -70,7 +59,7 @@ candidateID.innerHTML= 1;
 c.addEventListener('click', ()=>{
   b.classList.remove('modal-body-click');
   d.classList.remove('bg-blur');
-  // selected_list.removeChild(newElement);
+
 
 })
 

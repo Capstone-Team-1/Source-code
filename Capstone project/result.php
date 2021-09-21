@@ -143,7 +143,7 @@ tr:hover {background-color: #D6EEEE;}
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
+          ['Vote', 'Count'],
           ['Scott Morrison',    <?php echo $countdbdata;?> ],
           ['Malcom Turnbull',      <?php echo $countdataTwo ?>],
           ['Anthony Alabanese',  <?php echo$countdataThree;?>]
@@ -254,7 +254,7 @@ tr:hover {background-color: #D6EEEE;}
 
 
 
-<tbody id="dataSource"> <!---This will fetch data using ajax---->
+<tbody id="dataSource"> <!----This will fetch data using ajax---->
 
 </tbody>
 
@@ -343,19 +343,24 @@ tr:hover {background-color: #D6EEEE;}
 
 </div>
 
-       <div class="footer-link" style="text-align: center; word-spacing: 10rem; margin-top: 30px;">
+   <div class="footer-social-links">
 
-                    <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-facebook"></ion-icon></a>  
-                <a href="https://twitter.com/auselectoralcom"> <ion-icon name="logo-twitter"></ion-icon></a>   
-                      <a href="https://www.facebook.com/pages/AEC%20-%20Australian%20Electoral%20Commission/122364357847301/"> <ion-icon name="logo-instagram"></ion-icon></a>  
-                       
-                </div> 
+      <div>
+       <a href="https://www.facebook.com/AusElectoralCom"> <ion-icon name="logo-facebook"> </ion-icon> </a> 
+      </div>
+      <div>
+     <a href="https://twitter.com/AusElectoralCom">   <ion-icon name="logo-twitter"></ion-icon> </a>
+      </div>
+      <div>
+      <a href="https://www.instagram.com/AusElectoralCom/">  <ion-icon name="logo-instagram"></ion-icon> </a>
+      </div>
+    </div>
          
 
 
 
 
-</div>
+
 
        
  </footer>

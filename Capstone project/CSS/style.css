@@ -206,7 +206,7 @@ width: 100%;
   }
   .ecoa-logo img {
     width: 65px;
-    margin: 18px 15px 0 0 ;
+
   }
   .organization-name {
     font-size: 1.4rem;
@@ -767,6 +767,10 @@ input[type="button"]:hover {
     display: block;
     padding-top: 10px;
     font-size: 1rem;
+  }
+  .ecoa-logo img {
+    width: 65px;
+    margin: 0px 0px 0 -15px;
   }
 }
 

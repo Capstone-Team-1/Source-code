@@ -25,7 +25,8 @@ if (isset($_POST['submit'])) {
     $_SESSION['citizenLName'] = $row['citizenLName'];
     header("Location: candidate.php");
   } else {
-    echo "<script> alert('Login failed') </script>";
+    echo "<script> alert('Invalid User Name or Password')
+    document.getElementbyID('template').innerHTML= 'Invalid UserName or Password' </script>";
     header('index.php');
   }
 }

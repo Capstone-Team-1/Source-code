@@ -69,7 +69,7 @@ session_start();
                
                     </div>
         </div>
-
+<!-- This section contains the user details who has voted and a small greeting message along side -->
         <section class="success">
           <h1 style="font-size: 2.3rem; color: green" >
                 Thank You, Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?> your vote has been recorded!!!!
