@@ -1,33 +1,32 @@
 <?php
 
-include 'connection.php';
-session_start();
+include 'connection.php'; //including the connection php to connect to database
+session_start(); //this is keeping the record of session user details
 error_reporting(0);
-
+  //minimizing unwanted minimal error
 //this is checking if the user has already signed in if signed in then the location will be towards candidate.php
 if(($_SESSION['citizenID']))
  {
-        header("Location:candidate.php");
+        header("Location:candidate.php"); //if user has already logged in then the user will head towards candidate page, this condition will only work if the user did not click the log out button
     }
 
-if (isset($_POST['submit'])) {
-  $myuser = $_POST['citizenID'];
-  $mypassword = md5($_POST['citizenPassword']);
-  // To protect MySQL injection (more detail about MySQL injection)
+if (isset($_POST['submit'])) { //taking the user input using POST method and follwing the no null isset method
+  $myuser = $_POST['citizenID']; //the variable will be equal to the input entered in the input field
+  $mypassword = md5($_POST['citizenPassword']);  // To protect MySQL injection (more detail about MySQL injection) and to encypt it in hash value
 
-  $sql = "SELECT * FROM citizen WHERE citizenID ='$myuser' and citizenPassword ='$mypassword'";
+  $sql = "SELECT * FROM citizen WHERE citizenID ='$myuser' and citizenPassword ='$mypassword'"; //this is to check the received input in the citizen table
 
-  $result = mysqli_query($conn, $sql);
-  if ($result->num_rows > 0) {
-    $row = mysqli_fetch_assoc($result);
-    $_SESSION['citizenID'] = $row['citizenID'];
-    $_SESSION['citizenFName'] = $row['citizenFName'];
-    $_SESSION['citizenLName'] = $row['citizenLName'];
-    header("Location: candidate.php");
-  } else {
+  $result = mysqli_query($conn, $sql); //query to check the value with connection from our database voting
+  if ($result->num_rows > 0) { 
+    $row = mysqli_fetch_assoc($result); //this checks the user info in the database
+    $_SESSION['citizenID'] = $row['citizenID']; //if feilds match then it fetches and stores the user ID as a session variable
+    $_SESSION['citizenFName'] = $row['citizenFName']; //storing user firstname in a session variable to display the user details 
+    $_SESSION['citizenLName'] = $row['citizenLName'];//storing user lastname in a session variable to display the user details 
+    header("Location: candidate.php"); //upon login the header is candidate.php page
+  } else { //this condition  triggers if the user details does not match the table.
     echo "<script> alert('Invalid User Name or Password')
     document.getElementbyID('template').innerHTML= 'Invalid UserName or Password' </script>";
-    header('index.php');
+    header('Location: index.php'); //the user will get directed towards the register page upon failed login
   }
 }
 ?>
@@ -107,8 +106,10 @@ if (isset($_POST['submit'])) {
   <div class="section-form">
     <div class="login">
       <h3>Please enter your credentials </h3>
+      <!-- The empty paragrapg tag will fire some message if the data doesnot match as required -->
       <p id="template"></p>
-      <br>
+      <br> 
+      <!-- The form input will be passed to the PHP using post method and upon submit JS function validate is invoked which cheks the input fields -->
       <form action="" method="POST" onsubmit="return validate();">
         <label for="citizenID"></label>
         <input type="text" placeholder="ID Number" id="vid" name="citizenID" required></input>

@@ -1,9 +1,10 @@
 <?php
 
 include 'connection.php';
-error_reporting(0);
-if (isset($_POST["signup"])) {
-  echo "connection is done";
+//including the connection php file
+error_reporting(0); //making error report 0 to remove unnecessary errors
+if (isset($_POST["signup"])) { //once the button is click and if the value isnt null the value is taken through the post method present in the form
+ 
   $citizenID = mysqli_real_escape_string($conn, $_POST["citizenID"]);
   $citizenFName = mysqli_real_escape_string($conn, $_POST["citizenFName"]);
   $citizenLName = mysqli_real_escape_string($conn, $_POST["citizenLName"]);
@@ -127,10 +128,11 @@ if (isset($_POST["signup"])) {
       <h3>Please enter your details </h3>
       <p id="template"></p>
     <br>
-        <form action="#" method="post" onsubmit="return validateRegister();">
+    <!-- Form on submit checks if the proper data is entered and validateRegister is the function assigned to check -->
+        <form action="#" method="post" onsubmit="return validateRegister();"> 
 
           <p id="msg" style="color:red;"></p>
-
+<!-- Each input takes the user details and for the validation the id checks if the field are properly entered and not left empty. -->
           <input type="text" name="citizenFName" id="fname" placeholder="First Name" value="<?php echo $_POST["citizenFName"]; ?>">
           <input type="text" name="citizenLName" id="lname" placeholder="Last Name" value="<?php echo $_POST["citizenLName"]; ?>">
           <input type="number" name="citizenID" id="cid" placeholder="Citizenship ID" value="<?php echo $_POST["citizenID"]; ?>">
