@@ -55,7 +55,7 @@
 
       </div>
     </div>
-
+<div class="main-article">
     <div class="section-video" style="Margin-top:20px">
         <h1> ECOA Online Voting System</h1> 
  <iframe height="350" width="600"
@@ -69,6 +69,7 @@
 
 A list of locations the AEC will be visiting will be available in the weeks after an election is announced. </p>
     </div>
+</div>
     <footer>
     <div class="footer-details">
       <h3>Election Comission of Australia</h3>
