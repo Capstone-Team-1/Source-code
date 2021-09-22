@@ -50,7 +50,7 @@ include 'connection.php';
           </ul>
         </li>
         <li><a href="./about.php">About Elections</a></li>
-        <li><a href="">Instructive Video</a></li>
+        <li><a href="./instructive.php">Instructive Video</a></li>
         <li><a href="">ECOA</a>
           <ul class="dropdown">
             <li><a href="./adminLogin.php">Staff Login</a></li>
@@ -91,7 +91,7 @@ include 'connection.php';
 
 
 
-     <h3>Welcome to the Live Day Of ELECTION 2021<br> Make a choice and set the future of Australia with your decision. </h3>
+     <h3>Welcome to the Live Day of ELECTION Commission of Australia Voting 2021!!!!!<br> Make a choice and set the future of Australia with your decision. </h3>
     <section>
       
       <img src="./Images/pexels-hugo-heimendinger-1766215.jpg" alt="">
@@ -115,14 +115,29 @@ include 'connection.php';
         <div class="main-article">
           <h3 style="color: #009cde;">WELCOME
             Welcome to our corporate plan
+            
             Welcome to the Australian Electoral Commission (AEC) 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3>
-          <p style="font-size: 1.4rem; text-align: justify;">
+          
+            <p style="font-size: 1.4rem; text-align: justify;">
             Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
 
 
+  </p> 
+          <div class="section-video" style="margin: 100px 20px">
+ <iframe height="350" width="600"
+      src="https://www.youtube.com/embed/JqlyqNufeWI">
+   </iframe>
+      <iframe height="350" width="600"
+      src="https://www.youtube.com/embed/_dp_X9PsopU">
+   </iframe>
+     
+ <iframe height="350" width="600"
+      src="https://www.youtube.com/embed/3cricZYho78">
+   </iframe>
+     
 
-
-
+    </div>
+<p style="font-size: 1.4rem; text-align: justify;">
             To remain agile—now and into the future—we must continue refining our election delivery model through our lessons management approach. <br> <br> We will continue to evolve our planning processes, address the delivery of electoral events in a pandemic, and improve our delivery model for future electoral cycles.
 
             Elections are Australia’s largest and most complex single peacetime event. This fact is masked by the electoral administrator’s conundrum: the better and more efficient the election, the simpler the event appears to voters, candidates and political parties, most of who only interact with the voting process episodically and for a few brief <br> <br>
@@ -138,6 +153,7 @@ include 'connection.php';
 
             Compliance statement
           </p>
+    
         </div>
       </section>
     </div>
