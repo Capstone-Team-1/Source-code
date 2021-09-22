@@ -81,7 +81,7 @@ $candidateID = mysqli_real_escape_string($conn, $_POST["ID"]);
         <li><a href="./logout.php">Logout</a></li>
         </ul>
     </nav>
-     <!-- <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">     <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?> -->
+     <div class = "user-name" style="position:absolute; bottom: 44%; left: 88% ; font-size: 1.3rem; color:purple;">     <?php  echo $_SESSION['employeeFirstName']. " ". $_SESSION['employeeLastName'] ?>
     </header>
 
             <section class="banner">
@@ -89,7 +89,8 @@ $candidateID = mysqli_real_escape_string($conn, $_POST["ID"]);
                 <div class="banner-container">
                     <div class="banner-items">
                         <h2 class="banner-header">
-                            <br> New Candidate Registration Page
+                             <br> ECOA online voting platform
+                            <br> Please Register Your New Candidate
                         </h2>
 
                     </div>
