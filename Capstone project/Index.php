@@ -91,13 +91,9 @@ include 'connection.php';
 
 
 
-    <h3>What's Happening?</h3>
+     <h3>Welcome to the Live Day Of ELECTION 2021<br> Make a choice and set the future of Australia with your decision. </h3>
     <section>
-      <p>The website is under construction and will be live to be used on 7th of october 2021
-        <br>
-        <Strong> Please stay updated, we will be updating any privacy related information to you via the information that we have available
-        </strong>
-      </p>
+      
       <img src="./Images/pexels-hugo-heimendinger-1766215.jpg" alt="">
   </div>
   </div>
@@ -107,24 +103,14 @@ include 'connection.php';
   </div>
 
   <div class="main-article">
-    <h3 style="color: #009cde;">WELCOME
-      Welcome to our corporate plan
-      Welcome to the Election Commission of Australia 2020–21 Corporate Plan, which sets our strategic direction for the next four years.</h3>
-    <p style="font-size: 1.4rem; text-align: justify;">
-      Challenges to the successful administration of electoral events continue to multiply with a number of unprecedented local and world events, most notably the COVID-19 pandemic. As a result, electoral administration continues to be an increasingly complex endeavour, and I’m conscious our commitment to improvement and innovation—and our values of professionalism, agility, quality and electoral integrity—have never been more important.
-
-
+   
     <div class="reading-content">
 
 
 
-      <h3>What's Happening?</h3>
+      <h3>Welcome to the Live Day for ELECTION 2021. </h3>
       <section>
-        <p>The website is under construction and will be live to be used on 7th of october 2021
-          <br>
-          <Strong> Please stay updated, we will be updating any privacy related information to you via the information that we have available
-          </strong>
-        </p>
+       
 
         <div class="main-article">
           <h3 style="color: #009cde;">WELCOME
