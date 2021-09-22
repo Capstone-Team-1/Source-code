@@ -4,7 +4,7 @@ $dbhost = 'localhost';
 $dbname = 'voting';
 $dbuser = 'root';
 $dbpass = '';
-
+ //following the error handling apporach
 try{
   $dbcon = new PDO ("mysql:host = {$dbhost};dbname={$dbname}", $dbuser, $dbpass);
   $dbcon -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -12,7 +12,7 @@ try{
 catch(PDOException $ex){
   die($ex-> getMessage());
 }
-
+//the variable underneath checks the details for candidate no 1
 $result = $dbcon-> query("SELECT voteID FROM vote where candidateID= '1'");
 
 // guessing a variable to store data
@@ -24,7 +24,7 @@ $dbdata = array();
   while ( $row = $result->fetch(PDO::FETCH_ASSOC))  {
 	$dbdata[]=$row;
   }
-
+//inorder to count the total times the particular candidate was voted 
   $countdbdata = count($dbdata);
  
 
@@ -167,7 +167,7 @@ tr:hover {background-color: #D6EEEE;}
 
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
-          ['Move', 'Percentage'],
+          ['Vote', 'Percentage'],
           ['Scott Morrison',    <?php echo $countdbdata;?> ],
           ['Malcom Turnbull',      <?php echo $countdataTwo ?>],
           ['Anthony Alabanese',  <?php echo$countdataThree;?>]
@@ -296,7 +296,7 @@ tr:hover {background-color: #D6EEEE;}
 			$candidateOne->execute();
 			for($i=0; $rows = $candidateOne->fetch(); $i++){
 			echo " Mr. Scott Morrission received = ".$rows['count(voteID)']. " votes". "<br>";
-			}
+			} //for loop to iterate until possible and to all values available
       
       $candidateTwo = $dbcon->prepare("SELECT count(voteID) FROM vote where candidateID = '2'");
 			$candidateTwo->execute();

@@ -1,5 +1,7 @@
+
+//Making ajax call to display the count out side of the chart
 let ajax = new XMLHttpRequest();
-let method = "GET";
+let method = "GET"; //using get method
 let url = "./votedata.php"
 let asynchronous = true;
 

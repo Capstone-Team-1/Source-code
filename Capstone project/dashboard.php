@@ -1,11 +1,11 @@
 <?php 
-include 'connection.php';
-session_start();
+include 'connection.php'; //including the connection file to connect to database
+session_start(); //recording and checking the logged in session
 
 
-if(empty($_SESSION['employeeID']))
+if(empty($_SESSION['employeeID'])) //checking if authorised user has logged in
  {
-        header("Location:index.php");
+        header("Location:index.php"); //if inavlid user tries to access the dashboard page then the header is towards the index page
     }
 
 ?>
@@ -91,7 +91,7 @@ tr:hover {background-color: #D6EEEE;}
 
     </section>
         <!--Start from here-->
-
+<!-- This section displays the available user data in a table -->
         <section class="user-display">
           <h3 style="color:black;"> User List</h3>
           <table style="border:1px solid black;">

@@ -5,8 +5,8 @@ include 'connection.php';
 error_reporting(0); //making error report 0 to remove unnecessary errors
 if (isset($_POST["signup"])) { //once the button is click and if the value isnt null the value is taken through the post method present in the form
  
-  $citizenID = mysqli_real_escape_string($conn, $_POST["citizenID"]);
-  $citizenFName = mysqli_real_escape_string($conn, $_POST["citizenFName"]);
+  $citizenID = mysqli_real_escape_string($conn, $_POST["citizenID"]); //mysqli_real_escape_string to prevent SQL injection
+  $citizenFName = mysqli_real_escape_string($conn, $_POST["citizenFName"]); //each of the value matches the input and variable is assigned accordinly
   $citizenLName = mysqli_real_escape_string($conn, $_POST["citizenLName"]);
   $citizenPhone = mysqli_real_escape_string($conn, $_POST["citizenPhonenum"]);
   $citizenDOB = mysqli_real_escape_string($conn, $_POST["citizenDOB"]);
@@ -15,20 +15,20 @@ if (isset($_POST["signup"])) { //once the button is click and if the value isnt 
   $citizenCity = mysqli_real_escape_string($conn, $_POST["citizenCity"]);
   $citizenState = mysqli_real_escape_string($conn, $_POST["citizenState"]);
   $citizenZip = mysqli_real_escape_string($conn, $_POST["citizenZip"]);
-  $citizenPW = mysqli_real_escape_string($conn, md5($_POST["pw"]));
-  $citizenCPW = mysqli_real_escape_string($conn, md5($_POST["confirmpw"]));
+  $citizenPW = mysqli_real_escape_string($conn, md5($_POST["pw"])); //md5 parses the password into hash value which strengthens the secuirty factor
+  $citizenCPW = mysqli_real_escape_string($conn, md5($_POST["confirmpw"])); //same approach of md5 
 
-  $checkregestringID = mysqli_num_rows(mysqli_query($conn, "SELECT citizenID FROM citizen WHERE citizenID='$citizenID'"));
+  $checkregestringID = mysqli_num_rows(mysqli_query($conn, "SELECT citizenID FROM citizen WHERE citizenID='$citizenID'")); //this method checks if the voter has already registered to check the id
   if ($citizenPW !== $citizenCPW) {
-    echo "<script> alert ('Sorry your password does not match.'); </script>"; ##checking if the input data match
+    echo "<script> alert ('Sorry your password does not match.'); </script>"; ##checking if the input password match
 
-  } else if ($checkregestringID > 1) {
+  } else if ($checkregestringID > 1) { //checks if the regestering id matches 
     echo "<script> alert('Hey you have already registered please log in');
     </script>";
-  } else {
+  } else { //if the checks pass and then user input is entered as per the columns available in the table.
     $sql = " INSERT INTO citizen(citizenID, citizenFName, citizenLName, citizenPhone, citizenDOB, citizenEmail, citizenAddress, citizenCity, citizenState, citizenZip, citizenPassword, citizenAllowed, employeeID) VALUES ('$citizenID','$citizenFName','$citizenLName','$citizenPhone','$citizenDOB','$citizenEmail','$citizenAddress','$citizenCity','$citizenState','$citizenZip','$citizenPW','0','1') ";
     $result = mysqli_query($conn, $sql);
-    header("Location: success.php");
+    header("Location: success.php"); //once data inserted the user gets headed towards sucess.php page
     if ($result) {
 
       $_POST["citizenID"] = "";
@@ -154,10 +154,10 @@ if (isset($_POST["signup"])) { //once the button is click and if the value isnt 
           <input type="number" name="citizenZip" id="Zip" placeholder="Postal Code" value="<?php echo $_POST["citizenZip"]; ?>">
           <br>
           <label for="pw">Insert a Password &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
-          <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>" required >
+          <input type="password" name="pw" id="Citizenpw" placeholder="Password" value="<?php echo $_POST["pw"]; ?>" >
           <br>
           <label for="confirmpw">Confirm the Password &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label>
-          <input type="password" name="confirmpw" id="cpw" placeholder="Password" value="<?php echo $_POST["confirmpw"]; ?>" required >
+          <input type="password" name="confirmpw" id="cpw" placeholder="Password" value="<?php echo $_POST["confirmpw"]; ?>"  >
           <br>
           <br>
           <input type="submit" class="button" name="signup" value="SIGN UP">

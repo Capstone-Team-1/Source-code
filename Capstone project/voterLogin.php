@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) { //taking the user input using POST method and fol
   } else { //this condition  triggers if the user details does not match the table.
     echo "<script> alert('Invalid User Name or Password')
     document.getElementbyID('template').innerHTML= 'Invalid UserName or Password' </script>";
-    header('Location: index.php'); //the user will get directed towards the register page upon failed login
+    // header('Location: voterLogin.php'); //the user will get directed towards the register page upon failed login
   }
 }
 ?>
@@ -113,11 +113,11 @@ if (isset($_POST['submit'])) { //taking the user input using POST method and fol
       <form action="" method="POST" onsubmit="return validate();">
         <label for="citizenID"></label>
         <!-- each input has it own unique ID assigned to it for validation purpose -->
-        <input type="text" placeholder="ID Number" id="vid" name="citizenID" required></input>
+        <input type="text" placeholder="ID Number" id="vid" name="citizenID" ></input>
         <br>
         <br>
         <label for="citizenPassword"></label>
-        <input type="password" placeholder="Password" id="pw" name="citizenPassword" required></input>
+        <input type="password" placeholder="Password" id="pw" name="citizenPassword"></input>
         <br>
         <br>
         <input type="submit" class="button" Value="Login" name="submit"></input>

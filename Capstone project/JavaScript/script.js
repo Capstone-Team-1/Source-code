@@ -5,8 +5,8 @@ var votersId = document.getElementById("vid"); //refers to the input voters id
 var passWord = document.getElementById("pw"); //refers to the input voters password
 
 if(votersId.value==""|| passWord==""){ //checking if the feilds are empty or not
-    document.getElementById("template").innerHTML="Invalid login \"Please try Again\""
-    alert("You haven't enetered the required documents");
+    document.getElementById("template").innerHTML="Invalid login \"Please enter the username and password\""
+  
     return false;
 }
 else{ //message if the condition is met
