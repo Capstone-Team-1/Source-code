@@ -1,15 +1,15 @@
 
 //validating ourt login form
 function validate(){
-var votersId = document.getElementById("vid");
-var passWord = document.getElementById("pw");
+var votersId = document.getElementById("vid"); //refers to the input voters id
+var passWord = document.getElementById("pw"); //refers to the input voters password
 
-if(votersId.value==""|| passWord==""){
+if(votersId.value==""|| passWord==""){ //checking if the feilds are empty or not
     document.getElementById("template").innerHTML="Invalid login \"Please try Again\""
     alert("You haven't enetered the required documents");
     return false;
 }
-else{
+else{ //message if the condition is met
     document.getElementById("template").innerHTML="Thank you please wait until we assess you details"
     return true;
 }

@@ -1,30 +1,30 @@
 <?php
 
-include 'connection.php';
-session_start();
+include 'connection.php'; //includes the connection php file which connects to the database
+session_start(); //session record tracker
 error_reporting(0);
 //this is checking if the user has already signed in if signed in then the location will be towards candidate.php
 if(($_SESSION['employeeID']))
  {
-        header("Location:dashboard.php");
+        header("Location:dashboard.php"); //if user has already logged in and not pressed the session destroy then the header will always be towards the dashboard page.
     }
-if (isset($_POST['login'])) {
-  $myuser = $_POST['vid'];
-  $mypassword = ($_POST['pw']);
+if (isset($_POST['login'])) { //following the no null and the input obtained from the post method once the login button is clciked
+  $myuser = $_POST['vid']; //user entered ID.
+  $mypassword = ($_POST['pw']); //user entered password
   // To protect MySQL injection (more detail about MySQL injection)
 
-  $sql = "SELECT * FROM employee WHERE employeeID ='$myuser' and employeePassword ='$mypassword'";
+  $sql = "SELECT * FROM employee WHERE employeeID ='$myuser' and employeePassword ='$mypassword'"; //this query to check the input to the employee table
 
-  $result = mysqli_query($conn, $sql);
-  if ($result->num_rows > 0) {
+  $result = mysqli_query($conn, $sql); //query to connect the input and the database
+  if ($result->num_rows > 0) { //upon successful check user session details is recorded in a session variable
     $row = mysqli_fetch_assoc($result);
-    $_SESSION['employeeID']= $row['employeeID'];
-    $_SESSION['employeeFirstName'] = $row['employeeFirstName'];
-    $_SESSION['employeeLastName'] = $row['employeeLastName'];
-    header("Location: dashboard.php");
-  } else {
-    echo "<script> alert('Inavlid username or password') </script>";
-    header('index.php');
+    $_SESSION['employeeID']= $row['employeeID']; //stores session ID
+    $_SESSION['employeeFirstName'] = $row['employeeFirstName']; //stores session userFirstName
+    $_SESSION['employeeLastName'] = $row['employeeLastName']; //stores session user lastname 
+    header("Location: dashboard.php"); //once login check sucessfull the header is twoards the dashboard page
+  } else {  //error message if the login is failed
+    echo "<script> alert('Invalid username or password') </script>";
+    
   }
 }
 ?>
@@ -109,7 +109,7 @@ if (isset($_POST['login'])) {
       <h3>Please enter your credentials </h3>
       <p id="template"></p>
       <br>
-
+<!-- onsubmit the form the validated using the validate function which is present in the scrip.js file -->
       <form action="" method="POST" onsubmit="return validate();">
         <input type="text" name="vid" id="vid" placeholder="Admin ID"><br>
         <input type="password" name="pw" id="pw" placeholder="Password"><br>

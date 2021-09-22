@@ -112,6 +112,7 @@ if (isset($_POST['submit'])) { //taking the user input using POST method and fol
       <!-- The form input will be passed to the PHP using post method and upon submit JS function validate is invoked which cheks the input fields -->
       <form action="" method="POST" onsubmit="return validate();">
         <label for="citizenID"></label>
+        <!-- each input has it own unique ID assigned to it for validation purpose -->
         <input type="text" placeholder="ID Number" id="vid" name="citizenID" required></input>
         <br>
         <br>
@@ -122,6 +123,7 @@ if (isset($_POST['submit'])) { //taking the user input using POST method and fol
         <input type="submit" class="button" Value="Login" name="submit"></input>
         <br>
         <br>
+        <!-- Link placed underneath to head user if user has not registered yet -->
         Not registered? Please, <a href="./register.php" style="color:#4c5ae0;">Register Here</a>
       </form>
 

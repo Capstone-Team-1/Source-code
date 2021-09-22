@@ -1,3 +1,54 @@
+<?php 
+
+error_reporting(0); //unwanted error to zero 
+session_start(); //to track the record of the user as a session variable
+include 'connection.php'; //links the connection php to this page
+
+
+if(empty($_SESSION['employeeID']))
+ {
+        header("Location:dashboard.php"); //if user has already logged in and not pressed the session destroy then the header will always be towards the dashboard page.
+    }
+
+
+if (isset($_POST["submit_can"])) { //taking up the variable obtained via post method and no null approach
+$candidateID = mysqli_real_escape_string($conn, $_POST["ID"]);
+  $candidateParty = mysqli_real_escape_string($conn, $_POST["Party"]); //taking the users session ID as a inmput
+  $candidateName = mysqli_real_escape_string($conn, $_POST["Name"] ); //to prevent sql injection 
+  $candidateIdeology = mysqli_real_escape_string($conn, $_POST["Ideology"] ); 
+
+  $checkcandidate= mysqli_num_rows(mysqli_query($conn, "SELECT candidateID FROM vote WHERE candidateID='$candidateID'")); //to check the user vote status
+  if ($checkcandidate > 0) { //greater than 0 same candidate will not manupulate any feild in the database
+ ##checking if the candidadate has already been registered
+ header('location: alreadyInserted.php'); //if canidadate has already been inserted then this page will be shown
+
+  } else if ($checkcandidate> 1) { //similarly checking the count
+    echo "<script> alert('Hey the candidate has already been registered');
+    </script>";
+  } else {
+   $insert_can = "INSERT INTO candidate ( candidateID, candidateParty, candidateName, candidateIdeology) VALUES ($candidateID, $candidateParty, $citizenName, $candidateIdeology)"; // if the user has not voted then the vote is inserted as per the selection obtained from the user inputs
+            $insert_candidate = mysqli_query($conn, $insert_can);
+    header("Location: candidateRegistrationSuccess.php"); //once voted user gets directed towards this page
+    if ($insert_candidate) {
+//further verifiaction of user input
+    $candidateID = "";
+  $candidateParty =  ""; //taking the entered candidate details
+  $candidateName = "";
+  $candidateIdeology = "";
+     
+
+      echo "<script> alert ('success.'); </script>";
+    } else {
+      echo "<script> alert ('failed.'); </script>";
+    }
+  }
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,18 +97,25 @@
                 <div class="section-form">
                     <h2>Election Commission Of Australia </h2>
                     <p id="template"></p>
-                    <form action="" method="GET" onsubmit="return validateRegister();">
+                    <form action="" method="POST" onsubmit="return validateRegister();">
                         <br>
                         <br> 
-                        <label for="fname"> Candidate Party : </label>
-                        <input type="text" name="Party" id="Party" placeholder="Candidate Party"><br>
-                        <label for="lname"> Candidate Name : </label>
-                        <input type="text" name="Name" id="Name" placeholder="Candidate Name"><br>
-                        <label for="Ideology">Ideology &nbsp &nbsp &nbsp &nbsp &nbsp : </label>
-                        <input type="text" name="Ideology" id="Ideology" placeholder="Ideology">
+                        
+                         
+                        <input type="text" name="ID" id="canID" placeholder="Candidate ID" required><br>
+                       
+                            
+                            
+                            <br>
+                        <input type="text" name="Party" id="Party" placeholder="Candidate Party" required><br>
+                      
+                             <br>
+                        <input type="text" name="Name" id="Name" placeholder="Candidate Name" required><br>
+ <br>
+                         
+                        <input type="text" name="Ideology" id="Ideology" placeholder="Ideology" required>
                         <br>
-                        <br>
-                        <input type="submit" class="button">
+                        <input type="submit" class="button" name="submit_can">
                     </form>
                 </div>
                 <footer>

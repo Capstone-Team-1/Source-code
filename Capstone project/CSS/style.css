@@ -137,7 +137,7 @@ cursor: pointer;
 }
 
 li a:hover{
-  background: #1b9bff;
+
   color: purple;
   font-weight: 600;
   transition: 0.05s;

@@ -1,37 +1,37 @@
 <?php 
 
-error_reporting(0);
-session_start();
-include 'connection.php';
+error_reporting(0); //unwanted error to zero 
+session_start(); //to track the record of the user as a session variable
+include 'connection.php'; //links the connection php to this page
 
 
 if(empty($_SESSION['citizenID']))
  {
         header("Location:voterLogin.php");
-    }
+    } //checks if the anyone trying to access this page has been authenticated or not.
 
 
 
-if (isset($_POST["submit_vote"])) {
-  echo "connection is done";
+if (isset($_POST["submit_vote"])) { //taking up the variable obtained via post method and no null approach
+
   $citizenID = mysqli_real_escape_string($conn, $_SESSION["citizenID"]); //taking the users session ID as a inmput
-  $vote = mysqli_real_escape_string($conn, $_POST["vote"] );
+  $vote = mysqli_real_escape_string($conn, $_POST["vote"] ); //to prevent sql injection 
   
 
-  $checkcitizenID= mysqli_num_rows(mysqli_query($conn, "SELECT citizenID FROM vote WHERE citizenID='$citizenID'"));
-  if ($checkcitizenID  > 0) {
+  $checkcitizenID= mysqli_num_rows(mysqli_query($conn, "SELECT citizenID FROM vote WHERE citizenID='$citizenID'")); //to check the user vote status
+  if ($checkcitizenID  > 0) { //greater than 0 vote for a candidate will remove the voting privilege from the voter
  ##checking if user has already voted
- header('location: alreadyvoted.php');
+ header('location: alreadyvoted.php'); //if already voter the user will get different message
 
   } else if ($checkcitizenID > 1) {
     echo "<script> alert('Hey you have voted');
     </script>";
   } else {
-   $insert_vote = "INSERT INTO vote ( voteDate, candidateID, citizenID) VALUES (now(), $vote, $citizenID)";
+   $insert_vote = "INSERT INTO vote ( voteDate, candidateID, citizenID) VALUES (now(), $vote, $citizenID)"; // if the user has not voted then the vote is inserted as per the selection obtained from the user inputs
             $insert_vote_result = mysqli_query($conn, $insert_vote);
-    header("Location: sucessVoting.php");
+    header("Location: sucessVoting.php"); //once voted user gets directed towards this page
     if ($insert_vote_result) {
-
+//further verifiaction of user input
       $_SESSION["citizenID"] = "";
       $_POST["vote"] = "";
      
@@ -74,6 +74,7 @@ if (isset($_POST["submit_vote"])) {
 <!-- The form resposnible in storing the vote in DB -->
         <form action="" method="post">
       <div class="modal-body" id="popup">
+        <!-- The id present below will alter the candiate selection as per the click by the user -->
             <p>Are you sure you want to give your vote to <strong id="candidate_ID"> </strong>  ?</p>
     
             <p>This action is irreversible.</p>
@@ -85,7 +86,9 @@ if (isset($_POST["submit_vote"])) {
   <!-- The option will alter as per the button clicke which is located on every candidate -->
 </select>
             <button type="button" class="btnNo">No</button>
+            <!-- If user clicks no button the user gets back to the main page -->
             <button type="submit" name="submit_vote" class="submit">Yes</button>
+            <!-- if user clicks yes button then the vote is submitted -->
        </div>
         </form>
     <div class="blur">
@@ -141,6 +144,7 @@ if (isset($_POST["submit_vote"])) {
   <img src="./Images/malcolm-turnbull.jpg" alt="image " style="width: 336px;" >
   <div class="container">
     <h4><b>Malcom Turnbull: National Party of Australia</b></h4> 
+    <!-- On clicking the button JS is triggered -->
      <input type="button" name="buttonOne" class="buttonOne"value="Vote"></input>
   </div>
 </div>   
@@ -151,6 +155,7 @@ if (isset($_POST["submit_vote"])) {
   <div class="container">
     <h4><b>Anthony Albanese: Australian Labor Party</b></h4> 
   </div>
+    <!-- On clicking the button JS is triggered -->
   <input type="button" name="buttonTwo" class="buttonTwo" value="Vote" ></input>
 </div>  
 
