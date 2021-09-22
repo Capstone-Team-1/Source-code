@@ -123,7 +123,7 @@ include 'connection.php';
 
 
   </p> 
-          <div class="section-video" style="margin: 100px 20px">
+          <div class="section-video" style="margin: 100px">
  <iframe height="350" width="600"
       src="https://www.youtube.com/embed/JqlyqNufeWI">
    </iframe>

@@ -77,10 +77,10 @@ if(empty($_SESSION['citizenID']))
         </div>
 
         <section class="success">
-            <h1 style="font-size: 2.3rem; color: green" >
+            <h1 style="font-size: 2.3rem; color: red" >
                 Sorry, Dear <?php  echo $_SESSION['citizenFName']. " ". $_SESSION['citizenLName'] ?> you have already voted!!!!
             </h1>
-            <img src="./Images/ezgif.com-gif-maker.gif" alt="" style="margin-top: 30px;">
+            <img src="./Images/fail.gif" alt="" style="margin-top: 30px; height:420px">
             <br>
 
             <a href="./index.php" alt="" title="" style="color:black"> Click here to get redirected to main page and wait for result!! </a>
