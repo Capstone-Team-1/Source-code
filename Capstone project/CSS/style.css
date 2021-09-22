@@ -45,10 +45,7 @@ header {
   
 }
 
-p{
-  font-size: 1.4rem;
-  text-align: justify;
-}
+
 .ecoa-logo {
   display: inline-flex;
   align-items: center;
