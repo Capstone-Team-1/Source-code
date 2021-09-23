@@ -129,7 +129,7 @@ if (isset($_POST["signup"])) { //once the button is click and if the value isnt 
       <p id="template"></p>
     <br>
     <!-- Form on submit checks if the proper data is entered and validateRegister is the function assigned to check -->
-        <form action="#" method="post" onsubmit="return validateRegister(); ValidateDOB(); " > 
+        <form action="#" method="post" onsubmit="return validateRegister() " > 
 
           <p id="msg" style="color:red;"></p>
 <!-- Each input takes the user details and for the validation the id checks if the field are properly entered and not left empty. -->
