@@ -32,7 +32,7 @@ displayMessage.innerHTML= "Please fill all the required details";
 return false;
 
 }
-else if(dateofBirth.value<18)
+else if(age<18)
 {
     displayMessage.innerHTML= "You are not eligible to vote as you are under 18";
     return false;
