@@ -139,9 +139,9 @@ cursor: pointer;
 
 li a:hover{
 
-  color: purple;
+  color: grey;
   font-weight: 600;
-  transition: 0.05s;
+  transition: 1s;
 }
 
                   /* ------- Design of dropdown buttons in Navbar ---- */
