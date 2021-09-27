@@ -321,29 +321,22 @@ tr:hover {background-color: #D6EEEE;}
  
 </section>
 
-<footer style="margin-top:60px;">
-
-<div class="footer-banner" style="text-align: justify; " >
-    <h3 style="color: azure; font-size: 1.1em; font-weight: 550px;">Election comission of Australia</h1>
-
-<div class= "footer-details">
-    <p style="font-family: 'Poppins', sans-serif; font-size: 1.1em;">The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>   
+        <footer style="margin-top: 140px;">
+    <div class="footer-details" >
+      <h3>Election Comission of Australia</h3>
+      <p>The ECOA acknowledges the Traditional Owners of country throughout Australia and recognises their continuing connection to land, waters, culture and community. <br> We pay our respects to Elders past, present and emerging.</p>
 
 
-     <div class= "footer-container" style="margin-top: 50px;"> 
-             <div class="footer-item one"> Homepage</div>
-              <div class="footer-item two">For candidates </div>
-               <div class="footer-item three"> About election </div>
-                <div class="footer-item four"> Information Centre</div>
-                 <div class ="footer-item five "> The ECOA </div>
-                  </div>
-
-
-
-
-</div>
-
-   <div class="footer-social-links">
+      <div class="footer-container" style="margin-top: 50px;">
+        <div class="footer-item"> <a href="./dashboard.php">Dashboard</a></div>
+        <div class="footer-item"> <a href="./votersList.php">Voters List</a></div>
+        <div class="footer-item"> <a href="./eycandidateRegister.php">Candidate Register</a></div>
+        <div class="footer-item"> <a href="./result.php">Election Results</a></div>
+        <div class="footer-item"> <a href="./logout.php">Logout</a></div>
+      </div>
+    </div>
+    <!--This div in particular contains links to various platforms and is set to flex-->
+ <div class="footer-social-links">
 
       <div>
        <a href="https://www.facebook.com/AusElectoralCom"> <ion-icon name="logo-facebook"> </ion-icon> </a> 
@@ -355,15 +348,8 @@ tr:hover {background-color: #D6EEEE;}
       <a href="https://www.instagram.com/AusElectoralCom/">  <ion-icon name="logo-instagram"></ion-icon> </a>
       </div>
     </div>
-         
 
-
-
-
-
-
-       
- </footer>
+  </footer>
     
 
 
