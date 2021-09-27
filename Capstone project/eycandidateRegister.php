@@ -77,7 +77,7 @@ $candidateID = mysqli_real_escape_string($conn, $_POST["ID"]);
       <li><a href="./dashboard.php">Dashboard</a></li>
         <li><a href="./voterList.php">Voters List</a></li>
         <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
-        <li><a href="./electionResults.php">Election Resutls</a></li>
+        <li><a href="./result.php">Election Resutls</a></li>
         <li><a href="./logout.php">Logout</a></li>
         </ul>
     </nav>
