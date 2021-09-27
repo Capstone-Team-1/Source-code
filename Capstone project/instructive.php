@@ -67,9 +67,9 @@
 <p  style=" font-size: 1.4rem;
   text-align: justify; margin-bottom:40px" class="reading-content"
 > We want all the eligible Australians to vote in the Federal Election.
-    AEC mobile polling teams visit many voters who are not able to get to a polling place. Mobile polling facilities are set up in some hospitals, nursing homes, prisons and remote areas of Australia. Mobile polling is carried out around Australia during the election period.
+   ECOA mobile polling teams visit many voters who are not able to get to a polling place. Mobile polling facilities are set up in some hospitals, nursing homes, prisons and remote areas of Australia. Mobile polling is carried out around Australia during the election period.
 
-A list of locations the AEC will be visiting will be available in the weeks after an election is announced. </p>
+A list of locations the ECOA will be visiting will be available in the weeks after an election is announced. </p>
     </div>
 </div>
     <footer>
