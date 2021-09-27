@@ -1,35 +1,32 @@
-function validate(){
-var votersId = document.getElementById("vid");
-var passWord = document.getElementById("pw");
 
-if(votersId.value==""|| passWord==""){
-    document.getElementById("template").innerHTML="Invalid login \"Please try Again\""
-    alert("You haven't enetered the required documents");
+//validating ourt login form
+function validate(){
+var votersId = document.getElementById("vid"); //refers to the input voters id
+var passWord = document.getElementById("pw"); //refers to the input voters password
+
+if(votersId.value==""|| passWord==""){ //checking if the feilds are empty or not
+    document.getElementById("template").innerHTML="Invalid login \"Please enter the username and password\""
+  
     return false;
 }
-else{
+else{ //message if the condition is met
     document.getElementById("template").innerHTML="Thank you please wait until we assess you details"
     return true;
 }
 
 }
 
-///hamburger
+///hamburger menu
 
 
-let x= document.querySelector(".sticky-mobile-nav");
-let y = document.querySelector(".container");
-let menuStatus = false;
-x.addEventListener("click", function onMenuClick(){
-   if (menuStatus== false){
-       y.style.display = "none";
-       menuStatus =true;
-   }
+// let x= document.querySelector(".sticky-mobile-nav");
+// let y = document.querySelector(".container");
+// // let menuStatus = false;
+// x.addEventListener("click", function onMenuClick(){
 
-   else if (menuStatus == true){
-y.style.display = "block" ;
-y.style.color = "blue" ;
-menuStatus = false;
+//     y.classList.toggle('show-container'); //the toggle function adds and removes the class
 
-   }
-})
+// })
+
+
+
