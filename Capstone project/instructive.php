@@ -60,7 +60,7 @@
   
     <div class="section-video" style="Margin-top:20px">
         <h1> ECOA Online Voting System</h1> 
- <iframe height="350" width="600"
+ <iframe height="550" width="800"
       src="https://www.youtube.com/embed/63UIEr-YZz0">
    </iframe>
      
