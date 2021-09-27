@@ -10,7 +10,7 @@ if(votersId.value==""|| passWord==""){ //checking if the feilds are empty or not
     return false;
 }
 else{ //message if the condition is met
-    document.getElementById("template").innerHTML="Thank you please wait until we assess you details"
+    document.getElementById("template").innerHTML="Thank you please wait until we assess your details"
     return true;
 }
 

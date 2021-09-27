@@ -10,7 +10,8 @@ if(($_SESSION['citizenID']))
         header("Location:candidate.php"); //if user has already logged in then the user will head towards candidate page, this condition will only work if the user did not click the log out button
     }
 
-if (isset($_POST['submit'])) { //taking the user input using POST method and follwing the no null isset method
+if (isset($_POST['submit'])) { 
+  sleep(1);//taking the user input using POST method and follwing the no null isset method
   $myuser = $_POST['citizenID']; //the variable will be equal to the input entered in the input field
   $mypassword = md5($_POST['citizenPassword']);  // To protect MySQL injection (more detail about MySQL injection) and to encypt it in hash value
 

@@ -25,7 +25,8 @@ if (isset($_POST["signup"])) { //once the button is click and if the value isnt 
   } else if ($checkregestringID > 1) { //checks if the regestering id matches 
     echo "<script> alert('Hey you have already registered please log in');
     </script>";
-  } else { //if the checks pass and then user input is entered as per the columns available in the table.
+  } else { 
+    sleep(1);//if the checks pass and then user input is entered as per the columns available in the table.
     $sql = " INSERT INTO citizen(citizenID, citizenFName, citizenLName, citizenPhone, citizenDOB, citizenEmail, citizenAddress, citizenCity, citizenState, citizenZip, citizenPassword, citizenAllowed, employeeID) VALUES ('$citizenID','$citizenFName','$citizenLName','$citizenPhone','$citizenDOB','$citizenEmail','$citizenAddress','$citizenCity','$citizenState','$citizenZip','$citizenPW','0','1') ";
     $result = mysqli_query($conn, $sql);
     header("Location: success.php"); //once data inserted the user gets headed towards sucess.php page
