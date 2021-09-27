@@ -56,6 +56,8 @@
       </div>
     </div>
 <div class="main-article">
+
+  
     <div class="section-video" style="Margin-top:20px">
         <h1> ECOA Online Voting System</h1> 
  <iframe height="350" width="600"
@@ -63,7 +65,7 @@
    </iframe>
      
 <p  style=" font-size: 1.4rem;
-  text-align: justify;"
+  text-align: justify; margin-bottom:40px" class="reading-content"
 > We want all the eligible Australians to vote in the Federal Election.
     AEC mobile polling teams visit many voters who are not able to get to a polling place. Mobile polling facilities are set up in some hospitals, nursing homes, prisons and remote areas of Australia. Mobile polling is carried out around Australia during the election period.
 
@@ -84,7 +86,8 @@ A list of locations the AEC will be visiting will be available in the weeks afte
         <div class="footer-item"> <a href="./adminLogin.php">Staff Login</a></div>
         <div class="footer-item"> <a href="./contactus.php">Contact Us</a></div>
       </div>
-    </div>
+
+
     <!--This div in particular contains links to various platforms and is set to flex-->
 
     <div class="footer-social-links">

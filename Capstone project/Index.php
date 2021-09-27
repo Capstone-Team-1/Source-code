@@ -137,6 +137,8 @@ include 'connection.php';
      
 
     </div>
+
+    
 <p style="font-size: 1.4rem; text-align: justify;">
             To remain agile—now and into the future—we must continue refining our election delivery model through our lessons management approach. <br> <br> We will continue to evolve our planning processes, address the delivery of electoral events in a pandemic, and improve our delivery model for future electoral cycles.
 
@@ -161,21 +163,22 @@ include 'connection.php';
   <section class="card-container">
 
 
-    <div class="card">
+    <div class="card" style="width:330px">
       <img src="./Images/pexels-cottonbro-4669114.jpg" alt="image ">
       <div class="container">
         <h4><b>Make your selection</b></h4>
         <p></p>
       </div>
     </div>
-    <div class="card">
+    <div class="card" style="width:330px">
       <img src="./Images/pexels-artem-podrez-5108648.jpg" alt="card image">
       <div class="container">
         <h4><b>Your vote matters</b></h4>
         <p></p>
       </div>
     </div>
-    <div class="card">
+    <div class="card" style="width:330px">
+   
       <img src="./Images/pexels-rijan-hamidovic-2193268.jpg" alt="card image">
       <div class="container">
         <h4><b> Innovating the future</b></h4>
