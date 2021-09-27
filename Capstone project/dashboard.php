@@ -134,7 +134,7 @@ tr:hover {background-color: #D6EEEE;}
         <div class="footer-item"> <a href="./dashboard.php">Dashboard</a></div>
         <div class="footer-item"> <a href="./votersList.php">Voters List</a></div>
         <div class="footer-item"> <a href="./eycandidateRegister.php">Candidate Register</a></div>
-        <div class="footer-item"> <a href="./electionsResults.php">Election Results</a></div>
+        <div class="footer-item"> <a href="./result.php">Election Results</a></div>
         <div class="footer-item"> <a href="./logout.php">Logout</a></div>
       </div>
     </div>
