@@ -18,7 +18,7 @@ session_start();
     
     <style>
      .user-display{
-    margin-top: 80px;
+    margin: 120px;
   
 }
 table {

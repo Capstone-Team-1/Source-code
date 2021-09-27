@@ -222,7 +222,7 @@ tr:hover {background-color: #D6EEEE;}
     </div>
       <ul>
         <li><a href="./dashboard.php">Dashboard</a></li>
-        <li><a href="./votersAdminpage.php">Voters List</a></li>
+        <li><a href="./voterList.php">Voters List</a></li>
         <li><a href="./eycandidateRegister.php">Candidate Register</a></li>
         <li><a href="./result.php">Elections Resutls</a></li>
         <li><a href="./logout.php">Logout</a></li>
