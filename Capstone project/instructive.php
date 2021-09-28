@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Instructive Video</title>
   <link rel="stylesheet" href="./CSS/style.css">
 
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
@@ -60,7 +60,7 @@
   
     <div class="section-video" style="Margin-top:20px">
         <h1> ECOA Online Voting System</h1> 
- <iframe height="550" width="800"
+ <iframe height="550" width="1000"
       src="https://www.youtube.com/embed/63UIEr-YZz0">
    </iframe>
      
