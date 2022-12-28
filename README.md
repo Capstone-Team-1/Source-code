@@ -1,4 +1,5 @@
-# Source-code for Capstone Project Group Assesment<!DOCTYPE html>
+# Source-code for Capstone Project Group Assesment
+
 Please download the database named Voting and import it to your PHPmyadmin to access the functional site. 
 
 Features of the project.
